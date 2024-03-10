@@ -1,0 +1,24 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    padding: 1rem;
+    color: white;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .name {
+    margin-right: 1rem;
+  }
+  
+  .menu-icon img {
+    width: 24px;
+    height: auto;
+    cursor: pointer;
+  }
+  

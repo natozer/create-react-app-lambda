@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Header.css'; 
 import MenuIcon from './assets/menu.svg'; 
 

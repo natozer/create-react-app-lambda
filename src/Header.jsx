@@ -1,22 +1,23 @@
-import React from 'react';
-import './Header.css'; 
-import MenuIcon from './assets/menu.svg'; 
+import React from "react";
+import "./Header.css";
+import { ReactComponent as MuteIcon } from "./assets/mute.svg";
+import { ReactComponent as UnmuteIcon } from "./assets/unmute.svg";
+import { ReactComponent as MenuIcon } from "./assets/menu.svg";
 
-const Header = ({onMenuClick}) => {
-
-
+const Header = ({ isPlaying, toggleMusic, onMenuClick }) => {
   return (
-      <header>
-        <div className="header-content">
-          <div className="name">
-            <h1>ATELIER EXAVIL</h1>
-          </div>
-          <div className="menu-icon" onClick={onMenuClick}>
-            <img src={MenuIcon} alt="Menu" />
-          </div>
-        </div>
-      </header>
+    <header>
+      <h1>Atelier Exavil</h1>
+      <div className="buttonContainer">
+        <button onClick={toggleMusic}>
+          {isPlaying ? <MuteIcon /> : <UnmuteIcon />}
+        </button>
+        <button onClick={onMenuClick}>
+          <MenuIcon />
+        </button>
+      </div>
+    </header>
   );
-}
+};
 
 export default Header;

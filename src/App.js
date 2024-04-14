@@ -12,8 +12,6 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [splashScreenVisible, setSplashScreenVisible] = useState(true);
   const [hasEnteredSite, setHasEnteredSite] = useState(false);
-  const [showCredits, setShowCredits] = useState(false);
-  const creditsRef = useRef(null);
 
   const audioRef = useRef(new Audio('audio/neon-fury.mp3'));
   audioRef.current.loop = true;
@@ -36,13 +34,7 @@ function App() {
     setHasEnteredSite(true);
     document.body.classList.remove('no-scroll');
   };
-  const toggleCredits = () => {
-    gsap.to(creditsRef.current, {
-      duration: 0.5,
-      y: showCredits ? 100 : 0,  // Toggle position
-      onComplete: () => setShowCredits(!showCredits)
-    });
-  };
+
   useEffect(() => {
     document.body.classList.add('no-scroll');
     return () => {

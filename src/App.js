@@ -6,11 +6,9 @@ import Header from './components/Header';
 import AboutMe from './components/AboutMe';
 import ContactMe from './components/Contact';
 import Experience from './components/Experience';
-import MobileMessage from './components/MobileMessage';
 import Hero from './components/Hero';
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const [splashScreenVisible, setSplashScreenVisible] = useState(true);
   const [hasEnteredSite, setHasEnteredSite] = useState(false);
 
@@ -44,8 +42,6 @@ function App() {
   const handleResize = () => {
     const aspectRatioThreshold = 1.1;
     const aspectRatio = window.innerWidth / window.innerHeight;
-    const isMobile = aspectRatio < aspectRatioThreshold;
-    setIsMobile(isMobile);
   };
 
   useEffect(() => {
@@ -61,9 +57,7 @@ function App() {
   return (
     <div className="App">
       <SnowScene />
-      {isMobile ? (
-        <MobileMessage />
-      ) : (
+
         <>
           <Header
             isPlaying={isPlaying}
@@ -75,11 +69,11 @@ function App() {
           <Experience />
           <ContactMe ref={contactRef} />
         </>
-      )}
+      
       
       {splashScreenVisible && (
         <div ref={splashScreenRef} className="splash-screen">
-          <button onClick={handleEnterSite}>⊱ ────── Enter Site ───── ⊰ </button>
+          <button onClick={handleEnterSite}>Enter Site</button>
         </div>
       )}
     </div>

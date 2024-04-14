@@ -1,10 +1,4 @@
 
-
-@font-face {
-  font-family: "Neue Montreal";
-  src: url("fonts/PPNeueMontreal-Medium.otf") format("opentype");
-}
-
 @font-face {
   font-family: "Neue Montreal Bold";
   src: url("fonts/PPNeueMontreal-Bold.otf") format("opentype");
@@ -67,3 +61,4 @@ body {
   color: white;
 
 }
+

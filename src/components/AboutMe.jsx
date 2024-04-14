@@ -50,7 +50,7 @@ const AboutMe = () => {
   return (
     <div className="AboutMe">
       <div ref={paragraphRef} className='intro'>
-        <span>I'm a web developer from Miramichi, Canada.</span><span> I bring a wide range of front and back end skills to the table,</span> <span>and a relentless pursuit of perfection...</span>
+        <span>I'm a web developer from <span class="miramichi">Miramichi</span>, Canada.</span><span> I bring a wide range of front and back end skills to the table,</span> <span>and a relentless pursuit of perfection...</span>
       </div>
       <div ref={waveTextRef} className='Bold-Immersive-Memorable'>
         <span>I'm all about</span><span> Bold,</span> <span>Immersive,</span> <span> and Memorable.</span>

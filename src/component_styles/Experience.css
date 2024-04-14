@@ -2,7 +2,7 @@
   text-align: center;
   user-select: none;
   margin: 1rem;
-  color: gold;
+  color: #b7c1de;
 
 }
 
@@ -18,13 +18,14 @@
 }
 
 .experience-section li {
-  border: 2px solid #fffff2;
+  border: 2px solid #092047;
   border-radius: 10px;
   padding: 10px 10px;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
 }
 
 @media (max-width: 1024px) {

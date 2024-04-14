@@ -1,45 +1,36 @@
 .AboutMe {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
-    font-family: 'Neue Montreal Bold';
-    font-size: 4rem;
-    text-wrap: pretty;
-    user-select: none;
-    text-transform: uppercase;
-    text-align: center;
-    color: gold;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  font-family: 'Neue Montreal';
+  font-size: 4rem;
+  user-select: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #b7c1de;
 
-  }
-  
-  
-  .Bold-Immersive-Memorable {
-    font-family: 'Migra Extra Bold';
-    font-size: 10rem;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-  
-  @media (max-width: 1024px) { 
-    .AboutMe {
-      font-size: 2.5em;
-    }
-  }
-  
-  @media (max-width: 768px) { 
-    .AboutMe {
-      font-size: 1em;
-    }
+}
+
+.Bold-Immersive-Memorable {
+  font-size: 5rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 @media (max-width: 1024px) { 
-    .Bold-Immersive-Memorable {
-      font-size: 3.5em;
-    }
-  }
-  
-  @media (max-width: 768px) { 
-    .Bold-Immersive-Memorable {
-      font-size: 1.5em;
-    }
+.AboutMe {
+  font-size: 2.5rem;
+}
+.Bold-Immersive-Memorable {
+  font-size: 3.5rem;
+}
+}
+
+@media (max-width: 768px) { 
+.AboutMe {
+  font-size: 1rem;
+}
+.Bold-Immersive-Memorable {
+  font-size: 1.5rem;
+}
 }

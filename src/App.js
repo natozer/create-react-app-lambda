@@ -16,7 +16,7 @@ function App() {
   const [splashScreenVisible, setSplashScreenVisible] = useState(true);
   const [hasEnteredSite, setHasEnteredSite] = useState(false);
 
-  const audioRef = useRef(new Audio('music/tarantella.mp3'));
+  const audioRef = useRef(new Audio('music/new-age.mp3'));
   const contactRef = useRef(null);
   const splashScreenRef = useRef(null);
 

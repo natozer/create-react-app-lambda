@@ -8,21 +8,9 @@
   align-items: center;
   padding: 0.5em;
   font-size: 0.6rem;
-  color: gold;
+  color: #b7b7b7;
+  font-family: '2049';
 
-}
-
-
-.header-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: none;
-  pointer-events: none; 
-  opacity: 0; 
-  z-index: -1; 
 }
 
 
@@ -33,7 +21,9 @@ nav {
 }
 
 .navlink {
-  color: #fffff2;
+  color: #b7b7b7;
+
+
   margin-right: 10px;
   text-decoration: none;
   transition: transform 0.3s ease-in-out;

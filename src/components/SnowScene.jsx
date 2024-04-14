@@ -11,19 +11,10 @@ const SnowScene = (() => {
   const rendererRef = useRef(null);
   const composerRef = useRef(null);
 
-  const handleMobileLoad = (textureLoader, scene) => {
-    const aspectRatioThreshold = 1.2;
-    const aspectRatio = window.innerWidth / window.innerHeight;
-    if (aspectRatio < aspectRatioThreshold) {
-      textureLoader.load('images/cropped_aurora.jpg', function (texture) {
-        scene.background = texture;
-      });
-    } else {
-      textureLoader.load('images/storm.png', function (texture) {
-        scene.background = texture;
-      });
-    }
+  const handleMobileLoad = (scene) => {
+    scene.background = new THREE.Color(0x000000); // Sets the background to black
   };
+  
 
   useEffect(() => {
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 2000);
@@ -32,7 +23,7 @@ const SnowScene = (() => {
 
     const scene = new THREE.Scene();
     const textureLoader = new THREE.TextureLoader();
-    handleMobileLoad(textureLoader, scene);
+    handleMobileLoad( scene);
 
     scene.fog = new THREE.FogExp2(0x000000, 0.00006);
     sceneRef.current = scene;
@@ -96,7 +87,7 @@ glitchPass.randX = 10;
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
-      handleMobileLoad(textureLoader, scene);
+      handleMobileLoad( scene);
     }
     window.addEventListener('resize', onWindowResize);
 

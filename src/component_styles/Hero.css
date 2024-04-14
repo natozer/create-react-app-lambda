@@ -1,21 +1,28 @@
 .Hero {
-  font-family: 'Migra Extra Bold';
-  font-size: 6rem;
+
   margin: 2rem;
   user-select: none;
   text-align: center;
   letter-spacing: 5px; 
   position: relative;
-  color: gold;
-  
+  color: #b7b7b7;
+  font-family: 'Road Rage', sans-serif;
+  font-size: 3em;
+  text-shadow: 
+    0 0 0.2rem #b7c1de, 
+    0 0 0.5rem #0b468c, 
+    0 0 0.5rem  #092947;
+  box-sizing: border-box;
+
 }
 
 .Hero::after {
   content: "Actually, it's Nathaniel, but Nate looks better as a header. :)";
   position: absolute;
-  bottom: -5px;
+  bottom: -20px;
   right: 0;
-  font-size: 0.1em;
+  font-size: 0.5em;
+  font-family: '2049';
   opacity: 0; 
   transition: opacity 0.3s ease-in-out; 
 }

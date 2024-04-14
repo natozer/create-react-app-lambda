@@ -5,7 +5,7 @@
     align-items: center;
     font-size: 2.5rem;
     text-align: center;
-    color: gold;
+    color: #b7c1de;
 
   }
   
@@ -15,7 +15,6 @@
     flex-direction: row; 
     align-items: center; 
     gap: 2em; 
-    color: gold;
 
   }
 

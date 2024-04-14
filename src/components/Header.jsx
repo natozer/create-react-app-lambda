@@ -3,7 +3,7 @@ import { ReactComponent as MuteIcon } from "../assets/mute.svg";
 import { ReactComponent as UnmuteIcon } from "../assets/unmute.svg";
 import "../component_styles/AppHeader.css";
 
-function Header({ isPlaying, toggleMusic, onContactClick, onCreditsClick }) {
+function Header({ isPlaying, toggleMusic, onContactClick}) {
   const headerRef = useRef(null);
 
   return (
@@ -15,9 +15,6 @@ function Header({ isPlaying, toggleMusic, onContactClick, onCreditsClick }) {
       <nav>
         <div className="navlink" onClick={onContactClick}>
           CONTACT
-        </div>
-        <div className="navlink" onClick={onCreditsClick}>
-          CREDITS
         </div>
         <button onClick={toggleMusic}>
           {isPlaying ? <MuteIcon /> : <UnmuteIcon />}

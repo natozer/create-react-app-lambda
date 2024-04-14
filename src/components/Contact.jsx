@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../component_styles/Contact.css'
 
-const ContactMe = forwardRef((props, ref) => {
+const ContactMe = forwardRef((_props, ref) => {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
@@ -27,9 +27,7 @@ const ContactMe = forwardRef((props, ref) => {
     <div ref={ref} className="Contact">
       <h1>GET IN TOUCH.</h1>
       <div className="contact-details">
-        <a href="mailto:natozer@gmail.com" className="navlink">Contact Me</a>
-        <a href="https://www.linkedin.com/in/natozer" className="navlink">LinkedIn</a>
-        
+        <a href="mailto:natozer@gmail.com" className="navlink">EMAIL ME</a>
       </div>
     </div>
   );

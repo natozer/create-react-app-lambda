@@ -12,7 +12,7 @@ const SnowScene = (() => {
   const composerRef = useRef(null);
 
   const handleMobileLoad = (scene) => {
-    scene.background = new THREE.Color(0x000000); // Sets the background to black
+    scene.background = new THREE.Color(0x000000); 
   };
   
 
@@ -38,8 +38,7 @@ const SnowScene = (() => {
     composerRef.current = composer;
     const renderPass = new RenderPass(scene, camera);
     composer.addPass(renderPass);
-    const filmPass = new FilmPass(1);
-    composer.addPass(filmPass);
+
     const glitchPass = new GlitchPass();
 
 glitchPass.goWild = false;
@@ -52,7 +51,7 @@ glitchPass.randX = 10;
 
     const geometry = new THREE.BufferGeometry();
     const vertices = [];
-    for (let i = 0; i < 666; i++) {
+    for (let i = 0; i < 2500; i++) {
       const x = Math.random() * 2000 - 1000;
       const y = Math.random() * 2000 - 1000;
       const z = Math.random() * 2000 - 1000;

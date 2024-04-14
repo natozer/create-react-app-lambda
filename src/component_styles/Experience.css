@@ -2,8 +2,7 @@
   text-align: center;
   user-select: none;
   margin: 1rem;
-  color: #b7c1de;
-
+  color: #E0E4E8;
 }
 
 .experience-section h1 {
@@ -18,7 +17,6 @@
 }
 
 .experience-section li {
-  border: 2px solid #092047;
   border-radius: 10px;
   padding: 10px 10px;
   text-align: center;

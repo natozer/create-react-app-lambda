@@ -5,7 +5,7 @@ import '../component_styles/Contact.css';
 
 const ContactMe = forwardRef((_props, ref) => {
   gsap.registerPlugin(ScrollTrigger);
-  const audioRef = useRef(new Audio('audio/wolf-howling.mp3'));  // Update the path as necessary
+  const audioRef = useRef(new Audio('audio/wolf-howling.mp3'));  
 
   useEffect(() => {
     gsap.fromTo(ref.current, 
@@ -35,8 +35,7 @@ const ContactMe = forwardRef((_props, ref) => {
       <h1>GET IN TOUCH.</h1>
       <div className="contact-details">
         <a href="mailto:natozer@gmail.com" className="navlink"
-           onMouseEnter={handleMouseEnter} 
-           >
+           onMouseEnter={handleMouseEnter}>
           EMAIL ME
         </a>
       </div>

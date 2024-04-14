@@ -17,11 +17,11 @@
 }
 
 .Hero::after {
-  content: "Actually, it's Nathaniel, but Nate looks better as a header. :)";
+  content: "Actually, it's Nathaniel, but Nate looks better in the header.";
   position: absolute;
   bottom: -20px;
   right: 0;
-  font-size: 0.5em;
+  font-size: 0.3em;
   font-family: '2049';
   opacity: 0; 
   transition: opacity 0.3s ease-in-out; 

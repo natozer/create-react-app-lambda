@@ -1,10 +1,11 @@
-import React, { forwardRef, useEffect } from 'react';
+import React, { forwardRef, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../component_styles/Contact.css'
+import '../component_styles/Contact.css';
 
 const ContactMe = forwardRef((_props, ref) => {
   gsap.registerPlugin(ScrollTrigger);
+  const audioRef = useRef(new Audio('audio/wolf-howling.mp3'));  // Update the path as necessary
 
   useEffect(() => {
     gsap.fromTo(ref.current, 
@@ -23,11 +24,21 @@ const ContactMe = forwardRef((_props, ref) => {
     );
   }, [ref]);
 
+  const handleMouseEnter = () => {
+    audioRef.current.play();
+  };
+
+
+
   return (
     <div ref={ref} className="Contact">
       <h1>GET IN TOUCH.</h1>
       <div className="contact-details">
-        <a href="mailto:natozer@gmail.com" className="navlink">EMAIL ME</a>
+        <a href="mailto:natozer@gmail.com" className="navlink"
+           onMouseEnter={handleMouseEnter} 
+           >
+          EMAIL ME
+        </a>
       </div>
     </div>
   );

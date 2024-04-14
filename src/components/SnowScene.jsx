@@ -14,7 +14,6 @@ const SnowScene = (() => {
     scene.background = new THREE.Color(0x000000); 
   };
   
-
   useEffect(() => {
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 2000);
     camera.position.z = 1000;
@@ -35,27 +34,29 @@ const SnowScene = (() => {
 
     const composer = new EffectComposer(renderer);
     composerRef.current = composer;
+    
     const renderPass = new RenderPass(scene, camera);
     composer.addPass(renderPass);
-
+    
     const glitchPass = new GlitchPass();
-
-glitchPass.goWild = false;
-glitchPass.curF = 50;  
-glitchPass.randX = 10; 
-
+    glitchPass.goWild = false;
+    glitchPass.curF = 50;  
+    glitchPass.randX = 10; 
     composer.addPass(glitchPass); 
+    
     const snowflakeImages = ['images/snowflake1.png', 'images/snowflake2.png', 'images/snowflake3.png'];
     const snowflakeTextures = snowflakeImages.map(image => textureLoader.load(image));
 
     const geometry = new THREE.BufferGeometry();
-    const vertices = [];
+    const vertices = []; 
+
     for (let i = 0; i < 2500; i++) {
       const x = Math.random() * 2000 - 1000;
       const y = Math.random() * 2000 - 1000;
       const z = Math.random() * 2000 - 1000;
       vertices.push(x, y, z);
-    }
+    } 
+
     geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
 
     const sizes = [7, 8, 9];
@@ -65,7 +66,7 @@ glitchPass.randX = 10;
       [0.90, 0.05, 0.5]
     ];
 
-    snowflakeTextures.forEach((sprite, spriteIndex) => {
+    snowflakeTextures.forEach((sprite, _index) => {
       sizes.forEach((size, index) => {
         const material = new THREE.PointsMaterial({
           size,
@@ -78,6 +79,7 @@ glitchPass.randX = 10;
 
         const particles = new THREE.Points(geometry, material);
         scene.add(particles);
+
       });
     });
 
@@ -87,19 +89,18 @@ glitchPass.randX = 10;
       renderer.setSize(window.innerWidth, window.innerHeight);
       handleMobileLoad( scene);
     }
+
+
     window.addEventListener('resize', onWindowResize);
 
     function animate() {
       requestAnimationFrame(animate);
       let time = Date.now() * 0.00002;
-      let rotationSpeedMultiplier = 0.7; 
-    
-      scene.children.forEach((object, i) => {
+        scene.children.forEach((object, i) => {
         if (object instanceof THREE.Points) {
           let directionMultiplier = i % 2 === 0 ? 1 : -1;
-    
-          object.rotation.y = time * (i + 1) * directionMultiplier * rotationSpeedMultiplier;
-          object.rotation.z = time * directionMultiplier * rotationSpeedMultiplier;
+          object.rotation.y = time * (i + 1) * directionMultiplier;
+          object.rotation.z = time * directionMultiplier;
           object.position.x = Math.sin(time + i) * 20 * directionMultiplier;
           object.position.y = Math.cos(time + i) * 20;
         }

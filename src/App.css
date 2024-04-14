@@ -62,3 +62,30 @@ body {
 
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+.button-container {
+  position: relative;
+  display: inline-block;
+}
+
+.button-container::after {
+  content: "Warning, it's edgy";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #FFFFFF;
+  font-family: 'Road Rage';
+  visibility: hidden;  
+  opacity: 0;
+  transition: opacity 0.3s ease; 
+}
+
+.button-container:hover::after {
+  visibility: visible; 
+  opacity: 1;
+}

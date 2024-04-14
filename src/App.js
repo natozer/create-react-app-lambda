@@ -31,28 +31,34 @@ function App() {
   const handleEnterSite = () => {
     toggleMusic();
     gsap.to(splashScreenRef.current, { duration: 1, opacity: 0, onComplete: () => setSplashScreenVisible(false) });
-    setHasEnteredSite(true); 
+    setHasEnteredSite(true);
+    document.body.classList.remove('no-scroll');
   };
-  
+
+  useEffect(() => {
+    document.body.classList.add('no-scroll');
+    return () => {
+      document.body.classList.remove('no-scroll');
+      window.removeEventListener('contextmenu', handleContextMenu);
+    };
+  }, []);
 
   const handleContextMenu = (e) => {
     e.preventDefault();
   };
 
-
-
-  useEffect(() => {
-    window.addEventListener('contextmenu', handleContextMenu);
-    return () => {
-      window.removeEventListener('contextmenu', handleContextMenu);
-    };
-  }, []);
-
   return (
     <div className="App">
-      <SnowScene />
-
+      {splashScreenVisible ? (
+   <div className="splash-screen">
+   <div className="button-container">
+     <button onClick={handleEnterSite}>Enter Site</button>
+   </div>
+ </div>
+ 
+      ) : (
         <>
+          <SnowScene />
           <Header
             isPlaying={isPlaying}
             toggleMusic={toggleMusic}
@@ -63,12 +69,6 @@ function App() {
           <Experience />
           <ContactMe ref={contactRef} />
         </>
-      
-      
-      {splashScreenVisible && (
-        <div ref={splashScreenRef} className="splash-screen">
-          <button onClick={handleEnterSite}>Enter Site</button>
-        </div>
       )}
     </div>
   );

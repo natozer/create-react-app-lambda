@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
-import { FilmPass } from 'three/examples/jsm/postprocessing/FilmPass.js';
 import { GlitchPass } from 'three/examples/jsm/postprocessing/GlitchPass.js';
 
 const SnowScene = (() => {
@@ -93,7 +92,7 @@ glitchPass.randX = 10;
     function animate() {
       requestAnimationFrame(animate);
       let time = Date.now() * 0.00002;
-      let rotationSpeedMultiplier = 0.4; 
+      let rotationSpeedMultiplier = 0.7; 
     
       scene.children.forEach((object, i) => {
         if (object instanceof THREE.Points) {

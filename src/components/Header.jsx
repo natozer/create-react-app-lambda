@@ -11,7 +11,7 @@ function Header({ isPlaying, toggleMusic, onContactClick}) {
       className="App-header"
       ref={headerRef}
     >
-      <div>NATHANIEL ADDISON TOZER - FULL STACK WEB DEVELOPER</div>
+      <div>NATHANIEL ADDISON TOZER - FULL STACK WEB DEVELOPER </div>
       <nav>
         <div className="navlink" onClick={onContactClick}>
           CONTACT

@@ -12,6 +12,8 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [splashScreenVisible, setSplashScreenVisible] = useState(true);
   const [hasEnteredSite, setHasEnteredSite] = useState(false);
+  const [showCredits, setShowCredits] = useState(false);
+  const creditsRef = useRef(null);
 
   const audioRef = useRef(new Audio('audio/neon-fury.mp3'));
   audioRef.current.loop = true;
@@ -34,7 +36,13 @@ function App() {
     setHasEnteredSite(true);
     document.body.classList.remove('no-scroll');
   };
-
+  const toggleCredits = () => {
+    gsap.to(creditsRef.current, {
+      duration: 0.5,
+      y: showCredits ? 100 : 0,  // Toggle position
+      onComplete: () => setShowCredits(!showCredits)
+    });
+  };
   useEffect(() => {
     document.body.classList.add('no-scroll');
     return () => {
@@ -70,6 +78,12 @@ function App() {
           <ContactMe ref={contactRef} />
         </>
       )}
+      <div className="credits-button-container">
+        <div className="credits-button">credits</div>
+        <div className="credits-container">
+          <span>Fonts are Road Rage, Neue Montreal, and 2049. Music by Umasha Pros from Pixabay. Wolf Howling by UNIVERSFIELD on Pixabay. Personal use only. No money is being made through this site.  </span>
+        </div>
+      </div>
     </div>
   );
 }

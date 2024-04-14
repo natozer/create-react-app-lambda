@@ -89,3 +89,41 @@ body {
   visibility: visible; 
   opacity: 1;
 }
+.credits-button-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+.credits-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1000; 
+  color: white;
+  font-family: '2049';
+  font-size: 0.8rem;
+
+}
+
+.credits-container {
+  font-family: '2049';
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 25px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(100%); 
+  transition: transform 0.5s ease-in-out;
+  pointer-events: none; 
+  font-size: 0.8rem;
+}
+
+.credits-button-container:hover .credits-container {
+  transform: translateY(0); 
+}

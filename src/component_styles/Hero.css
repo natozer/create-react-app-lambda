@@ -1,0 +1,45 @@
+.Hero {
+  font-family: 'Migra Extra Bold';
+  font-size: 6rem;
+  margin: 2rem;
+  user-select: none;
+  text-align: center;
+  letter-spacing: 5px; 
+  position: relative;
+  color: gold;
+  
+}
+
+.Hero::after {
+  content: "Actually, it's Nathaniel, but Nate looks better as a header. :)";
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  font-size: 0.1em;
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out; 
+}
+
+.Hero:hover::after {
+  opacity: 1; 
+}
+
+@media (max-width: 1024px) {
+  .Hero {
+    font-size: 2.5em;
+    letter-spacing: 3px; 
+  }
+  .Hero::after {
+    font-size: 0.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .Hero {
+    font-size: 1em;
+    letter-spacing: 1px;
+  }
+  .Hero::after {
+    font-size: 0.5em;
+  }
+}

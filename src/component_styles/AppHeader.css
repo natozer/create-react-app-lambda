@@ -1,0 +1,67 @@
+.App-header {
+  position: relative;
+  margin-left: 2em;
+  gap: 2em;
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+  font-size: 0.6rem;
+  color: gold;
+
+}
+
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: none;
+  pointer-events: none; 
+  opacity: 0; 
+  z-index: -1; 
+}
+
+
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.navlink {
+  color: #fffff2;
+  margin-right: 10px;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navlink:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+button {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+button svg {
+  fill: white;
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (max-width: 768px) {
+  .App-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5em;
+  }
+}

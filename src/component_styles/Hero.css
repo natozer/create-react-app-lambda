@@ -12,7 +12,7 @@
 }
 
 .Hero::after {
-  content: "Actually, it's Nathaniel, but Nate looks better in the header.";
+  content: "Actually, it's Nathaniel, but Nate looks nice and edgy here.";
   position: absolute;
   bottom: -20px;
   right: 0;

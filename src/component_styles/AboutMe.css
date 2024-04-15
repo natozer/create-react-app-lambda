@@ -8,12 +8,15 @@
   text-transform: uppercase;
   text-align: center;
   color: #e0e4e8;
+
 }
 
 .Bold-Immersive-Memorable {
   font-size: 5rem;
   margin-top: 1em;
   margin-bottom: 1em;
+  text-shadow: 0 0 0.2rem #b7c1de, 0 0 0.5rem #0b468c, 0 0 0.5rem #092947;
+
 }
 
 @media (max-width: 1024px) {

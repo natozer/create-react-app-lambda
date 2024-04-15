@@ -11,6 +11,7 @@
   box-sizing: border-box;
 }
 
+
 .Hero::after {
   content: "Actually, it's Nathaniel, but Nate looks nice and edgy here.";
   position: absolute;

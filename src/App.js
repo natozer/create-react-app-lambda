@@ -50,12 +50,12 @@ function App() {
   return (
     <div className="App">
       {splashScreenVisible ? (
-   <div className="splash-screen">
-   <div className="button-container">
-     <button onClick={handleEnterSite}>Enter Site</button>
-   </div>
- </div>
- 
+        <div className="splash-screen">
+          <div className="button-container">
+            <button onClick={handleEnterSite}>Enter Site</button>
+          </div>
+        </div>
+
       ) : (
         <>
           <SnowScene />

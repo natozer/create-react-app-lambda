@@ -9,8 +9,7 @@
   padding: 0.5em;
   font-size: 0.6rem;
   color: #b7b7b7;
-  font-family: '2049';
-
+  font-family: "2049";
 }
 
 nav {
@@ -20,8 +19,6 @@ nav {
 
 .navlink {
   color: #b7b7b7;
-
-
   margin-right: 10px;
   text-decoration: none;
   transition: transform 0.3s ease-in-out;
@@ -33,18 +30,11 @@ nav {
 }
 
 button {
-  display: flex;
-  align-items: center;
   border: none;
   background: none;
   cursor: pointer;
 }
 
-button svg {
-  fill: white;
-  width: 1rem;
-  height: 1rem;
-}
 
 @media (max-width: 768px) {
   .App-header {

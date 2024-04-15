@@ -27,8 +27,7 @@ const Hero = ({ hasEnteredSite }) => {
         }
       );
     }
-  }, [hasEnteredSite]); 
-  
+  }, [hasEnteredSite]);
 
   return (
     <div className="Hero">

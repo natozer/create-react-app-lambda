@@ -1,21 +1,16 @@
 .Contact {
-    margin: 5rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1rem;
-    text-align: center;
-    color: #E0E4E8;
-  }
-  
-  
-  .contact-details {
-    display: flex;
-    flex-direction: row; 
-    align-items: center; 
-    gap: 2em; 
+  margin: 5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  text-align: center;
+  color: #e0e4e8;
+}
 
-  }
-
-  
-  
+.contact-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2em;
+}

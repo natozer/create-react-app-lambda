@@ -2,7 +2,7 @@
   text-align: center;
   user-select: none;
   margin: 1rem;
-  color: #E0E4E8;
+  color: #e0e4e8;
 }
 
 .experience-section h1 {
@@ -22,7 +22,6 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-
 }
 
 @media (max-width: 1024px) {

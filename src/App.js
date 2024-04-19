@@ -7,6 +7,7 @@ import AboutMe from './components/AboutMe';
 import ContactMe from './components/Contact';
 import Experience from './components/Experience';
 import Hero from './components/Hero';
+import Footer from './components/Footer';
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -72,6 +73,7 @@ function App() {
           <AboutMe />
           <Experience />
           {showContact && <ContactMe setShowContact={setShowContact} />}
+          <Footer/>
         </>
       )}
       <div className="credits-button-container">

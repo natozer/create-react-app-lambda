@@ -5,7 +5,7 @@
   user-select: none;
   margin: 1rem;
   margin-bottom: 4rem;
-  color: yellow;
+  color: var(--main-yellow);
 }
 
 .experience-section h1 {
@@ -19,7 +19,7 @@
 }
 
 .experience-section li {
-  border: 2px solid yellow;
+  border: 2px solid var(--main-yellow);
   border-radius: 10px;
   padding: 10px 5px;
   text-align: center;
@@ -29,8 +29,8 @@
 }
 
 .experience-section li:hover{
-  background-color: yellow;
-  color: black;
+  background-color: var(--main-yellow);
+  color: var(--main-black);
   font-style: italic;
 }
 

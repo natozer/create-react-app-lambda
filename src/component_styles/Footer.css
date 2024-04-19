@@ -1,0 +1,32 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-family: 'Neue Montreal Bold';
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-container {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+
+  }
+  
+  .footer-item {
+    margin-right: 20px; 
+  }
+  
+  .footer a{
+    color: var(--main-yellow);
+    text-decoration: none;
+    font-family: '2049';
+    transition: transform 0.3s ease-in-out;
+}
+
+ 
+.footer-container:hover {
+    transform: scale(1.1);
+  }

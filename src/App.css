@@ -14,6 +14,11 @@
   src: url('fonts/Road_Rage.otf') format('opentype');
 }
 
+:root {
+  --main-yellow: #FFEF00;
+  --main-black: #0e1111;
+  --main-dark-gray: #b7b7b7;
+}
 
 
 html,
@@ -21,12 +26,14 @@ body {
   margin-left: 0;
   padding: 0;
   font-family: "Neue Montreal Bold";
+ color: var(--main-yellow);
+
 }
 
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: yellow #0e1111;
+  scrollbar-color: var(--main-yellow) var(--main-black);
 }
 
 #particle-system-container {
@@ -41,12 +48,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: yellow;
+  background-color: var(--main-yellow);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  color: black;
+  color: var(--main-black);
 }
 
 
@@ -58,7 +65,7 @@ body {
   cursor: pointer;
   font-size: 2rem;
   font-family: '2049';
-  color: black;
+  color: var(--main-black);
 
 }
 
@@ -78,7 +85,7 @@ body {
   right: 0;
   text-align: center;
   font-size: 0.8rem;
-  color: black;
+  color: var(--main-black);
   font-family: 'Road Rage';
   visibility: hidden;  
   opacity: 0;
@@ -100,7 +107,7 @@ body {
   font-size: 16px;
   cursor: pointer;
   z-index: 1000; 
-  color: #b7b7b7;
+  color: var(--main-dark-gray);
   font-family: '2049';
   font-size: 0.6rem;
 
@@ -112,8 +119,8 @@ body {
   bottom: 0;
   left: 0;
   width: calc(100% - 16px); 
-  background: yellow;
-  color: black;
+  background: var(--main-yellow);
+  color: var(--main-black);
   padding: 25px 0 25px 25px; 
   display: flex;
   justify-content: space-between;

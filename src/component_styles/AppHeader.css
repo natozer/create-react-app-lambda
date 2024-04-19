@@ -8,7 +8,7 @@
   align-items: center;
   padding: 0.5em;
   font-size: 0.6rem;
-  color: #b7b7b7;
+  color: var(--main-dark-gray);
   font-family: "2049";
   
 }

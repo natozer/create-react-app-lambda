@@ -13,10 +13,10 @@ const Hero = ({ hasEnteredSite }) => {
         headerRef.current.querySelectorAll(".letter"),
         { autoAlpha: 0, y: 20 },
         {
-          duration: 3,
+          duration: 4,
           autoAlpha: 1,
           y: 0,
-          stagger: 0.1,
+          stagger: 0.15,
           ease: "power2.out",
           scrollTrigger: {
             trigger: headerRef.current,
@@ -35,27 +35,29 @@ const Hero = ({ hasEnteredSite }) => {
         <h1>
           {[
             "H",
-            "i",
+            "I",
             ",",
             " ",
             "I",
             "'",
-            "m",
+            "M",
             " ",
-            "N",
-            "a",
-            "t",
-            "e",
+            <span key="nate" className="nate">
+              N
+              <span>a</span>
+              <span>t</span>
+              <span>e</span>
+            </span>,
             ".",
-          ].map((letter, index) => (
+          ].map((item, index) => (
             <span key={index} className="letter">
-              {letter}
+              {item}
             </span>
           ))}
         </h1>
       </div>
     </div>
   );
-};
+}
 
 export default Hero;

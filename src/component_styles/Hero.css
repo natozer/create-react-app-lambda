@@ -4,13 +4,20 @@
   text-align: center;
   letter-spacing: 5px;
   position: relative;
-  color: yellow;
-  font-family: "Road Rage", sans-serif;
+  color: var(--main-yellow);
+  font-family: 'Neue Montreal Bold';
   font-size: 3em;
-  text-shadow: 0 0 0.2rem yellow;
   box-sizing: border-box;
+  text-shadow: 0 0 0.3rem white;
+
 }
 
+
+.nate{
+  text-shadow: 0 0 0.2rem var(--main-yellow), 0 0 0.5rem white, 0 0 0.8rem white;
+
+  font-family: "Road Rage", sans-serif;
+}
 
 .Hero::after {
   content: "Actually, it's Nathaniel, but Nate looks nice and edgy here.";

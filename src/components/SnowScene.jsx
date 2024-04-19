@@ -56,7 +56,7 @@ const SnowScene = () => {
     composer.addPass(glitchPass);
 
     const filmPass = new FilmPass(
-      0.35,   
+      0.5,   
       0.025,  
       648,    
       false   

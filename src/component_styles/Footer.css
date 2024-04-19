@@ -11,7 +11,7 @@
   .footer-container {
     display: flex;
     align-items: center;
-
+    margin: 1rem;
   }
   
   .footer-item {
@@ -25,7 +25,7 @@
 }
 
 .footer a:hover::after {
-    content: "Say something nice";
+    content: "...but compliments are ok too.";
     display: block;
     position: absolute;
     top: 100%; 
@@ -34,4 +34,18 @@
     font-size: 1rem;
     color: var(--main-yellow);
     font-family: '2049';
+}
+
+a:hover::before{
+
+   content: "I'd prefer a job offer..."; 
+   display: block;
+    position: absolute;
+    bottom: 100%; 
+    left: 0;
+    padding: 5px;
+    font-size: 1rem;
+    color: var(--main-yellow);
+    font-family: '2049';  
+    
 }

@@ -13,12 +13,14 @@ const SnowScene = () => {
 
   
   useEffect(() => {
+
     const camera = new THREE.PerspectiveCamera(
       75,
       window.innerWidth / window.innerHeight,
       1,
       2000
     );
+    
     camera.position.z = 1000;
     cameraRef.current = camera;
 
@@ -50,12 +52,14 @@ const SnowScene = () => {
     glitchPass.curF = 25;
     glitchPass.randX = 5;
     composer.addPass(glitchPass);
+
     const filmPass = new FilmPass(
       0.35,   
       0.025,  
       648,    
       false   
     );
+
     composer.addPass(filmPass);
     const snowflakeImages = [
       "images/snowflake1.png",

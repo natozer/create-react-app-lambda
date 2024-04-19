@@ -12,6 +12,7 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [splashScreenVisible, setSplashScreenVisible] = useState(true);
   const [hasEnteredSite, setHasEnteredSite] = useState(false);
+  const [showContact, setShowContact] = useState(false);
 
   const audioRef = useRef(new Audio('audio/proximity-liquid-drum-and-bass.mp3'));
   audioRef.current.loop = true;
@@ -26,6 +27,10 @@ function App() {
       audioRef.current.play();
     }
     setIsPlaying(!isPlaying);
+  };
+
+  const handleContactClick = () => {
+    setShowContact(!showContact);
   };
 
   const handleEnterSite = () => {
@@ -62,12 +67,12 @@ function App() {
           <Header
             isPlaying={isPlaying}
             toggleMusic={toggleMusic}
-            onContactClick={() => contactRef.current?.scrollIntoView({ behavior: 'smooth' })}
+            onContactClick={handleContactClick}
           />
           <Hero hasEnteredSite={hasEnteredSite} />
           <AboutMe />
           <Experience />
-          <ContactMe ref={contactRef} />
+          {showContact && <ContactMe setShowContact={setShowContact} />}
         </>
       )}
       <div className="credits-button-container">

@@ -1,28 +1,43 @@
 .Contact {
-  margin: 5rem 1rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 33%;
+  height: 100%;
+  background-color: yellow;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 100;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  font-size: 1rem;
-  text-align: center;
-  color: yellow;
+  opacity: 0;
+font-size: 0.7rem;
 }
 
-.contact-details {
+.contact-header {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  gap: 2em;
 }
 
 .Contact a{
-  color: yellow;
+  color: black;
   text-decoration: none;
-  transition: transform 0.3s ease-in-out;
+  font-family: '2049'
 }
 
 .Contact a:hover{
-  transform: scale(1.1);
+  text-decoration: underline;
+  font-style: italic;
 }
 
 
+button{
+  font-family: '2049'
+
+}
+
+button:hover {
+  text-decoration: underline;
+  font-style: italic;
+}

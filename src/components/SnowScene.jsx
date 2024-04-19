@@ -3,6 +3,7 @@ import * as THREE from "three";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { GlitchPass } from "three/examples/jsm/postprocessing/GlitchPass.js";
+import { FilmPass } from "three/examples/jsm/postprocessing/FilmPass.js"; 
 
 const SnowScene = () => {
   const sceneRef = useRef(null);
@@ -10,10 +11,7 @@ const SnowScene = () => {
   const rendererRef = useRef(null);
   const composerRef = useRef(null);
 
-  const handleMobileLoad = (scene) => {
-    scene.background = new THREE.Color(0x000000);
-  };
-
+  
   useEffect(() => {
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -26,7 +24,9 @@ const SnowScene = () => {
 
     const scene = new THREE.Scene();
     const textureLoader = new THREE.TextureLoader();
-    handleMobileLoad(scene);
+
+    const milkywayTexture = textureLoader.load("images/snow.jpg");
+    scene.background = milkywayTexture; 
 
     scene.fog = new THREE.FogExp2(0x000000, 0.00006);
     sceneRef.current = scene;
@@ -47,10 +47,16 @@ const SnowScene = () => {
 
     const glitchPass = new GlitchPass();
     glitchPass.goWild = false;
-    glitchPass.curF = 50;
-    glitchPass.randX = 10;
+    glitchPass.curF = 25;
+    glitchPass.randX = 5;
     composer.addPass(glitchPass);
-
+    const filmPass = new FilmPass(
+      0.35,   
+      0.025,  
+      648,    
+      false   
+    );
+    composer.addPass(filmPass);
     const snowflakeImages = [
       "images/snowflake1.png",
       "images/snowflake2.png",
@@ -63,7 +69,7 @@ const SnowScene = () => {
     const geometry = new THREE.BufferGeometry();
     const vertices = [];
 
-    for (let i = 0; i < 2500; i++) {
+    for (let i = 0; i < 2000; i++) {
       const x = Math.random() * 2000 - 1000;
       const y = Math.random() * 2000 - 1000;
       const z = Math.random() * 2000 - 1000;
@@ -102,7 +108,6 @@ const SnowScene = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
-      handleMobileLoad(scene);
     }
 
     window.addEventListener("resize", onWindowResize);

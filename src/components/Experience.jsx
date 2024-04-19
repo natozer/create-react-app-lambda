@@ -67,7 +67,7 @@ const Experience = () => {
         <li>THREE.JS</li>
         <li>UX</li>
       </ul>
-      <h1>FULL STACK WEB DEVELOPMENT.</h1>
+      <h1>I DO FULL STACK WEB DEVELOPMENT.</h1>
     </div>
   );
 }

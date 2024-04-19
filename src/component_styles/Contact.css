@@ -5,7 +5,7 @@
   align-items: center;
   font-size: 1rem;
   text-align: center;
-  color: #e0e4e8;
+  color: yellow;
 }
 
 .contact-details {
@@ -14,3 +14,15 @@
   align-items: center;
   gap: 2em;
 }
+
+.Contact a{
+  color: yellow;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.Contact a:hover{
+  transform: scale(1.1);
+}
+
+

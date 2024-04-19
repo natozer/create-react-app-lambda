@@ -13,7 +13,7 @@ function App() {
   const [splashScreenVisible, setSplashScreenVisible] = useState(true);
   const [hasEnteredSite, setHasEnteredSite] = useState(false);
 
-  const audioRef = useRef(new Audio('audio/neon-fury.mp3'));
+  const audioRef = useRef(new Audio('audio/proximity-liquid-drum-and-bass.mp3'));
   audioRef.current.loop = true;
 
   const contactRef = useRef(null);
@@ -73,7 +73,7 @@ function App() {
       <div className="credits-button-container">
         <div className="credits-button">credits</div>
         <div className="credits-container">
-          <span>Fonts are Road Rage, Neue Montreal, and 2049. Music by Umasha Pros from Pixabay. Wolf Howling by UNIVERSFIELD on Pixabay. Personal use only. No money is being made through this site.  </span>
+          <span>Fonts are Road Rage, Neue Montreal, and 2049. Music by penguinmusic on Pixabay. Wolf Howling by UNIVERSFIELD on Pixabay. Background image by Franz26 on Pixabay. Personal use only. No money is being made through this site.  </span>
         </div>
       </div>
     </div>

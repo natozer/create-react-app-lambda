@@ -34,7 +34,7 @@ const ContactMe = forwardRef((_props, ref) => {
     <div ref={ref} className="Contact">
       <h1>GET IN TOUCH.</h1>
       <div className="contact-details">
-        <a href="mailto:natozer@gmail.com" className="navlink"
+        <a href="mailto:natozer@gmail.com"
            onMouseEnter={handleMouseEnter}>
           EMAIL ME
         </a>

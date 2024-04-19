@@ -1,11 +1,10 @@
-.Experience{
-  margin-bottom: 2rem;
-}
+
 
 .experience-section {
   text-align: center;
   user-select: none;
   margin: 1rem;
+  margin-bottom: 4rem;
   color: yellow;
 }
 
@@ -22,7 +21,7 @@
 .experience-section li {
   border: 2px solid yellow;
   border-radius: 10px;
-  padding: 10px 10px;
+  padding: 10px 5px;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;

@@ -139,7 +139,7 @@ const SnowScene = () => {
 
     animate();
      
-    const seconds = 7000
+    const seconds = 8000
     // Set timeout to disable glitch after x seconds cause it gets a bit annoying and this is the only way to control it
     const glitchTimeout = setTimeout(() => {
       glitchPassRef.current.enabled = false;

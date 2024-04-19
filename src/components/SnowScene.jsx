@@ -10,8 +10,8 @@ const SnowScene = () => {
   const cameraRef = useRef(null);
   const rendererRef = useRef(null);
   const composerRef = useRef(null);
+  const glitchPassRef = useRef(null);
 
-  
   useEffect(() => {
 
     const camera = new THREE.PerspectiveCamera(
@@ -20,7 +20,7 @@ const SnowScene = () => {
       1,
       2000
     );
-    
+
     camera.position.z = 1000;
     cameraRef.current = camera;
 
@@ -49,6 +49,7 @@ const SnowScene = () => {
 
     const glitchPass = new GlitchPass();
 
+    glitchPassRef.current = glitchPass;
     glitchPass.goWild = false;
     glitchPass.curF = 25;
     glitchPass.randX = 5;
@@ -137,8 +138,15 @@ const SnowScene = () => {
     }
 
     animate();
+     
+    const seconds = 7000
+    // Set timeout to disable glitch after x seconds cause it gets a bit annoying and this is the only way to control it
+    const glitchTimeout = setTimeout(() => {
+      glitchPassRef.current.enabled = false;
+    }, seconds);
 
     return () => {
+      clearTimeout(glitchTimeout);
       document
         .getElementById("particle-system-container")
         .removeChild(renderer.domElement);

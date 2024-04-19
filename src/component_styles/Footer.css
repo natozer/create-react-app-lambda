@@ -11,7 +11,6 @@
   .footer-container {
     display: flex;
     align-items: center;
-    transition: transform 0.3s ease-in-out;
 
   }
   
@@ -19,14 +18,20 @@
     margin-right: 20px; 
   }
   
-  .footer a{
+  .footer a {
     color: var(--main-yellow);
     text-decoration: none;
-    font-family: '2049';
-    transition: transform 0.3s ease-in-out;
+    position: relative; 
 }
 
- 
-.footer-container:hover {
-    transform: scale(1.1);
-  }
+.footer a:hover::after {
+    content: "Say something nice";
+    display: block;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    padding: 5px;
+    font-size: 1rem;
+    color: var(--main-yellow);
+    font-family: '2049';
+}

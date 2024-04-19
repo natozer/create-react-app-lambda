@@ -27,8 +27,8 @@ const SnowScene = () => {
     const scene = new THREE.Scene();
     const textureLoader = new THREE.TextureLoader();
 
-    const milkywayTexture = textureLoader.load("images/snow.jpg");
-    scene.background = milkywayTexture; 
+    const forestTexture = textureLoader.load("images/snow.jpg");
+    scene.background = forestTexture; 
 
     scene.fog = new THREE.FogExp2(0x000000, 0.00006);
     sceneRef.current = scene;
@@ -48,9 +48,11 @@ const SnowScene = () => {
     composer.addPass(renderPass);
 
     const glitchPass = new GlitchPass();
+
     glitchPass.goWild = false;
     glitchPass.curF = 25;
     glitchPass.randX = 5;
+
     composer.addPass(glitchPass);
 
     const filmPass = new FilmPass(
@@ -61,11 +63,13 @@ const SnowScene = () => {
     );
 
     composer.addPass(filmPass);
+
     const snowflakeImages = [
       "images/snowflake1.png",
       "images/snowflake2.png",
       "images/snowflake3.png",
     ];
+    
     const snowflakeTextures = snowflakeImages.map((image) =>
       textureLoader.load(image)
     );

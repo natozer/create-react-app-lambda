@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from "react";
+
 import * as THREE from "three";
+import React, { useEffect, useRef } from "react";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { GlitchPass } from "three/examples/jsm/postprocessing/GlitchPass.js";
@@ -145,8 +146,14 @@ const SnowScene = () => {
 
     animate();
      
-  
+    const seconds = 8000
+    // Set timeout to disable glitch after x seconds cause it gets a bit annoying and this is the only way to control it
+    const glitchTimeout = setTimeout(() => {
+      glitchPassRef.current.enabled = false;
+    }, seconds);
+
     return () => {
+      clearTimeout(glitchTimeout);
       document
         .getElementById("particle-system-container")
         .removeChild(renderer.domElement);

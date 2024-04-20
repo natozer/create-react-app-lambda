@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
@@ -6,7 +6,6 @@ import { GlitchPass } from "three/examples/jsm/postprocessing/GlitchPass.js";
 import { FilmPass } from "three/examples/jsm/postprocessing/FilmPass.js"; 
 
 const SnowScene = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
   const sceneRef = useRef(null);
   const cameraRef = useRef(null);
   const rendererRef = useRef(null);
@@ -28,9 +27,7 @@ const SnowScene = () => {
     const scene = new THREE.Scene();
     const textureLoader = new THREE.TextureLoader();
 
-    const forestTexture = textureLoader.load("images/snow.jpg", () => {
-      setIsLoaded(true);
-    });
+    const forestTexture = textureLoader.load("images/snow.jpg");
     scene.background = forestTexture; 
 
     scene.fog = new THREE.FogExp2(0x000000, 0.00006);
@@ -161,7 +158,7 @@ const SnowScene = () => {
         .removeChild(renderer.domElement);
       window.removeEventListener("resize", onWindowResize);
     };
-  }, [isLoaded]);
+  }, []);
 
   return <div id="particle-system-container" />;
 };

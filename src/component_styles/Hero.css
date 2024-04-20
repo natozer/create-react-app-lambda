@@ -5,18 +5,10 @@
   letter-spacing: 5px;
   position: relative;
   color: var(--main-yellow);
-    font-family: "Road Rage", sans-serif;
-
+  font-family: "Road Rage", sans-serif;
+  text-shadow: 0 0 0.2rem var(--main-yellow), 0 0 0.5rem white;
   font-size: 3em;
   box-sizing: border-box;
-  text-shadow: 0 0 0.3rem white;
-
-}
-
-
-.nate{
-  text-shadow: 0 0 0.2rem var(--main-yellow), 0 0 0.5rem white, 0 0 0.8rem white;
-
 }
 
 .Hero::after {

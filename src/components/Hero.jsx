@@ -42,12 +42,10 @@ const Hero = ({ hasEnteredSite }) => {
             "'",
             "M",
             " ",
-            <span key="nate" className="nate">
-              N
-              <span>a</span>
-              <span>t</span>
-              <span>e</span>
-            </span>,
+            "N",
+            "A",
+            "T",
+            "E",
             ".",
           ].map((item, index) => (
             <span key={index} className="letter">

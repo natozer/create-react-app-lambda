@@ -46,7 +46,8 @@ const Experience = () => {
 
   return (
     <div className="experience-section" ref={experienceRef}>
-      <h1>I HAVE EXPERIENCE WITH...</h1>
+      <h1>FULL STACK WEB DEVELOPMENT</h1>
+      <h1>EXPERTISE IN</h1>
       <ul>
         <li>ANGULAR</li>
         <li>ASP.NET</li>
@@ -67,7 +68,6 @@ const Experience = () => {
         <li>THREE.JS</li>
         <li>UX</li>
       </ul>
-      <h1>I DO FULL STACK WEB DEVELOPMENT.</h1>
     </div>
   );
 }

@@ -8,7 +8,9 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-item">
-          <p>GET IN TOUCH:</p>
+          <p>
+            CONTACT ME
+          </p>
         </div>
         <div className="footer-item">
           <a href="mailto:natozer@gmail.com">natozer@gmail.com</a>

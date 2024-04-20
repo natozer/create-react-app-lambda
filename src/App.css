@@ -78,7 +78,7 @@ body {
 }
 
 .button-container::after {
-  content: "Photo-sensitivity warning";
+  content: "Photosensitivity warning";
   position: absolute;
   top: -20px;
   left: 0;

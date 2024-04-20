@@ -54,6 +54,8 @@ function App() {
 
   return (
     <div className="App">
+              <SnowScene />
+
       {splashScreenVisible ? (
         <div className="splash-screen">
           <div className="button-container">
@@ -61,9 +63,9 @@ function App() {
           </div>
         </div>
 
+
       ) : (
         <>
-          <SnowScene />
           <Header
             isPlaying={isPlaying}
             toggleMusic={toggleMusic}

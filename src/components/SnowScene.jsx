@@ -76,14 +76,20 @@ const SnowScene = () => {
     );
 
     const geometry = new THREE.BufferGeometry();
-    const vertices = [];
 
-    for (let i = 0; i < 3000; i++) {
+    const vertices = new Array(5000 * 3); 
+
+    for (let i = 0; i < 5000; i++) {
+      const baseIndex = i * 3; 
       const x = Math.random() * 2000 - 1000;
       const y = Math.random() * 2000 - 1000;
       const z = Math.random() * 2000 - 1000;
-      vertices.push(x, y, z);
+    
+      vertices[baseIndex] = x; 
+      vertices[baseIndex + 1] = y; 
+      vertices[baseIndex + 2] = z; 
     }
+    
 
     geometry.setAttribute(
       "position",

@@ -1,20 +1,17 @@
-
 import * as THREE from "three";
 import React, { useEffect, useRef } from "react";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { GlitchPass } from "three/examples/jsm/postprocessing/GlitchPass.js";
-import { FilmPass } from "three/examples/jsm/postprocessing/FilmPass.js"; 
+import { FilmPass } from "three/examples/jsm/postprocessing/FilmPass.js";
 
 const SnowScene = () => {
   const sceneRef = useRef(null);
   const cameraRef = useRef(null);
   const rendererRef = useRef(null);
   const composerRef = useRef(null);
-  const glitchPassRef = useRef(null);
 
   useEffect(() => {
-
     const camera = new THREE.PerspectiveCamera(
       75,
       window.innerWidth / window.innerHeight,
@@ -29,7 +26,7 @@ const SnowScene = () => {
     const textureLoader = new THREE.TextureLoader();
 
     const forestTexture = textureLoader.load("images/snow.jpg");
-    scene.background = forestTexture; 
+    scene.background = forestTexture;
 
     scene.fog = new THREE.FogExp2(0x000000, 0.00006);
     sceneRef.current = scene;
@@ -50,19 +47,9 @@ const SnowScene = () => {
 
     const glitchPass = new GlitchPass();
 
-    glitchPassRef.current = glitchPass;
-    glitchPass.goWild = false;
-    glitchPass.curF = 25;
-    glitchPass.randX = 5;
-
     composer.addPass(glitchPass);
 
-    const filmPass = new FilmPass(
-      0.5,   
-      0.025,  
-      648,    
-      false   
-    );
+    const filmPass = new FilmPass(0.5, 0.025, 648, false);
 
     composer.addPass(filmPass);
 
@@ -71,26 +58,25 @@ const SnowScene = () => {
       "images/snowflake2.png",
       "images/snowflake3.png",
     ];
-    
+
     const snowflakeTextures = snowflakeImages.map((image) =>
       textureLoader.load(image)
     );
 
     const geometry = new THREE.BufferGeometry();
 
-    const vertices = new Array(5000 * 3); 
+    const vertices = new Array(15000);
 
     for (let i = 0; i < 5000; i++) {
-      const baseIndex = i * 3; 
+      const baseIndex = i * 3;
       const x = Math.random() * 2000 - 1000;
       const y = Math.random() * 2000 - 1000;
       const z = Math.random() * 2000 - 1000;
-    
-      vertices[baseIndex] = x; 
-      vertices[baseIndex + 1] = y; 
-      vertices[baseIndex + 2] = z; 
+
+      vertices[baseIndex] = x;
+      vertices[baseIndex + 1] = y;
+      vertices[baseIndex + 2] = z;
     }
-    
 
     geometry.setAttribute(
       "position",
@@ -145,16 +131,8 @@ const SnowScene = () => {
     }
 
     animate();
-     
-    /*
-    const seconds = 8000
-    // Set timeout to disable glitch after x seconds cause it gets a bit annoying and this is the only way to control it
-    const glitchTimeout = setTimeout(() => {
-      glitchPassRef.current.enabled = false;
-    }, seconds);
-*/
+
     return () => {
-      //clearTimeout(glitchTimeout);
       document
         .getElementById("particle-system-container")
         .removeChild(renderer.domElement);

@@ -59,7 +59,7 @@ function App() {
       {splashScreenVisible ? (
         <div className="splash-screen">
           <div className="button-container">
-            <button onClick={handleEnterSite}>Enter Site</button>
+            <button onClick={handleEnterSite}><span className='glich_inner'>Enter Site</span></button>
           </div>
         </div>
 

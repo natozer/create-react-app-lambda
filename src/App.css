@@ -72,6 +72,7 @@ body {
 .no-scroll {
   overflow: hidden;
 }
+
 .button-container {
   position: relative;
   display: inline-block;
@@ -97,6 +98,8 @@ body {
   visibility: visible; 
   opacity: 1;
 }
+
+
 .credits-button-container {
   position: fixed;
   bottom: 20px;

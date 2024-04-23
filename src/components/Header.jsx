@@ -23,12 +23,17 @@ function ToggleButton({ isPlaying, toggleMusic }) {
 
 function Header({ isPlaying, toggleMusic, onContactClick }) {
   const headerRef = useRef(null);
+  const text = "NATHANIEL ADDISON TOZER // FULL STACK WEB DEVELOPER // CREATIVE DESIGNER";
 
   return (
     <div className="header-container">
       <header className="App-header" ref={headerRef}>
         <div className="header-left">
-          NATHANIEL ADDISON TOZER // FULL STACK WEB DEVELOPER // CREATIVE DESIGNER
+          {text.split('').map((char, index) => (
+            <span key={index} className="yellow-letter">
+              {char}
+            </span>
+          ))}
         </div>
         <div className="header-right">
           <MusicVisualizer isPlaying={isPlaying} />
@@ -39,8 +44,8 @@ function Header({ isPlaying, toggleMusic, onContactClick }) {
         </div>
       </header>
     </div>
-
   );
+  
 }
 
 export default Header;

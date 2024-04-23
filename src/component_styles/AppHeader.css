@@ -108,3 +108,8 @@ button {
   animation-duration: 0.4s;
 }
 
+.yellow-letter:hover {
+  color: yellow; 
+  cursor: default; 
+
+}

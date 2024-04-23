@@ -22,6 +22,8 @@
 .header-left {
   align-self: flex-start; 
   writing-mode: vertical-rl;
+  transform: rotate(180deg);
+
 }
 
 .header-right {
@@ -108,8 +110,3 @@ button {
   animation-duration: 0.4s;
 }
 
-.yellow-letter:hover {
-  color: yellow; 
-  cursor: default; 
-
-}

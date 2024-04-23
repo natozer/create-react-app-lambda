@@ -114,7 +114,7 @@ body {
   color: var(--main-dark-gray);
   font-family: '2049';
   font-size: 0.6rem;
-
+  transform: rotate(20deg)
 }
 
 .credits-container {

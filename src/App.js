@@ -55,9 +55,11 @@ function App() {
 
   useEffect(() => {
     document.body.classList.add('no-scroll');
+    const currentAudio = audioRef.current;
+
     return () => {
       document.body.classList.remove('no-scroll');
-      audioRef.current.pause(); 
+      currentAudio.pause(); 
     };
   }, []);
 

@@ -61,19 +61,17 @@ function App() {
     };
   }, []);
 
-  const handleContextMenu = (e) => {
-    e.preventDefault();
-  };
 
   return (
     <div className="App">
       <SnowScene />
       {splashScreenVisible ? (
-        <div className="splash-screen">
-          <div className="button-container">
-            <button onClick={handleEnterSite}><span className='glich_inner'>Enter Site</span></button>
-          </div>
-        </div>
+       <div className="splash-screen">
+    <div className="button-container">
+        <button onClick={handleEnterSite}><span className='glitch_inner'>Enter Site</span></button>
+    </div>
+</div>
+
       ) : (
         <>
           <Header

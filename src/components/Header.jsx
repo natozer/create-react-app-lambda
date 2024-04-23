@@ -25,18 +25,21 @@ function Header({ isPlaying, toggleMusic, onContactClick }) {
   const headerRef = useRef(null);
 
   return (
-    <header className="App-header" ref={headerRef}>
-      <div className="header-left">
-        NATHANIEL ADDISON TOZER - FULL STACK WEB DEVELOPER
-      </div>
-      <div className="header-right">
-        <MusicVisualizer isPlaying={isPlaying} />
-        <ToggleButton isPlaying={isPlaying} toggleMusic={toggleMusic} />
-        <div className="navlink" onClick={onContactClick} role="button" tabIndex="0">
-          CONTACT
+    <div className="header-container">
+      <header className="App-header" ref={headerRef}>
+        <div className="header-left">
+          NATHANIEL ADDISON TOZER // FULL STACK WEB DEVELOPER // CREATIVE DESIGNER
         </div>
-      </div>
-    </header>
+        <div className="header-right">
+          <MusicVisualizer isPlaying={isPlaying} />
+          <ToggleButton isPlaying={isPlaying} toggleMusic={toggleMusic} />
+          <div className="navlink" onClick={onContactClick} role="button" tabIndex="0">
+            CONTACT
+          </div>
+        </div>
+      </header>
+    </div>
+
   );
 }
 

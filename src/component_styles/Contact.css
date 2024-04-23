@@ -7,7 +7,7 @@
   background-color: var(--main-yellow);
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  z-index: 100;
+  z-index: 999;
   display: flex;
   flex-direction: column;
   opacity: 0;

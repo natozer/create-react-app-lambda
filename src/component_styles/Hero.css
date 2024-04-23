@@ -1,5 +1,5 @@
 .Hero {
-  margin: 2rem;
+  margin: 2rem auto; /* Auto margin horizontally centers the element */
   user-select: none;
   text-align: center;
   letter-spacing: 10px;
@@ -9,6 +9,7 @@
   text-shadow: 0 0 0.2rem var(--main-yellow), 0 0 0.5rem white;
   font-size: 3em;
   box-sizing: border-box;
+  width: 75%;
 }
 
 .Hero::after {

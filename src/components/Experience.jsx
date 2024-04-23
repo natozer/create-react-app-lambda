@@ -32,10 +32,10 @@ const Experience = () => {
       experienceRef.current.querySelectorAll(".words"),
       { autoAlpha: 0, x: 100 },
       {
-        duration: 1,
+        duration: 2,
         autoAlpha: 1,
         y: 0,
-        stagger: 0.1,
+        stagger: 0.15,
         ease: "power2.out",
         scrollTrigger: {
           trigger: experienceRef.current,
@@ -50,10 +50,10 @@ const Experience = () => {
       experienceRef.current.querySelectorAll(".expertise"),
       { autoAlpha: 0, y: 20 },
       {
-        duration: 1,
+        duration: 2,
         autoAlpha: 1,
         y: 0,
-        stagger: 0.1,
+        stagger: 0.15,
         ease: "power2.out",
         scrollTrigger: {
           trigger: experienceRef.current,
@@ -78,7 +78,7 @@ const Experience = () => {
   ))}
 </h1>
 <h1>
-  {["EXPERTISE", " ", "IN"].map((item, index) => (
+  {["E", "X", "P", "E", "R", "T", "I", "S", "E", " ", "I", "N"].map((item, index) => (
     <span key={index} className="expertise">
       {item}
     </span>

@@ -37,6 +37,7 @@
     font-family: '2049';
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    font-weight: bolder;
 
 }
 
@@ -53,8 +54,8 @@ a::before{
     font-family: '2049';  
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-
-}
+    font-weight: bolder;
+  }
 
 a:hover::after{
   opacity: 1;

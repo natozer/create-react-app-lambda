@@ -18,8 +18,10 @@
   right: 0;
   font-size: 0.3em;
   font-family: "2049";
+  font-weight: bolder;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  text-shadow: 0 0 0.2rem var(--main-yellow);
 }
 
 .Hero:hover::after {

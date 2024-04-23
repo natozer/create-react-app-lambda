@@ -15,8 +15,15 @@ function App() {
   const [hasEnteredSite, setHasEnteredSite] = useState(false);
   const [showContact, setShowContact] = useState(false);
 
-  const audioRef = useRef(new Audio('audio/beautiful-atmospheric-drum-and-bass.mp3'));
-  audioRef.current.loop = true;
+  const tracks = [
+    'audio/beautiful-atmospheric-drum-and-bass.mp3',
+    'audio/background-drum-and-bass.mp3'
+  ];
+
+  const pickRandomTrack = () => tracks[Math.floor(Math.random() * tracks.length)];
+
+  const audioRef = useRef(new Audio(pickRandomTrack()));
+  audioRef.current.loop = true; 
 
   const splashScreenRef = useRef(null);
 
@@ -24,6 +31,9 @@ function App() {
     if (isPlaying) {
       audioRef.current.pause();
     } else {
+      if (!audioRef.current.src) {
+        audioRef.current.src = pickRandomTrack();
+      }
       audioRef.current.play();
     }
     setIsPlaying(!isPlaying);
@@ -34,6 +44,9 @@ function App() {
   };
 
   const handleEnterSite = () => {
+    if (!isPlaying) {
+      audioRef.current.src = pickRandomTrack(); 
+    }
     toggleMusic();
     gsap.to(splashScreenRef.current, { duration: 1, opacity: 0, onComplete: () => setSplashScreenVisible(false) });
     setHasEnteredSite(true);
@@ -44,7 +57,7 @@ function App() {
     document.body.classList.add('no-scroll');
     return () => {
       document.body.classList.remove('no-scroll');
-      window.removeEventListener('contextmenu', handleContextMenu);
+      audioRef.current.pause(); 
     };
   }, []);
 
@@ -54,16 +67,13 @@ function App() {
 
   return (
     <div className="App">
-              <SnowScene />
-
+      <SnowScene />
       {splashScreenVisible ? (
         <div className="splash-screen">
           <div className="button-container">
             <button onClick={handleEnterSite}><span className='glich_inner'>Enter Site</span></button>
           </div>
         </div>
-
-
       ) : (
         <>
           <Header
@@ -81,7 +91,7 @@ function App() {
       <div className="credits-button-container">
         <div className="credits-button">CREDITS</div>
         <div className="credits-container">
-          <span>Fonts are Road Rage, Neue Montreal, and 2049. Music by Ivymusic on Pixabay. Background image by Franz26 on Pixabay. Personal use only. No money is being made through this site.  </span>
+          <span>Fonts are Road Rage, Neue Montreal, and 2049. Music by Ivymusic and Looptape on Pixabay. Background image by Franz26 on Pixabay. Personal use only. No money is being made through this site.</span>
         </div>
       </div>
     </div>

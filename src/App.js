@@ -15,7 +15,7 @@ function App() {
   const [hasEnteredSite, setHasEnteredSite] = useState(false);
   const [showContact, setShowContact] = useState(false);
 
-  const audioRef = useRef(new Audio('audio/background-drum-and-bass.mp3'));
+  const audioRef = useRef(new Audio('audio/beautiful-atmospheric-drum-and-bass.mp3'));
   audioRef.current.loop = true;
 
   const splashScreenRef = useRef(null);

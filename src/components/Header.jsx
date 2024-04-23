@@ -3,20 +3,39 @@ import { ReactComponent as MuteIcon } from "../assets/mute.svg";
 import { ReactComponent as UnmuteIcon } from "../assets/unmute.svg";
 import "../component_styles/AppHeader.css";
 
+function MusicVisualizer({ isPlaying }) {
+  return (
+    <div className={`visualizer ${isPlaying ? "playing" : ""}`}>
+      {Array.from({ length: 5 }).map((_, index) => (
+        <div key={index} className="bar"></div>
+      ))}
+    </div>
+  );
+}
+
+function ToggleButton({ isPlaying, toggleMusic }) {
+  return (
+    <button onClick={toggleMusic} aria-label={isPlaying ? "Mute" : "Unmute"}>
+      {isPlaying ? <MuteIcon /> : <UnmuteIcon />}
+    </button>
+  );
+}
+
 function Header({ isPlaying, toggleMusic, onContactClick }) {
   const headerRef = useRef(null);
 
   return (
     <header className="App-header" ref={headerRef}>
-      <div>NATHANIEL ADDISON TOZER - FULL STACK WEB DEVELOPER </div>
-      <nav>
-        <div className="navlink" onClick={onContactClick}>
+      <div className="header-left">
+        NATHANIEL ADDISON TOZER - FULL STACK WEB DEVELOPER
+      </div>
+      <div className="header-right">
+        <MusicVisualizer isPlaying={isPlaying} />
+        <ToggleButton isPlaying={isPlaying} toggleMusic={toggleMusic} />
+        <div className="navlink" onClick={onContactClick} role="button" tabIndex="0">
           CONTACT
         </div>
-        <button onClick={toggleMusic}>
-          {isPlaying ? <MuteIcon /> : <UnmuteIcon />}
-        </button>
-      </nav>
+      </div>
     </header>
   );
 }

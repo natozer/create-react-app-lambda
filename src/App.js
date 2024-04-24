@@ -15,14 +15,7 @@ function App() {
   const [hasEnteredSite, setHasEnteredSite] = useState(false);
   const [showContact, setShowContact] = useState(false);
 
-  const tracks = [
-    'audio/beautiful-atmospheric-drum-and-bass.mp3',
-    'audio/background-drum-and-bass.mp3'
-  ];
-
-  const pickRandomTrack = () => tracks[Math.floor(Math.random() * tracks.length)];
-
-  const audioRef = useRef(new Audio(pickRandomTrack()));
+  const audioRef = useRef(new Audio('audio/background-drum-and-bass.mp3'));
   audioRef.current.loop = true; 
 
   const splashScreenRef = useRef(null);
@@ -31,9 +24,6 @@ function App() {
     if (isPlaying) {
       audioRef.current.pause();
     } else {
-      if (!audioRef.current.src) {
-        audioRef.current.src = pickRandomTrack();
-      }
       audioRef.current.play();
     }
     setIsPlaying(!isPlaying);
@@ -45,9 +35,8 @@ function App() {
 
   const handleEnterSite = () => {
     if (!isPlaying) {
-      audioRef.current.src = pickRandomTrack(); 
+      toggleMusic(); 
     }
-    toggleMusic();
     gsap.to(splashScreenRef.current, { duration: 1, opacity: 0, onComplete: () => setSplashScreenVisible(false) });
     setHasEnteredSite(true);
     document.body.classList.remove('no-scroll');

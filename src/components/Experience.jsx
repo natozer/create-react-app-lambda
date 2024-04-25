@@ -84,14 +84,12 @@ const Experience = () => {
     </span>
   ))}
 </h1>
-
       <ul>
         <li>ANGULAR</li>
         <li>ASP.NET</li>
         <li>C#</li>
         <li>CSS</li>
         <li>EXPRESS.JS</li>
-        <li>GSAP</li>
         <li>GIT</li>
         <li>HTML</li>
         <li>JAVA</li>
@@ -101,9 +99,7 @@ const Experience = () => {
         <li>MYSQL</li>
         <li>NODE.JS</li>
         <li>REACT</li>
-        <li>SPRING BOOT</li>
-        <li>THREE.JS</li>
-        <li>UX</li>
+        <li>TYPESCRIPT</li>
       </ul>
     </div>
   );

@@ -28,7 +28,7 @@ function Header({ isPlaying, toggleMusic, onContactClick }) {
     <div className="header-container">
       <header className="App-header" ref={headerRef}>
         <div className="header-left">
-          NATHANIEL ADDISON TOZER // FULL STACK WEB DEVELOPER 
+          NATHANIEL ADDISON TOZER ❈ FULL STACK WEB DEVELOPER 
         </div>
         <div className="header-right">
           <MusicVisualizer isPlaying={isPlaying} />

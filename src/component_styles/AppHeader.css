@@ -118,4 +118,10 @@ button {
   display: inline-block; 
   transform: rotate(270deg); 
   margin: 3px; 
+
+}
+.vertical-stack:hover {
+ 
+  color: var(--main-yellow);
+  
 }

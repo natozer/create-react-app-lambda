@@ -86,7 +86,7 @@ const Experience = () => {
 </h1>
       <ul>
         <li>ANGULAR</li>
-        <li>ASP.NET</li>
+        <li>ASP.NET CORE</li>
         <li>C#</li>
         <li>CSS</li>
         <li>EXPRESS.JS</li>

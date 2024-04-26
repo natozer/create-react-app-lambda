@@ -25,9 +25,9 @@
 .header-left {
   align-self: flex-start; 
   writing-mode: vertical-rl;
-  transform: rotate(180deg);
   user-select: none;
-
+  font-size: 0.8rem;
+  margin-top: 1rem;
 }
 
 .header-right {
@@ -114,3 +114,8 @@ button {
   animation-duration: 0.4s;
 }
 
+.vertical-stack {
+  display: inline-block; 
+  transform: rotate(270deg); 
+  margin: 5px; 
+}

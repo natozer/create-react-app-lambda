@@ -6,13 +6,19 @@
 
 @font-face {
   font-family: '2049';
-  src: url('fonts/OT2049-Regular.otf') format('truetype');
+  src: url('fonts/SpaceMono-Bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Road Rage';
   src: url('fonts/Road_Rage.otf') format('opentype');
 }
+
+@font-face {
+  font-family: 'Quicksilver';
+  src: url('fonts/Quicksilver-3z2OL.ttf') format('truetype');
+}
+
 
 :root {
   --main-yellow: #FFEF00;
@@ -64,7 +70,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 2rem;
-  font-family: '2049';
+  font-family: 'Quicksilver';
   color: var(--main-black);
 
 }

@@ -9,7 +9,41 @@ const Experience = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.fromTo(
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: experienceRef.current,
+        start: "top 75%", 
+        end: "bottom top",
+        toggleActions: "play none none reverse",
+      }
+    });
+
+   
+    tl.fromTo(
+      experienceRef.current.querySelectorAll(".words"),
+      { autoAlpha: 0, x: 100 },
+      {
+        duration: 1,
+        autoAlpha: 1,
+        x: 0,
+        stagger: 0.1,
+        ease: "power2.out"
+      }
+    );
+
+    tl.fromTo(
+      experienceRef.current.querySelectorAll(".expertise"),
+      { autoAlpha: 0, y: 20 },
+      {
+        duration: 1,
+        autoAlpha: 1,
+        y: 0,
+        stagger: 0.05,
+        ease: "power2.out"
+      }
+    );
+
+    tl.fromTo(
       experienceRef.current.querySelectorAll("li"),
       { autoAlpha: 0, y: 30 },
       {
@@ -17,76 +51,30 @@ const Experience = () => {
         y: 0,
         stagger: 0.15,
         ease: "expo.out",
-        duration: 1.5,
-        scrollTrigger: {
-          trigger: experienceRef.current,
-          start: "top 75%",
-          end: "bottom top",
-          toggleActions: "play none none reverse",
-        },
+        duration: 1.5
       }
     );
-
-
-    gsap.fromTo(
-      experienceRef.current.querySelectorAll(".words"),
-      { autoAlpha: 0, x: 100 },
-      {
-        duration: 2,
-        autoAlpha: 1,
-        y: 0,
-        stagger: 0.15,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: experienceRef.current,
-          start: "top 80%",
-          end: "bottom top",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-  
-    gsap.fromTo(
-      experienceRef.current.querySelectorAll(".expertise"),
-      { autoAlpha: 0, y: 20 },
-      {
-        duration: 2,
-        autoAlpha: 1,
-        y: 0,
-        stagger: 0.15,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: experienceRef.current,
-          start: "top 80%",
-          end: "bottom top",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-  
-
-
   }, []);
 
   return (
     <div className="experience-section" ref={experienceRef}>
-<h1>
-  {["FULL", " ", "STACK", " ", "WEB", " ", "DEVELOPMENT"].map((item, index) => (
-    <span key={index} className="words">
-      {item}
-    </span>
-  ))}
-</h1>
-<h1>
-  {["E", "X", "P", "E", "R", "T", "I", "S", "E", " ", "I", "N"].map((item, index) => (
-    <span key={index} className="expertise">
-      {item}
-    </span>
-  ))}
-</h1>
+      <h1>
+        {["FULL", " ", "STACK", " ", "WEB", " ", "DEVELOPMENT"].map((item, index) => (
+          <span key={index} className="words">
+            {item}
+          </span>
+        ))}
+      </h1>
+      <h1>
+        {["E", "X", "P", "E", "R", "T", "I", "S", "E", " ", "I", "N"].map((item, index) => (
+          <span key={index} className="expertise">
+            {item}
+          </span>
+        ))}
+      </h1>
       <ul>
         <li>ANGULAR</li>
-        <li>ASP.NET CORE</li>
+        <li>ASP.NET</li>
         <li>C#</li>
         <li>CSS</li>
         <li>EXPRESS.JS</li>

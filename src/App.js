@@ -8,6 +8,8 @@ import ContactMe from './components/Contact';
 import Experience from './components/Experience';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
+import backgroundMusic from './assets/background-drum-and-bass.mp3';
+
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -15,8 +17,8 @@ function App() {
   const [hasEnteredSite, setHasEnteredSite] = useState(false);
   const [showContact, setShowContact] = useState(false);
 
-  const audioRef = useRef(new Audio('audio/background-drum-and-bass.mp3'));
-  audioRef.current.loop = true; 
+  const audioRef = useRef(new Audio(backgroundMusic));
+  audioRef.current.loop = true;
 
   const splashScreenRef = useRef(null);
 
@@ -35,7 +37,7 @@ function App() {
 
   const handleEnterSite = () => {
     if (!isPlaying) {
-      toggleMusic(); 
+      toggleMusic();
     }
     gsap.to(splashScreenRef.current, { duration: 1, opacity: 0, onComplete: () => setSplashScreenVisible(false) });
     setHasEnteredSite(true);
@@ -48,7 +50,7 @@ function App() {
 
     return () => {
       document.body.classList.remove('no-scroll');
-      currentAudio.pause(); 
+      currentAudio.pause();
     };
   }, []);
 
@@ -57,11 +59,11 @@ function App() {
     <div className="App">
       <SnowScene />
       {splashScreenVisible ? (
-       <div className="splash-screen">
-    <div className="button-container">
-        <button onClick={handleEnterSite}><span className='glitch_inner'>Enter Site</span></button>
-    </div>
-</div>
+        <div className="splash-screen">
+          <div className="button-container">
+            <button onClick={handleEnterSite}><span className='glitch_inner'>Enter Site</span></button>
+          </div>
+        </div>
 
       ) : (
         <>
@@ -74,7 +76,7 @@ function App() {
           <AboutMe />
           <Experience />
           {showContact && <ContactMe setShowContact={setShowContact} />}
-          <Footer/>
+          <Footer />
         </>
       )}
       <div className="credits-button-container">

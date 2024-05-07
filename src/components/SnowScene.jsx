@@ -4,6 +4,10 @@ import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { GlitchPass } from "three/examples/jsm/postprocessing/GlitchPass.js";
 import { FilmPass } from "three/examples/jsm/postprocessing/FilmPass.js";
+import snowBackground from '../assets/snow.jpg';
+import snowflake1 from '../assets/snowflake1.png';
+import snowflake2 from '../assets/snowflake2.png';
+import snowflake3 from '../assets/snowflake3.png';
 
 const SnowScene = () => {
   const sceneRef = useRef(null);
@@ -25,7 +29,7 @@ const SnowScene = () => {
     const scene = new THREE.Scene();
     const textureLoader = new THREE.TextureLoader();
 
-    const forestTexture = textureLoader.load("images/snow.jpg");
+    const forestTexture = textureLoader.load(snowBackground);
     scene.background = forestTexture;
 
     scene.fog = new THREE.FogExp2(0x000000, 0.00006);
@@ -53,15 +57,8 @@ const SnowScene = () => {
 
     composer.addPass(filmPass);
 
-    const snowflakeImages = [
-      "images/snowflake1.png",
-      "images/snowflake2.png",
-      "images/snowflake3.png",
-    ];
-
-    const snowflakeTextures = snowflakeImages.map((image) =>
-      textureLoader.load(image)
-    );
+    const snowflakeImages = [snowflake1, snowflake2, snowflake3];
+    const snowflakeTextures = snowflakeImages.map(image => textureLoader.load(image));
 
     const geometry = new THREE.BufferGeometry();
 

@@ -13,10 +13,10 @@ const Hero = ({ hasEnteredSite }) => {
         heroRef.current.querySelectorAll(".letter"),
         { autoAlpha: 0, y: 20 },
         {
-          duration: 4,
+          duration: 3,
           autoAlpha: 1,
           y: 0,
-          stagger: 0.15,
+          stagger: 0.1,
           ease: "power2.out",
           scrollTrigger: {
             trigger: heroRef.current,

@@ -6,7 +6,7 @@
   font-size: 2rem;
   user-select: none;
   text-transform: uppercase;
-  text-align: left;
+  text-align: center;
 }
 
 .Bold-Immersive-Memorable {
@@ -14,31 +14,6 @@
   margin-top: 1em;
   margin-bottom: 1em;
   font-family: 'Quicksilver';
-  text-align: center;
-}
-
-@media (min-width: 1400px){
-  .AboutMe {
-    font-size: 3rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  .AboutMe {
-    font-size: 2rem;
-  }
-  .Bold-Immersive-Memorable {
-    font-size: 3.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .AboutMe {
-    font-size: 1rem;
-  }
-  .Bold-Immersive-Memorable {
-    font-size: 1.5rem;
-  }
 }
 
 .profile-section {
@@ -60,50 +35,6 @@
   border: 3px solid yellow;
 }
 
-@media (min-width: 1440px) {
-  .profile-section img {
-    max-width: 300px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .profile-section div {
-    max-width: 70%;
-  }
-  .profile-section img {
-    max-width: 120px;
-  }
-}
-
-@media (max-width: 768px) {
-  .profile-section {
-    flex-direction: column;
-    align-items: center;
-  }
-  .profile-section div {
-    max-width: 100%;
-  }
-  .profile-section img {
-    margin-left: 0;
-    margin-bottom: 30px;  
-    max-width: 80%;
-  }
-}
-
-@media (max-width: 480px) {
-  .profile-section img {
-    max-width: 70%;
-    margin-bottom: 25px;  
-  }
-}
-
-@media (max-width: 320px) {
-  .profile-section img {
-    max-width: 60%;
-    margin-bottom: 20px;  
-  }
-}
-
 .image-container {
   position: relative;
   display: inline-block;
@@ -111,7 +42,7 @@
 
 .image-caption {
   position: absolute;
-  bottom: auto;
+  bottom: -2rem;
   right: 0;
   display: none;
   color: var(--main-yellow);
@@ -124,8 +55,57 @@
   display: block;
 }
 
+@media (min-width: 1440px) {
+  .profile-section img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .AboutMe {
+    font-size: 2rem;
+  }
+  .Bold-Immersive-Memorable {
+    font-size: 3.5rem;
+  }
+  .profile-section div {
+    max-width: 70%;
+  }
+  .profile-section img {
+    max-width: 120px;
+  }
+}
+
 @media (max-width: 768px) {
+  .AboutMe {
+    font-size: 1rem;
+  }
+  .Bold-Immersive-Memorable {
+    font-size: 1.5rem;
+  }
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-section div {
+    max-width: 100%;
+  }
+  .profile-section img {
+    display: none; 
+  }
   .image-caption {
     font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-section img {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 320px) {
+  .profile-section img {
+    max-width: 60%;
   }
 }

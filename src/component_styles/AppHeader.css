@@ -3,9 +3,6 @@
   top: 0;
   left: 0;
   width: 100%;
-
-
-
 }
 
 .App-header {
@@ -27,6 +24,7 @@
   user-select: none;
   font-size: 0.8rem;
   margin-top: 1rem;
+  
 }
 
 .header-right {
@@ -122,5 +120,5 @@ button {
 .vertical-stack:hover {
  
   color: var(--main-yellow);
-  
+
 }

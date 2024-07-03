@@ -31,7 +31,7 @@ const SnowScene = () => {
     const forestTexture = textureLoader.load(snowBackground);
     scene.background = forestTexture;
 
-    scene.fog = new THREE.FogExp2(0x000000, 0.00006);
+    scene.fog = new THREE.FogExp2(0x000000, 0.00002);
     sceneRef.current = scene;
 
     const renderer = new THREE.WebGLRenderer();
@@ -75,7 +75,7 @@ const SnowScene = () => {
       new THREE.Float32BufferAttribute(vertices, 3)
     );
 
-    const sizes = [7, 8, 9];
+    const sizes = [5,6];
     const colors = [
       [1.0, 0.2, 0.5],
       [0.95, 0.1, 0.5],

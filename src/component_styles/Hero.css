@@ -1,63 +1,30 @@
 .Hero {
-  margin: 2rem auto; 
-  user-select: none;
+  margin: 2rem auto;
   text-align: center;
-  letter-spacing: 10px;
-  position: relative;
+  letter-spacing: 1px;
   color: var(--main-yellow);
-  font-family: "Road Rage", sans-serif;
-  text-shadow: 0 0 0.2rem var(--main-yellow), 0 0 0.5rem var(--main-yellow);
-  box-sizing: border-box;
-  width: 75%;
+  font-family: "Migha", sans-serif;
+  text-shadow: 0 0 0.5rem var(--main-yellow);
+  font-size: 1.5rem;
 }
-
-.Hero::after {
-  content: "Actually, it's Nathaniel, but Nate looks nice and edgy here.";
-  position: absolute;
-  bottom: -20px;
-  right: 0;
-  font-family: "2049";
-  font-weight: bolder;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  text-shadow: 0 0 0.2rem var(--main-yellow);
-  letter-spacing: normal;
-}
-
-.Hero:hover::after {
-  opacity: 1;
-}
-
 
 @media (min-width: 768px) {
   .Hero {
-    font-size: 1rem;
+    font-size: 1.8rem;
     letter-spacing: 1px;
   }
-  .Hero::after {
-    font-size: 0.5rem;
-  }
 }
-
-
 
 @media (min-width: 1024px) {
   .Hero {
     font-size: 3.5rem;
     letter-spacing: 3px;
   }
-  .Hero::after {
-    font-size: 0.5rem;
-  }
 }
 
 @media (min-width: 1440px) {
   .Hero {
     font-size: 6rem;
-    letter-spacing: 3px;
-  }
-  .Hero::after {
-    font-size: 1.5rem;
+    letter-spacing: 5px;
   }
 }
-

@@ -51,12 +51,10 @@ const AboutMe = () => {
 
   return (
     <div className="AboutMe">
-      <div className="profile-section">
         <div ref={paragraphRef}>
           <span>I'm a web developer from Miramichi, Canada.</span>
           <span> I bring a wide range of front and back end skills to the table,</span>
           <span> and a relentless pursuit of perfection.</span>
-        </div>
       </div>
       <div ref={waveTextRef} className='Bold-Immersive-Memorable'>
         <span> Bold, </span> <span> Immersive, </span> <span>and Memorable </span> <span> design.</span>

@@ -1,31 +1,36 @@
 .AboutMe {
-  margin-left: 3.5rem;
-  margin-right: 3.5rem;
-  margin-bottom: 2rem;
+  margin: 2rem;
+  padding: 2rem;
   font-family: "Neue Montreal Bold";
   font-size: 2rem;
-  user-select: none;
   text-transform: uppercase;
   text-align: center;
-
 }
 
 .Bold-Immersive-Memorable {
   font-size: 5rem;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-family: 'Road Rage';
-}
-
-.profile-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  font-family: "Migha";
 }
 
 
+@media (min-width: 768px) {
+  .AboutMe {
+    font-size: 1rem;
+  }
+  .Bold-Immersive-Memorable {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .AboutMe {
+    font-size: 2rem;
+  }
+  .Bold-Immersive-Memorable {
+    font-size: 3.5rem;
+  }
+}
 
 
 @media (min-width: 1440px) {
@@ -34,39 +39,6 @@
   }
   .Bold-Immersive-Memorable {
     font-size: 7rem;
-  }
-  .profile-section div {
-    max-width: 70%;
-  }
- 
-}
-
-
-@media (max-width: 1024px) {
-  .AboutMe {
-    font-size: 2rem;
-  }
-  .Bold-Immersive-Memorable {
-    font-size: 3.5rem;
-  }
-  .profile-section div {
-    max-width: 70%;
-  }
-}
-
-@media (max-width: 768px) {
-  .AboutMe {
-    font-size: 1rem;
-  }
-  .Bold-Immersive-Memorable {
-    font-size: 1.5rem;
-  }
-  .profile-section {
-    flex-direction: column;
-    align-items: center;
-  }
-  .profile-section div {
-    max-width: 100%;
   }
 }
 

@@ -60,11 +60,8 @@ function App() {
       <SnowScene />
       {splashScreenVisible ? (
         <div className="splash-screen">
-          <div className="button-container">
-            <button onClick={handleEnterSite}><span className='glitch_inner'>Enter Site</span></button>
-          </div>
+            <button onClick={handleEnterSite}>Enter Site</button>
         </div>
-
       ) : (
         <>
           <Header

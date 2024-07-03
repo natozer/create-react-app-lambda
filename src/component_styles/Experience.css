@@ -1,17 +1,4 @@
 
-
-.experience-section {
-  text-align: center;
-  user-select: none;
-  margin: 3rem;
-  margin-bottom: 4rem;
-  color: var(--main-yellow);
-}
-
-.experience-section h1 {
-  font-size: 2rem;
-}
-
 .experience-section ul {
   list-style-type: none;
   display: grid;

@@ -5,7 +5,6 @@ import SnowScene from './components/SnowScene';
 import Header from './components/Header';
 import AboutMe from './components/AboutMe';
 import ContactMe from './components/Contact';
-import Experience from './components/Experience';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
 import backgroundMusic from './assets/cinematic-fantasy-dark.mp3';
@@ -71,7 +70,6 @@ function App() {
           />
           <Hero hasEnteredSite={hasEnteredSite} />
           <AboutMe />
-          <Experience />
           {showContact && <ContactMe setShowContact={setShowContact} />}
           <Footer />
         </>

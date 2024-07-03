@@ -28,28 +28,6 @@
   max-width: 60%;
 }
 
-.profile-section img {
-  margin-left: 40px;
-  max-width: 150px;
-  height: auto;
-  border: 3px solid yellow;
-}
-
-.image-container {
-  position: relative;
-  display: inline-block;
-}
-
-.image-caption {
-  position: absolute;
-  bottom: -2rem;
-  right: 0;
-  display: none;
-  color: var(--main-yellow);
-  padding: 5px 10px;
-  font-size: 0.8rem;
-  border-radius: 4px;
-}
 
 .image-container:hover .image-caption {
   display: block;
@@ -61,6 +39,21 @@
   }
 }
 
+
+@media (min-width: 1440px) {
+  .AboutMe {
+    font-size: 4rem;
+  }
+  .Bold-Immersive-Memorable {
+    font-size: 7rem;
+  }
+  .profile-section div {
+    max-width: 70%;
+  }
+ 
+}
+
+
 @media (max-width: 1024px) {
   .AboutMe {
     font-size: 2rem;
@@ -70,9 +63,6 @@
   }
   .profile-section div {
     max-width: 70%;
-  }
-  .profile-section img {
-    max-width: 120px;
   }
 }
 
@@ -90,22 +80,5 @@
   .profile-section div {
     max-width: 100%;
   }
-  .profile-section img {
-    display: none; 
-  }
-  .image-caption {
-    font-size: 0.6rem;
-  }
 }
 
-@media (max-width: 480px) {
-  .profile-section img {
-    max-width: 70%;
-  }
-}
-
-@media (max-width: 320px) {
-  .profile-section img {
-    max-width: 60%;
-  }
-}

@@ -32,7 +32,7 @@ const AboutMe = () => {
       paragraphRef.current.children,
       { autoAlpha: 0, y: 20 },
       {
-        duration: 4,
+        duration: 5,
         autoAlpha: 1,
         y: 0,
         stagger: 1,
@@ -59,7 +59,7 @@ const AboutMe = () => {
         </div>
       </div>
       <div ref={waveTextRef} className='Bold-Immersive-Memorable'>
-        <span>Modern,</span> <span> Memorable,</span> <span> and Hard-Hitting design.</span>
+        <span> Bold, </span> <span> Immersive, </span> <span>and Memorable </span> <span> design.</span>
       </div>
     </div>
   );

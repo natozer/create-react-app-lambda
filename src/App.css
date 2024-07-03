@@ -11,13 +11,15 @@
 
 @font-face {
   font-family: 'Road Rage';
-  src: url('fonts/Road_Rage.otf') format('opentype');
+  src: url('fonts/Migha-Black.otf') format('opentype');
 }
 
+
 @font-face {
-  font-family: 'Quicksilver';
-  src: url('fonts/Quicksilver-3z2OL.ttf') format('truetype');
+  font-family: 'Alagard';
+  src: url('fonts/alagard.ttf') format('truetype');
 }
+
 
 
 :root {
@@ -70,7 +72,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 2rem;
-  font-family: 'Quicksilver';
+  font-family: 'Road Rage';
   color: var(--main-black);
 
 }
@@ -85,7 +87,7 @@ body {
 }
 
 .button-container::after {
-  content: "Photosensitivity warning";
+  content: "";
   position: absolute;
   top: -20px;
   left: 0;
@@ -118,7 +120,7 @@ body {
   cursor: pointer;
   z-index: 1000; 
   color: var(--main-dark-gray);
-  font-family: '2049';
+  font-family: 'Alagard';
   font-size: 0.6rem;
 }
 

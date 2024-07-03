@@ -8,7 +8,7 @@ import ContactMe from './components/Contact';
 import Experience from './components/Experience';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
-import backgroundMusic from './assets/background-drum-and-bass.mp3';
+import backgroundMusic from './assets/cinematic-fantasy-dark.mp3';
 
 
 function App() {
@@ -82,7 +82,7 @@ function App() {
       <div className="credits-button-container">
         <div className="credits-button">CREDITS</div>
         <div className="credits-container">
-          <span>Fonts are Road Rage, Quicksilver, Neue Montreal, and Space Mono. Music by Ivymusic on Pixabay. Background image by Franz26 on Pixabay. Personal use only. No money is being made through this site.</span>
+          <span>Fonts are Alagard, Migha, Neue Montreal, and Space Mono. Music by Roman Senyk from Pixabay. Background image by Franz26 on Pixabay. Personal use only. No money is being made through this site.</span>
         </div>
       </div>
     </div>

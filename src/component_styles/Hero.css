@@ -1,13 +1,12 @@
 .Hero {
-  margin: 2rem auto; /* Auto margin horizontally centers the element */
+  margin: 2rem auto; 
   user-select: none;
   text-align: center;
   letter-spacing: 10px;
   position: relative;
   color: var(--main-yellow);
   font-family: "Road Rage", sans-serif;
-  text-shadow: 0 0 0.2rem var(--main-yellow), 0 0 0.5rem white;
-  font-size: 3em;
+  text-shadow: 0 0 0.2rem var(--main-yellow), 0 0 0.5rem var(--main-yellow);
   box-sizing: border-box;
   width: 75%;
 }
@@ -17,7 +16,6 @@
   position: absolute;
   bottom: -20px;
   right: 0;
-  font-size: 0.3em;
   font-family: "2049";
   font-weight: bolder;
   opacity: 0;
@@ -30,22 +28,36 @@
   opacity: 1;
 }
 
-@media (max-width: 1024px) {
-  .Hero {
-    font-size: 2.5em;
-    letter-spacing: 3px;
-  }
-  .Hero::after {
-    font-size: 0.5em;
-  }
-}
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .Hero {
-    font-size: 1em;
+    font-size: 1rem;
     letter-spacing: 1px;
   }
   .Hero::after {
-    font-size: 0.5em;
+    font-size: 0.5rem;
   }
 }
+
+
+
+@media (min-width: 1024px) {
+  .Hero {
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+  }
+  .Hero::after {
+    font-size: 0.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .Hero {
+    font-size: 6rem;
+    letter-spacing: 3px;
+  }
+  .Hero::after {
+    font-size: 1.5rem;
+  }
+}
+

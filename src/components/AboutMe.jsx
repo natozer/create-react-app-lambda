@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "../component_styles/AboutMe.css";
-import "../component_styles/Experience.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,7 +9,6 @@ const AboutMe = () => {
   const waveTextRef = useRef(null);
   const waveTextRef2 = useRef(null);
   const paragraphRef = useRef(null);
-  const experienceRef = useRef(null);
 
   useEffect(() => {
     const tl = gsap.timeline({
@@ -44,29 +42,7 @@ const AboutMe = () => {
         }
       )
 
-      .fromTo(
-        experienceRef.current.querySelectorAll(".expertise"),
-        { autoAlpha: 0, y: 20 },
-        {
-          duration: 1,
-          autoAlpha: 1,
-          y: 0,
-          stagger: 0.05,
-          ease: "power2.out",
-        }
-      )
 
-      .fromTo(
-        experienceRef.current.querySelectorAll("li"),
-        { autoAlpha: 0, y: 30 },
-        {
-          autoAlpha: 1,
-          y: 0,
-          stagger: 0.15,
-          ease: "expo.out",
-          duration: 1.5,
-        }
-      );
 
     gsap.fromTo(
       paragraphRef.current.children,
@@ -104,34 +80,7 @@ const AboutMe = () => {
       <div ref={waveTextRef2} className="Bold-Immersive-Memorable">
         Full Stack Web Development.
       </div>
-      <div className="experience-section" ref={experienceRef}>
-        <h1>
-          {["E", "X", "P", "E", "R", "T", "I", "S", "E", " ", "I", "N"].map(
-            (item, index) => (
-              <span key={index} className="expertise">
-                {item}
-              </span>
-            )
-          )}
-        </h1>
-        <ul>
-          <li>ANGULAR</li>
-          <li>ASP.NET</li>
-          <li>C#</li>
-          <li>CSS</li>
-          <li>EXPRESS.JS</li>
-          <li>GIT</li>
-          <li>HTML</li>
-          <li>JAVA</li>
-          <li>JAVASCRIPT</li>
-          <li>MONGO DB</li>
-          <li>MSSQL</li>
-          <li>MYSQL</li>
-          <li>NODE.JS</li>
-          <li>REACT</li>
-          <li>TYPESCRIPT</li>
-        </ul>
-      </div>
+
     </div>
   );
 };

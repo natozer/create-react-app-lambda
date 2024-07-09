@@ -6,21 +6,27 @@
   height: 100%;
   background-color: var(--main-yellow);
   padding: 1rem;
-  font-size: 0.8rem;
-  color: black;
+  font-size: 1rem;
+  color: var(--main-black);
 }
 
 .contact-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Migha';
+}
+
+.Contact h2{
+  font-family: 'Migha';
 }
 
 .Contact button,
 .Contact a {
-  color: black;
+  color: var(--main-black);
   text-decoration: none;
-  font-family: "Space Mono Bold";
+  font-family: "Kayak";
+  font-weight: bolder;
 }
 
 .Contact a:hover,

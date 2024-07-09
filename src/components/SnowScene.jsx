@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { FilmPass } from "three/examples/jsm/postprocessing/FilmPass.js";
-import snowBackground from '../assets/snow.png';
+import snowBackground from '../assets/snow2.png';
 import snowflake1 from '../assets/snowflake1.png';
 import snowflake2 from '../assets/snowflake2.png';
 import snowflake3 from '../assets/snowflake3.png';

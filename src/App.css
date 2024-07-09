@@ -5,8 +5,8 @@
 }
 
 @font-face {
-  font-family: 'Space Mono Bold';
-  src: url('fonts/SpaceMono-Bold.ttf') format('truetype');
+  font-family: 'Kayak';
+  src: url('fonts/Kayak.otf') format('opentype');
 }
 
 @font-face {
@@ -26,6 +26,7 @@
   --main-yellow: #FFC000;
   --main-black: #0e1111;
   --main-dark-gray: #b7b7b7;
+  --main-gray: #7e8294; 
 }
 
 
@@ -33,7 +34,7 @@ html,
 body {
   margin: 0;
   padding: 0;
- font-family: "Neue Montreal Bold";
+ font-family: "Kayak";
  color: var(--main-yellow);
  user-select: none;
 
@@ -51,34 +52,6 @@ body {
   z-index: -1;
 }
 
-.splash-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--main-yellow);
-  display: flex;
-  justify-content: center;
-  z-index: 9999;
-  color: var(--main-black);
-}
-
-
-
-.splash-screen button {
-  cursor: pointer;
-  font-size: 2rem;
-  font-family: 'Migha';
-  color: var(--main-black);
-}
-
-.no-scroll {
-  overflow: hidden;
-}
-
-
-
 .credits-button-container {
   position: fixed;
   bottom: 20px;
@@ -91,12 +64,13 @@ body {
   cursor: pointer;
   z-index: 1000; 
   color: var(--main-dark-gray);
-  font-family: 'Space Mono Bold';  
-  font-size: 0.6rem;
+  font-family: 'Alagard';  
+  font-size: 0.7rem;
 }
 
 .credits-container {
-  font-family: 'Space Mono Bold';
+  font-family: 'Kayak';
+  font-weight: bolder;
   position: fixed;
   bottom: 0;
   left: 0;

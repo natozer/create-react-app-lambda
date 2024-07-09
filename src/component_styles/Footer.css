@@ -18,7 +18,7 @@
 }
 
 .footer a::after {
-  content: "...but compliments are ok too.";
+  content: "...I'm looking for a job. :)";
   display: block;
   position: absolute;
   top: 100%;
@@ -26,14 +26,14 @@
   padding: 5px;
   font-size: 1rem;
   color: var(--main-yellow);
-  font-family: "Space Mono Bold";
+  font-family: "Kayak";
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   font-weight: bolder;
 }
 
 a::before {
-  content: "I'd prefer a job offer...";
+  content: "By the way...";
   display: block;
   position: absolute;
   bottom: 100%;
@@ -41,7 +41,7 @@ a::before {
   padding: 5px;
   font-size: 1rem;
   color: var(--main-yellow);
-  font-family: "Space Mono Bold";
+  font-family: "Kayak";
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   font-weight: bolder;

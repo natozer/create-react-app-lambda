@@ -1,0 +1,73 @@
+.AboutMe {
+    margin: 4rem 6rem;
+    text-align: center;
+    letter-spacing: 1px;
+    color: var(--main-yellow);
+    font-family: "Kayak", sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  
+
+  .Nate{
+   font-family: 'Ragna';
+   letter-spacing: 10px;
+   font-weight: 900;
+   font-size: 8rem;
+  }
+  
+  .Bold-Immersive-Memorable {
+    font-family: "Ragna";
+    font-size: 2rem;
+    margin-top: 3rem;
+  
+  }
+
+  
+  
+  @media (min-width: 444px) {
+    
+    .Nate{
+        font-size: 2rem;
+    }
+  
+    .AboutMe {
+      font-size: 1rem;
+    }
+    
+    .Bold-Immersive-Memorable {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+ 
+    .Nate{
+        font-size: 8rem;
+    }
+    .AboutMe {
+      font-size: 2rem;
+    }
+    
+    .Bold-Immersive-Memorable {
+      font-size: 7.5rem;
+    }
+  }
+  
+  @media (min-width: 1440px) {
+
+    .Nate{
+        font-size: 10rem;
+    }
+
+    .AboutMe {
+      font-size: 4rem;
+    }
+    
+    .Bold-Immersive-Memorable {
+      font-size: 10rem;
+    }
+  }
+  
+  
+  

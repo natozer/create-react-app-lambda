@@ -8,11 +8,11 @@ import Hero from './components/Hero';
 import Footer from './components/Footer';
 import SplashScreen from './components/SplashScreen';
 import backgroundMusic from './assets/cinematic-fantasy-dark.mp3';
+import AboutMe from './components/AboutMe';
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [splashScreenVisible, setSplashScreenVisible] = useState(true);
-  const [hasEnteredSite, setHasEnteredSite] = useState(false);
   const [showContact, setShowContact] = useState(false);
 
   const audioRef = useRef(new Audio(backgroundMusic));
@@ -38,7 +38,6 @@ function App() {
       toggleMusic();
     }
     gsap.to(splashScreenRef.current, { duration: 1, opacity: 0, onComplete: () => setSplashScreenVisible(false) });
-    setHasEnteredSite(true);
   };
 
   useEffect(() => {
@@ -57,7 +56,8 @@ function App() {
       ) : (
         <>
           <Header isPlaying={isPlaying} toggleMusic={toggleMusic} onContactClick={handleContactClick} />
-          <Hero hasEnteredSite={hasEnteredSite} />
+          <Hero/>
+          <AboutMe/>
           {showContact && <ContactMe setShowContact={setShowContact} />}
           <Footer />
         </>

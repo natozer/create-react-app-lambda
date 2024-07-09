@@ -1,117 +1,41 @@
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 import "../component_styles/Hero.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Hero = ({ hasEnteredSite }) => {
+const Hero = () => {
   const heroRef = useRef(null);
-  const waveTextRef = useRef(null);
-  const waveTextRef2 = useRef(null);
-  const paragraphRef = useRef(null);
+  const scrollIndicatorRef = useRef(null);
 
   useEffect(() => {
-    if (hasEnteredSite) {
-      gsap.set([paragraphRef.current, waveTextRef.current, waveTextRef2.current], { autoAlpha: 0 });
+    gsap.fromTo(heroRef.current, 
+      { autoAlpha: 0, y: 30 },  
+      { duration: 1.5, autoAlpha: 1, y: 0, ease: "power2.out" }
+    );
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: heroRef.current,
-          start: "top 80%",
-          end: "bottom top",
-          toggleActions: "play none none reverse",
-        }
-      });
+    gsap.set(scrollIndicatorRef.current, { autoAlpha: 1 });
 
-      tl.fromTo(
-        heroRef.current.querySelectorAll(".letter"),
-        { autoAlpha: 0, y: 20 },
-        {
-          duration: 1.5,
-          autoAlpha: 1,
-          y: 0,
-          stagger: 0.1,
-          ease: "power2.out",
-        }
-      ).call(() => {
-        gsap.fromTo(
-          paragraphRef.current,
-          { autoAlpha: 0, y: 20 },
-          {
-            duration: 1.5,
-            autoAlpha: 1,
-            y: 0,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: paragraphRef.current,
-              start: "top 75%",
-              end: "bottom top",
-              toggleActions: "play reverse play reverse",
-            },
-          }
-        );
-
-        gsap.fromTo(
-          waveTextRef2.current,
-          { autoAlpha: 0, y: 20 },
-          {
-            duration: 1.5,
-            autoAlpha: 1,
-            y: 0,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: waveTextRef2.current,
-              start: "top 75%",
-              end: "bottom top",
-              toggleActions: "play reverse play reverse",
-            },
-          }
-        );
-
-        gsap.fromTo(
-          waveTextRef.current,
-          { autoAlpha: 0, y: 20 },
-          {
-            duration: 1.5,
-            autoAlpha: 1,
-            y: 0,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: waveTextRef.current,
-              start: "top 75%",
-              end: "bottom top",
-              toggleActions: "play reverse play reverse",
-            },
-          }
-        );
-      });
-
-    }
-  }, [hasEnteredSite]);
+    ScrollTrigger.create({
+      trigger: heroRef.current,
+      start: "top top", 
+      end: "bottom top", 
+      onEnter: () => gsap.to(scrollIndicatorRef.current, { autoAlpha: 0 }),
+      onLeave: () => gsap.to(scrollIndicatorRef.current, { autoAlpha: 1 }),
+      onEnterBack: () => gsap.to(scrollIndicatorRef.current, { autoAlpha: 0 }),
+      onLeaveBack: () => gsap.to(scrollIndicatorRef.current, { autoAlpha: 1 }),
+      toggleActions: "play none none reverse" 
+    });
+  }, []);
 
   return (
     <div ref={heroRef} className="Hero">
-      <h1>
-        {["I", "'", "m", " ", "N", "a", "t", "e", "."].map(
-          (item, index) => (
-            <span key={index} className="letter">
-              {item}
-            </span>
-          )
-        )}
-      </h1>
-      <div ref={paragraphRef} className="AboutMe">
-        <span>I'm a web developer from Miramichi, Canada.</span>
-        <span> I bring a wide range of front and back end skills to the table,</span>
-        <span> and a relentless pursuit of perfection.</span>
-      </div>
-      <div ref={waveTextRef2} className="Bold-Immersive-Memorable">
-        Full Stack Web Development.
-      </div>
-      <div ref={waveTextRef} className="Bold-Immersive-Memorable">
-        <span> Bold, </span> <span> Immersive, </span>{" "}
-        <span>and Memorable </span> <span> design.</span>
+      <h2 className="fs">FULL STACK</h2>
+      <h1 className="wd">ATELIER EXAVIL</h1>
+      <h2 className="fst">WEB DEVELOPMENT</h2>
+      <div ref={scrollIndicatorRef} className="scroll-down">
+        Scroll Down
       </div>
     </div>
   );

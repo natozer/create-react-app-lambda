@@ -21,9 +21,16 @@
 }
 
 
+@font-face {
+  font-family: 'Ragna';
+  src: url('fonts/ragna.ttf') format('truetype');
+}
+
+
 
 :root {
-  --main-yellow: #FFC000;
+  --main-yellow: #ffc000;
+  ;
   --main-black: #0e1111;
   --main-dark-gray: #b7b7b7;
   --main-gray: #7e8294; 

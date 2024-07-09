@@ -93,7 +93,7 @@ const Hero = ({ hasEnteredSite }) => {
   return (
     <div ref={heroRef} className="Hero">
       <h1>
-        {["H", "I", ",", " ", "I", "'", "M", " ", "N", "A", "T", "E", "."].map(
+        {["I", "'", "m", " ", "N", "a", "t", "e", "."].map(
           (item, index) => (
             <span key={index} className="letter">
               {item}

@@ -2,9 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Neue Montreal Bold";
+  font-family: "Ragna";
   font-size: 2rem;
   margin: 2rem;
+  font-weight: 900;
 }
 
 .footer-item {

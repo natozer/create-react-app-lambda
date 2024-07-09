@@ -3,24 +3,24 @@
   text-align: center;
   letter-spacing: 1px;
   color: var(--main-yellow);
-  font-family: "Neue Montreal Bold", sans-serif;
+  font-family: "Kayak", sans-serif;
   text-transform: uppercase;
-
+  font-weight: 900;
 }
 
 .Hero h1{
-  font-family: 'Migha';
- text-shadow: 0 0 0.5rem var(--main-yellow);
-
+  font-family: 'Ragna';
+ letter-spacing: 10px;
+ font-weight: 900;
 }
 
 .Bold-Immersive-Memorable {
-  font-family: "Migha";
+  font-family: "Ragna";
   font-size: 2rem;
   margin-top: 3rem;
+
 }
 
-/* Responsive Media Queries */
 @media (min-width: 768px) {
   .Hero {
     font-size: 1.8rem;

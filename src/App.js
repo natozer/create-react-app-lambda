@@ -74,10 +74,12 @@ function App() {
           <Footer />
         </>
       )}
+      <div className="credits-button-container">
         <div className="credits-button">CREDITS</div>
         <div className="credits-container">
           <span>Fonts are Alagard, Migha, Neue Montreal, and Space Mono. Music by Roman Senyk from Pixabay. Background image by Franz26 from Pixabay. Personal use only. No money is being made through this site.</span>
         </div>
+      </div>
       </div>
   );
 }

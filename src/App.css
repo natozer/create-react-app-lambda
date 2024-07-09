@@ -78,16 +78,21 @@ body {
 }
 
 
-.credits-button {
+
+.credits-button-container {
   position: fixed;
-  bottom: 1rem;
-  left: 1rem;
-  font-size: 0.8rem;
+  bottom: 20px;
+  left: 20px;
+}
+
+.credits-button {
+  padding: 10px 15px;
+  font-size: 16px;
   cursor: pointer;
   z-index: 1000; 
   color: var(--main-dark-gray);
-  font-family: 'Alagard';
-  font-size: 0.7rem;
+  font-family: 'Space Mono Bold';  
+  font-size: 0.6rem;
 }
 
 .credits-container {
@@ -95,13 +100,18 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
+  width: calc(100% - 16px); 
   background: var(--main-yellow);
   color: var(--main-black);
+  padding: 25px 0 25px 25px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   transform: translateY(100%); 
   transition: transform 0.5s ease-in-out;
   pointer-events: none; 
   font-size: 0.8rem;
-  padding: 1rem;
+
 }
 
 .credits-button-container:hover .credits-container {

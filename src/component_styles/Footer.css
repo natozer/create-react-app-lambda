@@ -1,63 +1,57 @@
 .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    font-family: 'Neue Montreal Bold';
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    padding: 1rem;
-  }
-  
-  
-  .footer-item {
-    margin-right: 20px; 
-  }
-  
-  .footer a {
-    color: var(--main-yellow);
-    text-decoration: none;
-    position: relative; 
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Neue Montreal Bold";
+  font-size: 2rem;
+  margin: 2rem;
+}
+
+.footer-item {
+  margin-right: 20px;
+}
+
+.footer a {
+  color: var(--main-yellow);
+  text-decoration: none;
+  position: relative;
 }
 
 .footer a::after {
-    content: "...but compliments are ok too.";
-    display: block;
-    position: absolute;
-    top: 100%; 
-    left: 0;
-    padding: 5px;
-    font-size: 1rem;
-    color: var(--main-yellow);
-    font-family: 'Space Mono Bold';
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    font-weight: bolder;
-
+  content: "...but compliments are ok too.";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 5px;
+  font-size: 1rem;
+  color: var(--main-yellow);
+  font-family: "Space Mono Bold";
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  font-weight: bolder;
 }
 
-a::before{
+a::before {
+  content: "I'd prefer a job offer...";
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  padding: 5px;
+  font-size: 1rem;
+  color: var(--main-yellow);
+  font-family: "Space Mono Bold";
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  font-weight: bolder;
+}
 
-   content: "I'd prefer a job offer..."; 
-   display: block;
-    position: absolute;
-    bottom: 100%; 
-    left: 0;
-    padding: 5px;
-    font-size: 1rem;
-    color: var(--main-yellow);
-    font-family: 'Space Mono Bold';  
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    font-weight: bolder;
-  }
-
-a:hover::after{
+a:hover::after {
   opacity: 1;
 }
 
-a:hover::before{
+a:hover::before {
   opacity: 1;
 }
 
@@ -65,12 +59,10 @@ a:hover::before{
   .footer {
     font-size: 1rem;
   }
- 
 }
 
 @media (max-width: 768px) {
   .Footer {
     font-size: 0.6rem;
   }
-  
 }

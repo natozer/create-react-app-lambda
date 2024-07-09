@@ -9,12 +9,10 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start; 
-  padding: 0.5em;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   color: var(--main-dark-gray);
   font-family: "Alagard";
-  margin-left: 0.5em;
-  margin-top: 0.2em;
+  margin: 0.5rem;
 
 }
 
@@ -31,8 +29,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1em;
-  padding: 15px; 
+  gap: 0.5rem;
+  margin: 1rem;
 }
 
 .navlink {

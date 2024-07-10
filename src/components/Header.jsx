@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { ReactComponent as MuteIcon } from "../assets/mute.svg";
 import { ReactComponent as UnmuteIcon } from "../assets/unmute.svg";
+import { renderTextWithSpan } from "../utils";
 import "../component_styles/AppHeader.css";
 
 function MusicVisualizer({ isPlaying }) {
@@ -24,19 +25,11 @@ function ToggleButton({ isPlaying, toggleMusic }) {
 function Header({ isPlaying, toggleMusic, onContactClick }) {
   const headerRef = useRef(null);
 
-  const renderTextWithSpan = (text) => {
-    return text.split('').map((char, index) => (
-      <span key={index} className="vertical-stack">
-        {char}
-      </span>
-    ));
-  };
-
   return (
     <div className="header-container">
       <header className="App-header" ref={headerRef}>
         <div className="header-left">
-          {renderTextWithSpan("NATHANIEL TOZER 2024 ")}
+          {renderTextWithSpan("NATHANIEL TOZER 2024 ", "vertical-stack")}
         </div>
         <div className="header-right">
           <MusicVisualizer isPlaying={isPlaying} />

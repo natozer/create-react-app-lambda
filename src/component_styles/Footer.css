@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Ragna";
+  font-family: "Morven";
   font-size: 2rem;
   margin: 2rem;
   font-weight: 900;
@@ -19,7 +19,7 @@
 }
 
 .footer a::after {
-  content: "...I'm looking for a job. :)";
+  content: "...I'm looking for a job.";
   display: block;
   position: absolute;
   top: 100%;
@@ -27,7 +27,7 @@
   padding: 5px;
   font-size: 1rem;
   color: var(--main-yellow);
-  font-family: "Kayak";
+  font-family: "Morven";
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   font-weight: bolder;
@@ -42,7 +42,7 @@ a::before {
   padding: 5px;
   font-size: 1rem;
   color: var(--main-yellow);
-  font-family: "Kayak";
+  font-family: "Morven";
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   font-weight: bolder;

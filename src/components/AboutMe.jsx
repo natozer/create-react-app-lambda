@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { renderTextWithSpan } from "../utils";
+
 import "../component_styles/AboutMe.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -87,25 +89,20 @@ const AboutMe = () => {
   return (
     <div ref={heroRef} className="AboutMe">
       <h1 className="Nate">
-        {["H", "I", ",", " ", "I", "'", "m", " ", "N", "a", "t", "e", "."].map(
-          (item, index) => (
-            <span key={index} className="letter">
-              {item}
-            </span>
-          )
-        )}
+      {renderTextWithSpan("My name is Nate... ", "letter")}
+
       </h1>
       <div ref={paragraphRef} className="AboutMe">
-        <span>I'm a web developer from Miramichi, Canada.</span>
+        <span>I'm a full stack web developer from Miramichi, Canada.</span>
         <span> I bring a wide range of front and back end skills to the table,</span>
         <span> and a relentless pursuit of perfection.</span>
       </div>
-      <div ref={waveTextRef2} className="Bold-Immersive-Memorable">
-        Full Stack Web Development with a little bit of magic.
+      <div ref={waveTextRef2} className="FullStack">
+        I try to add a litle bit of magic to web development...
       </div>
       <div ref={waveTextRef} className="Bold-Immersive-Memorable">
-        <span> Modern, </span> <span> Memorable, </span> <span>and Immersive </span> <span> design.</span>
-      </div>
+      with Modern, Memorable, and Immersive design that hits hard.
+       </div>
     </div>
   );
 };

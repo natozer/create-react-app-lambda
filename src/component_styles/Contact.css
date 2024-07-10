@@ -14,18 +14,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Ragna';
+  font-family: 'Morven';
 }
 
 .Contact h2{
-  font-family: 'Ragna';
+  font-family: 'Morven';
 }
 
 .Contact button,
 .Contact a {
   color: var(--main-black);
   text-decoration: none;
-  font-family: "Kayak";
+  font-family: "Morven";
   font-weight: bolder;
 }
 

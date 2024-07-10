@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { renderTextWithSpan } from "../utils";
 import "../component_styles/Experience.css";
 
 const Experience = () => {
@@ -12,10 +13,10 @@ const Experience = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: experienceRef.current,
-        start: "top 50%", 
+        start: "top 50%",
         end: "bottom top",
         toggleActions: "play none none reverse",
-      }
+      },
     });
 
     tl.fromTo(
@@ -26,7 +27,7 @@ const Experience = () => {
         autoAlpha: 1,
         y: 0,
         stagger: 0.02,
-        ease: "power2.out"
+        ease: "power2.out",
       }
     );
 
@@ -38,22 +39,14 @@ const Experience = () => {
         y: 0,
         stagger: 0.05,
         ease: "expo.out",
-        duration: 1
+        duration: 1,
       }
     );
-
   }, []);
 
   return (
     <div className="experience-section" ref={experienceRef}>
-
-      <h1>
-        {["E", "X", "P", "E", "R", "I", "E", "N", "C", "E", " ", "I", "N"].map((item, index) => (
-          <span key={index} className="expertise">
-            {item}
-          </span>
-        ))}
-      </h1>
+      <h1>{renderTextWithSpan("I have Experience with", "expertise")}</h1>
       <ul>
         <li>ANGULAR</li>
         <li>ASP.NET</li>

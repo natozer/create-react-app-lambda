@@ -9,6 +9,11 @@
   src: url('fonts/Kayak.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'Morven';
+  src: url('fonts/f24q217-morven-morven-regular-400.otf') format('opentype');
+}
+
 
 @font-face {
   font-family: 'Ragna';
@@ -29,7 +34,7 @@ html,
 body {
   margin: 0;
   padding: 0;
- font-family: "Kayak";
+ font-family: "Ragna";
  color: var(--main-yellow);
  user-select: none;
 
@@ -59,12 +64,12 @@ body {
   cursor: pointer;
   z-index: 1000; 
   color: var(--main-dark-gray);
-  font-family: 'Kayak';  
+  font-family: 'Morven';  
   font-size: 0.7rem;
 }
 
 .credits-container {
-  font-family: 'Kayak';
+  font-family: 'Morven';
   font-weight: bolder;
   position: fixed;
   bottom: 0;

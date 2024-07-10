@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import SplashScreen from './components/SplashScreen';
 import backgroundMusic from './assets/cinematic-fantasy-dark.mp3';
 import AboutMe from './components/AboutMe';
+import Experience from './components/Experience';
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -58,6 +59,7 @@ function App() {
           <Header isPlaying={isPlaying} toggleMusic={toggleMusic} onContactClick={handleContactClick} />
           <Hero/>
           <AboutMe/>
+          <Experience/>
           {showContact && <ContactMe setShowContact={setShowContact} />}
           <Footer />
         </>
@@ -65,7 +67,7 @@ function App() {
       <div className="credits-button-container">
         <div className="credits-button">CREDITS</div>
         <div className="credits-container">
-          <span>Fonts are Alagard, Ragna, Kayak, and Neue Montreal. Music by Roman Senyk from Pixabay. Background image by Franz26 from Pixabay. Personal use only. No money is being made through this site.</span>
+          <span>Fonts are Ragna, Kayak, and Neue Montreal. Music by Roman Senyk from Pixabay. Background image by Franz26 from Pixabay. Personal use only. No money is being made through this site.</span>
         </div>
       </div>
     </div>

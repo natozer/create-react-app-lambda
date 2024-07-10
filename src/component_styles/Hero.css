@@ -35,6 +35,7 @@
   font-family: 'Ragna';
   font-weight: bolder;
   font-size: 4rem;
+  text-align: center;
 }
 
 @keyframes flash {

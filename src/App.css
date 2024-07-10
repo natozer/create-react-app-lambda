@@ -9,11 +9,6 @@
   src: url('fonts/Kayak.otf') format('opentype');
 }
 
-@font-face {
-  font-family: 'Alagard';
-  src: url('fonts/alagard.ttf') format('truetype');
-}
-
 
 @font-face {
   font-family: 'Ragna';

@@ -4,6 +4,7 @@ import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { FilmPass } from "three/examples/jsm/postprocessing/FilmPass.js";
 import snowBackground from '../assets/snow3.png';
+import croppedAurora from '../assets/snowmobile.png';
 import snowflake1 from '../assets/snowflake1.png';
 import snowflake2 from '../assets/snowflake2.png';
 import snowflake3 from '../assets/snowflake3.png';
@@ -28,10 +29,11 @@ const SnowScene = () => {
     const scene = new THREE.Scene();
     const textureLoader = new THREE.TextureLoader();
 
-    const forestTexture = textureLoader.load(snowBackground);
-    scene.background = forestTexture;
+    const isMobile = window.innerWidth / window.innerHeight > 1 ? false : true;
+    const backgroundTexture = textureLoader.load(isMobile ? croppedAurora : snowBackground);
+    scene.background = backgroundTexture;
 
-    scene.fog = new THREE.FogExp2(0x000000, 0.00002);
+    scene.fog = new THREE.FogExp2(0x000000, 0.00006);
     sceneRef.current = scene;
 
     const renderer = new THREE.WebGLRenderer();
@@ -48,18 +50,17 @@ const SnowScene = () => {
     const renderPass = new RenderPass(scene, camera);
     composer.addPass(renderPass);
 
-    const filmPass = new FilmPass(0.5, 0.025, 648, false);
-
+    const filmPass = new FilmPass(0.8, 0.05, 648, false);
     composer.addPass(filmPass);
+
 
     const snowflakeImages = [snowflake1, snowflake2, snowflake3];
     const snowflakeTextures = snowflakeImages.map(image => textureLoader.load(image));
 
     const geometry = new THREE.BufferGeometry();
+    const vertices = new Array(6000);
 
-    const vertices = new Array(12000);
-
-    for (let i = 0; i < 4000; i++) {
+    for (let i = 0; i < 2000; i++) {
       const baseIndex = i * 3;
       const x = Math.random() * 2000 - 1000;
       const y = Math.random() * 2000 - 1000;
@@ -70,12 +71,9 @@ const SnowScene = () => {
       vertices[baseIndex + 2] = z;
     }
 
-    geometry.setAttribute(
-      "position",
-      new THREE.Float32BufferAttribute(vertices, 3)
-    );
+    geometry.setAttribute("position", new THREE.Float32BufferAttribute(vertices, 3));
 
-    const sizes = [5,6];
+    const sizes = [5, 4, 3];
     const colors = [
       [1.0, 0.2, 0.5],
       [0.95, 0.1, 0.5],
@@ -102,13 +100,16 @@ const SnowScene = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
+
+      const isMobile = window.innerWidth / window.innerHeight > 1 ? false : true;
+      scene.background = textureLoader.load(isMobile ? croppedAurora : snowBackground);
     }
 
     window.addEventListener("resize", onWindowResize);
 
     function animate() {
       requestAnimationFrame(animate);
-      let time = Date.now() * 0.00002;
+      let time = Date.now() * 0.00001;
       scene.children.forEach((object, i) => {
         if (object instanceof THREE.Points) {
           let directionMultiplier = i % 2 === 0 ? 1 : -1;

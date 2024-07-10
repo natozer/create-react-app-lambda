@@ -10,12 +10,6 @@
 }
 
 @font-face {
-  font-family: 'Migha';
-  src: url('fonts/Migha-Black.otf') format('opentype');
-}
-
-
-@font-face {
   font-family: 'Alagard';
   src: url('fonts/alagard.ttf') format('truetype');
 }
@@ -30,7 +24,6 @@
 
 :root {
   --main-yellow: #ffc000;
-  ;
   --main-black: #0e1111;
   --main-dark-gray: #b7b7b7;
   --main-gray: #7e8294; 

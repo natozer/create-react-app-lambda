@@ -1,109 +1,107 @@
 .AboutMe {
-    margin: 4rem 6rem;
-    text-align: center;
-    letter-spacing: 1px;
-    color: var(--main-yellow);
-    font-family: "Morven", sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
-  }
-  
+  text-align: center;
+  letter-spacing: 1px;
+  color: var(--main-yellow);
+  font-family: "Morven", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
 
-  .Nate{
-   font-family: 'Morven';
-   letter-spacing: 10px;
-   font-weight: 900;
-   text-transform: none;
+.Nate {
+  letter-spacing: 10px;
+  font-weight: 900;
+  text-transform: none;
+}
+
+.Bold-Immersive-Memorable {
+  font-size: 2rem;
+  margin-top: 4rem;
+}
+
+.FullStack {
+  font-family: "Ragna";
+  font-size: 2rem;
+  margin-top: 4rem;
+}
+
+@media (max-width: 444px) {
+  .Nate {
+    font-size: 1.4rem;
+    letter-spacing: normal;
   }
-  
+
+  .Intro {
+    margin-top: 2rem;
+  }
+
+  .AboutMe {
+    font-size: 1rem;
+    margin: 2rem 3rem;
+  }
+
   .Bold-Immersive-Memorable {
-    font-family: "Morven";
-    font-size: 2rem;
-    margin-top: 3rem;
-  
+    font-size: 1.5rem;
   }
 
   .FullStack {
-    font-family: "Ragna";
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 444px) {
+  .Nate {
+    font-size: 1.5rem;
+    letter-spacing: 6px;
+  }
+
+  .AboutMe {
+    font-size: 1rem;
+    margin: 2rem 4rem;
+  }
+
+  .Bold-Immersive-Memorable {
+    font-size: 1.5rem;
+  }
+
+  .FullStack {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Nate {
+    font-size: 6rem;
+    letter-spacing: 6px;
+  }
+  .AboutMe {
     font-size: 2rem;
-    margin-top: 3rem;
-  
+    margin: 4rem 6rem;
   }
 
-
-  @media (max-width: 444px) {
-    
-    .Nate{
-        font-size: 1rem;
-    }
-  
-    .AboutMe {
-      font-size: 1rem;
-      margin: 1rem 2rem;
-    }
-    
-    .Bold-Immersive-Memorable .FullStack {
-      font-size: 1.5rem;
-    }
+  .Bold-Immersive-Memorable {
+    font-size: 7rem;
   }
-  
-  @media (min-width: 444px) {
-    
-    .Nate{
-        font-size: 1.5rem;
-    }
-  
-    .AboutMe {
-      font-size: 1rem;
-    }
-    
-    .Bold-Immersive-Memorable{
-      font-size: 1.5rem;
-    }
-
-    .FullStack{
-      font-size: 1.5rem;
-    }
+  .FullStack {
+    font-size: 5rem;
   }
-  
-  @media (min-width: 1024px) {
- 
-    .Nate{
-        font-size: 6rem;
-    }
-    .AboutMe {
-      font-size: 2rem;
-    }
-    
-    .Bold-Immersive-Memorable  {
-      font-size: 7.5rem;
-    }
-    .FullStack{
-      font-size: 5rem;
+}
 
-    }
+@media (min-width: 1440px) {
+  .Nate {
+    font-size: 8rem;
   }
-  
-  @media (min-width: 1440px) {
 
-    .Nate{
-        font-size: 8rem;
-    }
-
-    .AboutMe {
-      font-size: 4rem;
-    }
-    
-    .Bold-Immersive-Memorable  {
-      font-size: 10rem;
-
-    }
-
-    .FullStack{
-      font-size: 8rem;
-
-    }
+  .AboutMe {
+    font-size: 4rem;
+    margin: 4rem 6rem;
   }
-  
-  
-  
+
+  .Bold-Immersive-Memorable {
+    font-size: 9rem;
+  }
+
+  .FullStack {
+    font-size: 8rem;
+  }
+}

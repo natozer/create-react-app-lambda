@@ -7,7 +7,7 @@ import "../component_styles/AboutMe.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutMe = () => {
-  const effect1Ref1= useRef(null);
+  const effect1Ref1 = useRef(null);
   const effect1Ref2 = useRef(null);
   const effect2Ref1 = useRef(null);
   const effect2Ref2 = useRef(null);
@@ -42,6 +42,8 @@ const AboutMe = () => {
             start: "top 40%",
             end: "top top",
             toggleActions: "play none none reverse",
+            onEnter: () => element.classList.add('magicHighlight'),
+            onLeaveBack: () => element.classList.remove('magicHighlight'),
           }
         }
       );
@@ -56,7 +58,6 @@ const AboutMe = () => {
   return (
     <div className="AboutMe">
       <h1 ref={effect1Ref1} className="Nate">
-        My name is Nate...
       </h1>
       <div ref={effect1Ref2} className="Intro">
         <span>I'm a full stack web developer from Miramichi, Canada.</span>

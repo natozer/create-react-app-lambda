@@ -30,7 +30,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div ref={heroRef} className="Hero">
+    <div ref={heroRef} className="Hero neon-button">
       <h2 className="fs">FULL STACK</h2>
       <h1 className="wd">ATELIER EXAVIL</h1>
       <h2 className="fst">WEB DEVELOPMENT</h2>

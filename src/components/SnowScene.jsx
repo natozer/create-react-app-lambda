@@ -50,7 +50,7 @@ const SnowScene = () => {
     const renderPass = new RenderPass(scene, camera);
     composer.addPass(renderPass);
 
-    const filmPass = new FilmPass(0.8, 0.05, 648, false);
+    const filmPass = new FilmPass(1, 0.05, 648, false);
     composer.addPass(filmPass);
 
 

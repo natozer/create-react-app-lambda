@@ -16,10 +16,9 @@ function SplashScreen({ onEnterSite }) {
         {" "}
         {renderTextWithSpan("NATHANIEL TOZER 2024 ")}
       </div>
-      <h1 className="fs">FULL STACK</h1>
-      <h2 className="wd">ATELIER EXAVIL</h2>
-      <h2 className="fst">WEB DEVELOPMENT</h2>
-      <button onClick={onEnterSite}>Enter Site</button>
+      <h1 className="fs">Coming in 2025</h1>
+      <h2 className="wd">Nathaniel Tozer</h2>
+      <h2 className="fst">Work in progress</h2>
     </div>
   );
 }

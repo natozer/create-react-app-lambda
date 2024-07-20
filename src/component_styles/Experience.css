@@ -1,0 +1,85 @@
+
+
+.experience-section {
+  user-select: none;
+  margin: 4rem 6rem;
+  opacity: 0.7;
+
+}
+
+.experience-section h1, .experience-section h2 {
+  text-transform: uppercase;
+  font-family: 'BTSuave';
+  font-weight: 900;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+
+.experience-section ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.experience-section li {
+  border: 2px solid var(--main-yellow);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.experience-section li:hover{
+  background-color: var(--main-yellow);
+  color: var(--main-black);
+}
+
+
+@media (max-width: 768px) {
+  .experience-section ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experience-section li{
+    font-size: 0.8rem;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .experience-section ul {
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1.1em;
+  }
+}
+
+@media (min-width: 1444px) {
+  .experience-section ul {
+    grid-template-columns: repeat(3, 2fr);
+    font-size: 1.6em;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .experience-section h1  {
+    font-size: 1.2rem;
+  }
+  .experience-section{
+    margin: 2rem 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .experience-section h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1444px) {
+  .experience-section h1 {
+    font-size: 4.5rem;
+  }
+}

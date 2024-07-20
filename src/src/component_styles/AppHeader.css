@@ -1,0 +1,135 @@
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 0.7rem;
+  color: var(--main-gray);
+  font-weight: bold;
+
+}
+
+.header-left {
+  align-self: flex-start;
+  writing-mode: vertical-rl;
+  user-select: none;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  letter-spacing: 2px;
+  font-family: "BTSuave";
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 1.5rem;
+
+}
+
+@media (max-width: 600px) {
+  .header-right{
+  margin: 1rem;
+  }
+}
+
+
+.header-right a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.header-right a:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 1440px) {
+  .header-left {
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+  }
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.visualizer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 20px;
+  width: 30px;
+}
+
+.bar {
+  width: 5px;
+  background-color: var(--main-gray);
+  border-radius: 2px;
+  height: 0;
+  transition: background-color 0.3s;
+}
+
+.bar:hover {
+  background-color: var(--light-yellow);
+}
+
+@keyframes bounce {
+  from {
+    height: 10%;
+  }
+  to {
+    height: 90%;
+  }
+}
+
+.visualizer.playing .bar {
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.visualizer.playing .bar:nth-child(1) {
+  animation-name: bounce;
+  animation-duration: 0.8s;
+}
+
+.visualizer.playing .bar:nth-child(2) {
+  animation-name: bounce;
+  animation-duration: 0.5s;
+}
+
+.visualizer.playing .bar:nth-child(3) {
+  animation-name: bounce;
+  animation-duration: 0.6s;
+}
+
+.visualizer.playing .bar:nth-child(4) {
+  animation-name: bounce;
+  animation-duration: 0.7s;
+}
+
+.visualizer.playing .bar:nth-child(5) {
+  animation-name: bounce;
+  animation-duration: 0.4s;
+}
+
+.vertical-stack {
+  display: inline-block;
+  transform: rotate(270deg);
+  margin: 3px;
+}
+.vertical-stack:hover {
+  color: var(--light-yellow);
+}

@@ -29,9 +29,14 @@
   font-family: 'Road Rage';  
   margin: 0;
   transform: rotate(-10deg); 
-  text-shadow: 2px 2px 4px var(--main-yellow);
- font-weight: lighter;
+  text-shadow: 
+    1px 1px 2px #FFFFFF,
+    2px 2px 4px #ADD8E6,
+    3px 3px 6px #FFFFFF,
+    4px 4px 8px #ADD8E6;
+  font-weight: lighter;
 }
+
 
 @keyframes flash {
   0%, 100% { opacity: 1; }

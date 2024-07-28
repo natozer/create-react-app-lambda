@@ -22,19 +22,14 @@
   src: url('fonts/SpaceMono-Regular.ttf');
 }
 
-/*
-    scene.background = new THREE.Color(0x400001); 
 
-  --main-yellow:  #aff1f1;
-
-*/
 :root {
-  --swedish-yellow:  #d4be2a;
-  --swedish-blue: #1d32c7;
-  --burgundy: #400001;
+  --swedish-yellow:  grey;
+  --swedish-blue: black;
+  --burgundy:  #2c0001;
   --icey-blue: #aef1f0;
   --pink: #f18283;
-  --teal: #016d6c;
+  --teal:  #013636;
   --white: white;
   --main-black: #141414;
   --main-gray: #bac4b8;

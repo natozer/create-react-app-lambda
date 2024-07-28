@@ -36,7 +36,17 @@ const Words = () => {
     <>
       <div className="WordsTitleContainer">
         <span className="WordsTitle">
-          Here are some words for you <img src={downwardTriangle} alt="Downward Triangle" />
+          Here are some words for you    <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="30"
+            height="30"
+          >
+            <path
+              fill="var(--primary-color)"
+              d="M12 15l-8-8h16l-8 8z"
+            />
+          </svg>
         </span>
       </div>
       <div className="words-container">

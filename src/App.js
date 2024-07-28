@@ -6,7 +6,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
 import SplashScreen from './components/SplashScreen';
-import backgroundMusic from './assets/swedish-theme.mp3';
+import backgroundMusic from './assets/gaia.mp3';
 import AboutMe from './components/AboutMe';
 import Experience from './components/Experience';
 import Credits from './components/Credits'; 

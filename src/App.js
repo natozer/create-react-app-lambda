@@ -6,13 +6,17 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
 import SplashScreen from './components/SplashScreen';
-import backgroundMusic from './assets/gaia.mp3';
+import backgroundMusic from './assets/swedish-theme.mp3';
 import AboutMe from './components/AboutMe';
 import Experience from './components/Experience';
+import Credits from './components/Credits'; 
+import ThemeStation from './components/ThemeStation';
+import Words from './components/Words';
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [splashScreenVisible, setSplashScreenVisible] = useState(true);
+  const [buttonVisible, setButtonVisible] = useState(true);
 
   const audioRef = useRef(new Audio(backgroundMusic));
   audioRef.current.loop = true;
@@ -32,7 +36,8 @@ function App() {
     if (!isPlaying) {
       toggleMusic();
     }
-    gsap.to(splashScreenRef.current, { duration: 1, opacity: 0, onComplete: () => setSplashScreenVisible(false) });
+    setButtonVisible(false);
+    gsap.to(splashScreenRef.current, { duration: 3, opacity: 0, onComplete: () => setSplashScreenVisible(false) });
   };
 
   useEffect(() => {
@@ -45,29 +50,25 @@ function App() {
 
   return (
     <div className="App">
+      <SnowScene />
+      <Hero />
 
-        <SnowScene />
-        
       {splashScreenVisible ? (
-        <SplashScreen onEnterSite={handleEnterSite} />
+        <SplashScreen onEnterSite={handleEnterSite} buttonVisible={buttonVisible} splashScreenRef={splashScreenRef} />
       ) : (
-        
         <>
           <Header isPlaying={isPlaying} toggleMusic={toggleMusic} />
-          <Hero />
-          <AboutMe />
+          <div className='wrapper'>
+           <AboutMe />
           <Experience />
+          <Words/>
           <Footer />
+          <Credits /> 
+  
+          </div>
+          <ThemeStation/>
         </>
       )}
-
-
-      <div className="credits-button-container">
-        <div className="credits-button">CREDITS</div>
-        <div className="credits-container">
-          <span>Fonts are PPNeue Montreal and BTSuave. This site is a personal demo project. No money is being made through this site.</span>
-        </div>
-      </div>
     </div>
   );
 }

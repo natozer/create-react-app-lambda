@@ -1,7 +1,7 @@
 import React from "react";
 import "../component_styles/SplashScreen.css";
 
-function SplashScreen({ onEnterSite }) {
+function SplashScreen({ onEnterSite, buttonVisible, splashScreenRef }) {
   const renderTextWithSpan = (text) => {
     return text.split("").map((char, index) => (
       <span key={index} className="vertical-stack">
@@ -11,18 +11,13 @@ function SplashScreen({ onEnterSite }) {
   };
 
   return (
-    <div className="splash-screen">
-          <div className="splash-overlay"/>
-
+    <div className="splash-screen" ref={splashScreenRef}>
+      <div className="splash-overlay" />
       <div className="splash-header">
-        {" "}
-        {renderTextWithSpan("NATHANIEL TOZER 2024 ")}
+        {renderTextWithSpan("NATHANIEL TOZER 2025 ")}
       </div>
-      <h2>FULL STACK</h2>
-      <h1>NATHANIEL TOZER</h1>
-      <h2>WEB DEVELOPER</h2>  
-     
-      <button onClick={onEnterSite}>Enter Site</button>
+      
+      {buttonVisible && <button onClick={onEnterSite}>Enter Site</button>}
     </div>
   );
 }

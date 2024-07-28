@@ -3,6 +3,12 @@
   top: 0;
   left: 0;
   width: 100%;
+  animation: blurAnimation 3s forwards;
+}
+
+@keyframes blurAnimation {
+  0% { filter: blur(5px); }
+  100% { filter: blur(0px); }
 }
 
 .App-header {
@@ -10,9 +16,8 @@
   justify-content: space-between;
   align-items: flex-start;
   font-size: 0.7rem;
-  color: var(--main-gray);
+  color: var(--primary-color);
   font-weight: bold;
-
 }
 
 .header-left {
@@ -22,7 +27,7 @@
   font-size: 0.8rem;
   margin-top: 1rem;
   letter-spacing: 2px;
-  font-family: "BTSuave";
+  font-family: "Road Rage";
 }
 
 .header-right {
@@ -31,15 +36,13 @@
   align-items: center;
   gap: 0.8rem;
   margin: 1.5rem;
-
 }
 
 @media (max-width: 600px) {
-  .header-right{
-  margin: 1rem;
+  .header-right {
+    margin: 1rem;
   }
 }
-
 
 .header-right a {
   display: inline-block;
@@ -75,14 +78,14 @@ button {
 
 .bar {
   width: 5px;
-  background-color: var(--main-gray);
+  background-color: var(--primary-color);
   border-radius: 2px;
   height: 0;
   transition: background-color 0.3s;
 }
 
 .bar:hover {
-  background-color: var(--light-yellow);
+  background-color: var(--secondary-color);
 }
 
 @keyframes bounce {
@@ -130,6 +133,7 @@ button {
   transform: rotate(270deg);
   margin: 3px;
 }
+
 .vertical-stack:hover {
-  color: var(--light-yellow);
+  color: var(--secondary-color);
 }

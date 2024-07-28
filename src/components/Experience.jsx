@@ -3,14 +3,6 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "../component_styles/Experience.css";
 
-const createSpanElements = (text, className) => {
-  return text.split('').map((char, index) => (
-    <span key={index} className={className}>
-      {char}
-    </span>
-  ));
-};
-
 const Experience = () => {
   const experienceRef = useRef(null);
 
@@ -27,19 +19,7 @@ const Experience = () => {
     });
 
     tl.fromTo(
-      experienceRef.current.querySelectorAll(".expertise"),
-      { autoAlpha: 0, y: 20 },
-      {
-        duration: 0.2,
-        autoAlpha: 1,
-        y: 0,
-        stagger: 0.01,
-        ease: "power2.out"
-      }
-    );
-
-    tl.fromTo(
-      experienceRef.current.querySelectorAll("li"),
+      experienceRef.current.querySelectorAll(".card"),
       { autoAlpha: 0, y: 30 },
       {
         autoAlpha: 1,
@@ -52,28 +32,44 @@ const Experience = () => {
   }, []);
 
   return (
-    <div className="experience-section" ref={experienceRef}>
-      <h1>
-        {createSpanElements("I HAVE EXPERIENCE WITH...", "expertise")}
-      </h1>
-      <ul>
-        <li>ANGULAR</li>
-        <li>ASP.NET</li>
-        <li>C#</li>
-        <li>CSS</li>
-        <li>EXPRESS.JS</li>
-        <li>GIT</li>
-        <li>HTML</li>
-        <li>JAVA</li>
-        <li>JAVASCRIPT</li>
-        <li>MONGO DB</li>
-        <li>MSSQL</li>
-        <li>MYSQL</li>
-        <li>NODE.JS</li>
-        <li>REACT</li>
-        <li>TYPESCRIPT</li>
-      </ul>
-    </div>
+    <>
+      <div className="ExperienceTitleContainer">
+        <span className="ExperienceTitle">
+          MY SKILLSET
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="30"
+            height="30"
+          >
+            <path
+              fill="var(--primary-color)"
+              d="M12 15l-8-8h16l-8 8z"
+            />
+          </svg>
+        </span>
+      </div>
+      <div className="experience-section" ref={experienceRef}>
+        <div className="card-container">
+          <div className="card">ANGULAR</div>
+          <div className="card">ASP.NET</div>
+          <div className="card">C#</div>
+          <div className="card">EXPRESS.JS</div>
+          <div className="card">GIT</div>
+          <div className="card">HTML</div>
+          <div className="card">JAVA</div>
+          <div className="card">JAVASCRIPT</div>
+          <div className="card">MONGO DB</div>
+          <div className="card">MSSQL</div>
+          <div className="card">MYSQL</div>
+          <div className="card">NODE.JS</div>
+          <div className="card">REACT</div>
+          <div className="card">TYPESCRIPT</div>
+        </div>      
+        <h3>And let me tell you...</h3>
+        <h2>I'm <span className="dangerous">Dangerous</span> with CSS.</h2>
+      </div>
+    </>
   );
 };
 

@@ -7,18 +7,18 @@ gsap.registerPlugin(ScrollTrigger);
 
 const AboutMe = () => {
   const aboutMeRef = useRef(null);
-  const headersRef = useRef([]);
+  const headerRef = useRef(null);
 
   useEffect(() => {
     if (aboutMeRef.current) {
       aboutMeRef.current.style.visibility = "visible";
     }
 
-    headersRef.current.forEach((header) => {
-      gsap.set(header, { autoAlpha: 0 });
+    if (headerRef.current) {
+      gsap.set(headerRef.current, { autoAlpha: 0 });
 
       gsap.fromTo(
-        header,
+        headerRef.current,
         { autoAlpha: 0 },
         {
           duration: 1.5,
@@ -26,31 +26,43 @@ const AboutMe = () => {
           y: 0,
           ease: "power2.out",
           scrollTrigger: {
-            trigger: header,
+            trigger: headerRef.current,
             start: "top 75%",
             end: "bottom top",
             toggleActions: "play reverse play reverse",
           },
         }
       );
-    });
+    }
   }, []);
 
   return (
-    <div ref={aboutMeRef} className="AboutMe">
-      <div ref={(el) => (headersRef.current[0] = el)}>
-        <h1>HI, I'M NATE.</h1>
+    <>
+      <div className="AboutMeTitleContainer">
+        <span className="AboutMeTitle">
+          WHO I AM
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="30"
+            height="30"
+          >
+            <path
+              fill="var(--primary-color)"
+              d="M12 15l-8-8h16l-8 8z"
+            />
+          </svg>
+        </span>
       </div>
-      <div ref={(el) => (headersRef.current[1] = el)}>
-        <h3>I'm a web developer from Miramichi, Canada.</h3>
-      </div>
-      <div ref={(el) => (headersRef.current[2] = el)}>
-        <h3>
+      <div ref={aboutMeRef} className="AboutMe">
+        <h1 ref={headerRef}>
+          I'm a web developer from Miramichi, Canada.
+          <br />
           I bring a wide range of front and back end skills to the table, and a
           relentless pursuit of perfection.
-        </h3>
+        </h1>
       </div>
-    </div>
+    </>
   );
 };
 

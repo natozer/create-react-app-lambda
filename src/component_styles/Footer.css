@@ -1,35 +1,55 @@
 .footer {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 4rem;
+}
+
+.FooterTitleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.FooterTitle {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--primary-color);
+  background: none;
+}
+
+.FooterTitle svg {
+  margin-left: 0.5rem;
+  width: 30px; 
+  height: 30px;
+}
+
+.footer-content {
+  display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Neue Montreal Bold";
-  padding: 2rem;
   font-weight: 900;
-  opacity: 0.8;
-  backdrop-filter: blur(10px); 
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  padding: 5rem 0rem;
+
 }
 
 .footer a {
   text-decoration: none;
   position: relative;
-  color: var(--main-yellow);
-  font-weight: lighter;
+  color: var(--secondary-color);
   letter-spacing: 0.15em;
   display: inline-block;
-  position: relative;
   overflow: hidden;
-}
-
-@media (max-width: 1024px) {
-  .footer {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .Footer {
-    font-size: 0.6rem;
-  }
 }
 
 .footer a::after {
@@ -39,11 +59,22 @@
   bottom: 0;
   width: 0;
   height: 3px;
-  background-color:  var(--main-yellow);
+  background-color: var(--secondary-color);
   transition: width 0.3s;
-  color: #bac4b8;
 }
 
 .footer a:hover::after {
   width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .footer-content {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    font-size: 0.6rem;
+  }
 }

@@ -13,25 +13,30 @@
   src: url("fonts/Road_Rage.otf") format("opentype");
 }
 
+
+
 @font-face {
   font-family: "Space Mono";
   src: url("fonts/SpaceMono-Regular.ttf");
 }
-
 :root {
   --millenial-gray: grey;
   --pure-black: black;
-  --burgundy: #2c0001;
+  --burgundy: #1a0001 ;
   --icey-blue: #aef1f0;
   --pink: #f18283;
   --teal: #013636;
   --white: white;
   --main-black: #141414;
   --main-gray: #bac4b8;
-
+  --aqua: aqua;
+  --purpleish-black: #1f001f;
+  --contrast-color: #e0b0ff; /* Light Lavender */
+  --tertiary-color: var(--white); /* New tertiary color */
   --primary-color: var(--white);
   --secondary-color: var(--main-black);
 }
+
 
 html,
 body {

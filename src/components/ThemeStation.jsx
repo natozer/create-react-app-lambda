@@ -3,20 +3,22 @@ import "../component_styles/ThemeStation.css";
 
 const themes = [
   {
-    name: "Millenial Gray",
-    primary: "var(--millenial-gray)",
-    secondary: "var(--pure-black)",
-  },
-  {
     name: "Cyberpunk",
     primary: "var(--icey-blue)",
     secondary: "var(--burgundy)",
+    tertiary: "var(--aqua)",
   },
-  { name: "Flamingo", primary: "var(--pink)", secondary: "var(--teal)" },
   {
     name: "Miramichi Gothic",
     primary: "var(--white)",
     secondary: "var(--main-black)",
+    tertiary: "var(--white)", 
+  },
+  {
+    name: "Purple Haze",
+    primary: "#a0d2eb",
+    secondary: "var(--purpleish-black)",
+    tertiary: "#f8e58c",
   },
 ];
 
@@ -24,14 +26,9 @@ const ThemeStation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleThemeChange = (theme) => {
-    document.documentElement.style.setProperty(
-      "--primary-color",
-      theme.primary
-    );
-    document.documentElement.style.setProperty(
-      "--secondary-color",
-      theme.secondary
-    );
+    document.documentElement.style.setProperty("--primary-color", theme.primary);
+    document.documentElement.style.setProperty("--secondary-color", theme.secondary);
+    document.documentElement.style.setProperty("--tertiary-color", theme.tertiary);
 
     const event = new CustomEvent("themeChange");
     window.dispatchEvent(event);

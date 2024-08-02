@@ -29,10 +29,10 @@
   font-family: 'Road Rage';  
   margin: 0;
   transform: rotate(-10deg); 
-  color: var(--primary-color);
+  color: var(--tertiary-color);
   text-shadow: 
     1px 1px 2px var(--primary-color),
-    2px 2px 4px #ADD8E6,
+    2px 2px 4px var(--tertiary-color),
     3px 3px 6px #ADD8e6,
     4px 4px 8px #ADD8E6;
   font-weight: lighter;

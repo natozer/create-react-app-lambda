@@ -57,7 +57,6 @@ const AboutMe = () => {
       <div ref={aboutMeRef} className="AboutMe">
         <h1 ref={headerRef}>
           I'm a web developer from Miramichi, Canada.
-          <br />
           I bring a wide range of front and back end skills to the table, and a
           relentless pursuit of perfection.
         </h1>

@@ -6,11 +6,11 @@ import "../component_styles/Words.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const Words = () => {
-  const words = ["Modern", "Bold", "Memorable", "Immersive", "Interactive"];
+  const words = ["Modern", "Bold", "Memorable", "Immersive"];
   const wordsRef = useRef([]);
 
   useEffect(() => {
-    gsap.utils.toArray(wordsRef.current).forEach((word, index) => {
+    gsap.utils.toArray(wordsRef.current).forEach((word, _index) => {
       ScrollTrigger.create({
         trigger: word,
         start: "top center",

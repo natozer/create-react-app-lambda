@@ -8,10 +8,8 @@ import snowflake2 from "../assets/snowflake2.png";
 import snowflake3 from "../assets/snowflake3.png";
 
 /*
-
 Full disclosure, I got the idea for the snowflake sprites from here:
 https://threejs.org/examples/#webgl_points_sprites
-
 */
 
 const SnowScene = () => {
@@ -21,17 +19,17 @@ const SnowScene = () => {
   const composerRef = useRef(null);
 
   const animationSettingsRef = useRef({
-    speed: 0.5,
-    color: new THREE.Color(1, 1, 1),
+    speed: 0.3,
+    color: new THREE.Color(0.2, 0.7, 1),
     size: 5,
-    animationType: "rotate",
+    animationType: "cyberpunk",
   });
 
   const themesAnimationSettingsRef = useRef({
     Cyberpunk: {
       speed: 0.3,
       color: new THREE.Color(0.2, 0.7, 1),
-      size: 6,
+      size: 5,
       animationType: "cyberpunk",
     },
     "Miramichi Gothic": {
@@ -60,6 +58,7 @@ const SnowScene = () => {
     cameraRef.current = camera;
 
     const scene = new THREE.Scene();
+    scene.background = new THREE.Color("#1a0001"); // Set the default background color
     sceneRef.current = scene;
 
     const renderer = new THREE.WebGLRenderer();
@@ -104,32 +103,23 @@ const SnowScene = () => {
       new THREE.Float32BufferAttribute(vertices, 3)
     );
 
-    const sizes = [5, 4, 3];
-    const colors = [
-      [1.0, 0.2, 0.5],
-      [0.95, 0.1, 0.5],
-      [0.9, 0.05, 0.5],
-    ];
-
     const particlesArray = [];
-    snowflakeTextures.forEach((sprite, _index) => {
-      sizes.forEach((size, index) => {
-        const material = new THREE.PointsMaterial({
-          size,
-          map: sprite,
-          blending: THREE.AdditiveBlending,
-          depthTest: false,
-          transparent: true,
-          color: new THREE.Color().setHSL(...colors[index % colors.length]),
-        });
-
-        const particles = new THREE.Points(geometry, material);
-        particles.rotation.x = Math.random() * 6;
-        particles.rotation.y = Math.random() * 6;
-        particles.rotation.z = Math.random() * 6;
-        scene.add(particles);
-        particlesArray.push(particles);
+    snowflakeTextures.forEach((sprite) => {
+      const material = new THREE.PointsMaterial({
+        size: animationSettingsRef.current.size, // Use the default size
+        map: sprite,
+        blending: THREE.AdditiveBlending,
+        depthTest: false,
+        transparent: true,
+        color: animationSettingsRef.current.color, // Use the default color
       });
+
+      const particles = new THREE.Points(geometry, material);
+      particles.rotation.x = Math.random() * 6;
+      particles.rotation.y = Math.random() * 6;
+      particles.rotation.z = Math.random() * 6;
+      scene.add(particles);
+      particlesArray.push(particles);
     });
 
     function onWindowResize() {
@@ -161,11 +151,10 @@ const SnowScene = () => {
             break;
 
           case "bitter":
-       
             object.rotation.x += 0.0005;
             object.rotation.y += 0.0005;
-
             break;
+
           default:
             object.rotation.y = time * speed * (i < 4 ? i + 1 : -(i + 1));
             break;

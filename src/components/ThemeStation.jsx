@@ -12,13 +12,13 @@ const themes = [
     name: "Miramichi Gothic",
     primary: "var(--main-black)",
     secondary: "var(--main-gray)",
-    tertiary: "yellow",
+    tertiary: "#FDDA0D",
   },
   {
     name: "Bitter about bitter",
-    primary: "#a0d2eb",
+    primary: "var(--another-blue)",
     secondary: "var(--purpleish-black)",
-    tertiary: "#f8e58c",
+    tertiary: "var(--main-black)",
   },
 ];
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../component_styles/ThemeStation.css";
+import bassDrop from "../assets/bass_drop.mp3"; 
 
 const themes = [
   {
@@ -27,6 +28,7 @@ const ThemeStation = () => {
   const [activeTheme, setActiveTheme] = useState(themes[0].name);
 
   const handleThemeChange = (theme) => {
+
     document.documentElement.style.setProperty("--primary-color", theme.primary);
     document.documentElement.style.setProperty("--secondary-color", theme.secondary);
     document.documentElement.style.setProperty("--tertiary-color", theme.tertiary);
@@ -34,6 +36,9 @@ const ThemeStation = () => {
     const event = new CustomEvent("themeChange", { detail: theme });
     window.dispatchEvent(event);
     setActiveTheme(theme.name);
+
+    const audio = new Audio(bassDrop);
+    audio.play();
   };
 
   return (

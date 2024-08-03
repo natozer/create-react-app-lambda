@@ -161,9 +161,7 @@ const SnowScene = () => {
             break;
 
           case "bitter":
-            object.scale.setScalar(
-              Math.abs(Math.sin(time * speed * (i + 1))) + 0.5
-            );
+       
             object.rotation.x += 0.0005;
             object.rotation.y += 0.0005;
 

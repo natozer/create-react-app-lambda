@@ -58,11 +58,10 @@
 
 @media (max-width: 600px) {
   .Hero {
-    gap: 0.5rem;
-    word-spacing: 0.3rem;
-    padding: 0.5rem;
+    word-spacing: 0.1rem;
+    padding: 0.3rem;
     margin: 2rem 4rem;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
   }
 
   .Hero h2 {

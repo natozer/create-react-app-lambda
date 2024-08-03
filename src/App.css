@@ -106,7 +106,7 @@ body {
   }
 }
 
-@media (min-width: 790px) {
+@media (max-width: 790px) {
   .wrapper {
     margin: 2rem 4rem;
   }

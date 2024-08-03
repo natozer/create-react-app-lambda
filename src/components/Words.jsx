@@ -6,7 +6,7 @@ import "../component_styles/Words.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const Words = () => {
-  const words = ["Give", "Me", "A", "Job", "Please", "(づ ◕‿◕ )づ"];
+  const words = ["Give", "Me", "A", "Job", "Please", "٩(◕‿◕)۶"];
   const wordsRef = useRef([]);
 
   useEffect(() => {

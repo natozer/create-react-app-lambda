@@ -16,7 +16,7 @@ function SplashScreen({ onEnterSite, buttonVisible, splashScreenRef }) {
       <div className="splash-header">
         {renderTextWithSpan("NATHANIEL TOZER 2025 ")}
       </div>
-      
+
       {buttonVisible && <button onClick={onEnterSite}>Enter Site</button>}
     </div>
   );

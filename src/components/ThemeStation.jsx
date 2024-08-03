@@ -3,19 +3,19 @@ import "../component_styles/ThemeStation.css";
 
 const themes = [
   {
-    name: "Cyberpunk",
+    name: "default",
     primary: "var(--icey-blue)",
     secondary: "var(--burgundy)",
     tertiary: "var(--aqua)",
   },
   {
-    name: "Miramichi Gothic",
+    name: "Miramichi",
     primary: "var(--main-black)",
     secondary: "var(--main-gray)",
-    tertiary: "#FDDA0D",
+    tertiary: "var(--main-gray)",
   },
   {
-    name: "Bitter about bitter",
+    name: "Cyberpunk",
     primary: "var(--another-blue)",
     secondary: "var(--purpleish-black)",
     tertiary: "var(--main-black)",

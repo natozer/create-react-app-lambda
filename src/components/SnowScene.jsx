@@ -22,27 +22,27 @@ const SnowScene = () => {
     speed: 0.3,
     color: new THREE.Color(0.2, 0.7, 1),
     size: 5,
-    animationType: "cyberpunk",
+    animationType: "default",
   });
 
   const themesAnimationSettingsRef = useRef({
-    Cyberpunk: {
+    "default": {
       speed: 0.3,
       color: new THREE.Color(0.2, 0.7, 1),
       size: 5,
-      animationType: "cyberpunk",
+      animationType: "default",
     },
-    "Miramichi Gothic": {
+    "Miramichi": {
       speed: 0.5,
       color: new THREE.Color(0.5, 0.5, 0.5),
       size: 4,
-      animationType: "gothic",
+      animationType: "Miramichi",
     },
-    "Bitter about bitter": {
+    "Cyberpunk": {
       speed: 0.2,
       color: new THREE.Color(0.8, 0.5, 0.2),
       size: 5,
-      animationType: "bitter",
+      animationType: "Cyberpunk",
     },
   });
 
@@ -58,7 +58,7 @@ const SnowScene = () => {
     cameraRef.current = camera;
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color("#1a0001"); // Set the default background color
+    scene.background = new THREE.Color("#1a0001"); 
     sceneRef.current = scene;
 
     const renderer = new THREE.WebGLRenderer();
@@ -106,12 +106,12 @@ const SnowScene = () => {
     const particlesArray = [];
     snowflakeTextures.forEach((sprite) => {
       const material = new THREE.PointsMaterial({
-        size: animationSettingsRef.current.size, // Use the default size
+        size: animationSettingsRef.current.size, 
         map: sprite,
         blending: THREE.AdditiveBlending,
         depthTest: false,
         transparent: true,
-        color: animationSettingsRef.current.color, // Use the default color
+        color: animationSettingsRef.current.color, 
       });
 
       const particles = new THREE.Points(geometry, material);
@@ -141,16 +141,17 @@ const SnowScene = () => {
         object.material.size = size;
 
         switch (animationType) {
-          case "cyberpunk":
+          
+          case "default":
             object.rotation.y = time * speed * (i < 4 ? i + 1 : -(i + 1));
             break;
 
-          case "gothic":
+          case "Miramichi":
             object.rotation.x += 0.002;
             object.rotation.y += 0.002;
             break;
 
-          case "bitter":
+          case "Cyberpunk":
             object.rotation.x += 0.0005;
             object.rotation.y += 0.0005;
             break;

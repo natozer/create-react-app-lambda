@@ -8,6 +8,7 @@
     background-color: var(--primary-color);
     border-radius: 4px;
     padding: 2rem;
+
   }
   
   .WordsTitleContainer {
@@ -15,6 +16,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
+        margin-top: 2rem;
   }
   
   .WordsTitle {

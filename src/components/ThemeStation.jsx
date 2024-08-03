@@ -10,12 +10,12 @@ const themes = [
   },
   {
     name: "Miramichi Gothic",
-    primary: "var(--white)",
-    secondary: "var(--main-black)",
-    tertiary: "var(--white)", 
+    primary: "var(--main-black)",
+    secondary: "var(--main-gray)",
+    tertiary: "yellow",
   },
   {
-    name: "Purple Haze",
+    name: "Bitter Bitterness",
     primary: "#a0d2eb",
     secondary: "var(--purpleish-black)",
     tertiary: "#f8e58c",
@@ -24,6 +24,7 @@ const themes = [
 
 const ThemeStation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeTheme, setActiveTheme] = useState(themes[0].name);
 
   const handleThemeChange = (theme) => {
     document.documentElement.style.setProperty("--primary-color", theme.primary);
@@ -32,6 +33,7 @@ const ThemeStation = () => {
 
     const event = new CustomEvent("themeChange");
     window.dispatchEvent(event);
+    setActiveTheme(theme.name);
   };
 
   return (
@@ -42,7 +44,11 @@ const ThemeStation = () => {
       {isOpen ? (
         <ul>
           {themes.map((theme, index) => (
-            <li key={index} onClick={() => handleThemeChange(theme)}>
+            <li
+              key={index}
+              onClick={() => handleThemeChange(theme)}
+              className={theme.name === activeTheme ? "active" : ""}
+            >
               {theme.name}
             </li>
           ))}

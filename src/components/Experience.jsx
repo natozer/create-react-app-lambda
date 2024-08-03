@@ -54,6 +54,7 @@ const Experience = () => {
           <div className="card">ANGULAR</div>
           <div className="card">ASP.NET</div>
           <div className="card">C#</div>
+          <div className="card">CSS</div>
           <div className="card">EXPRESS.JS</div>
           <div className="card">GIT</div>
           <div className="card">HTML</div>
@@ -66,8 +67,6 @@ const Experience = () => {
           <div className="card">REACT</div>
           <div className="card">TYPESCRIPT</div>
         </div>      
-        <h3>And let me tell you...</h3>
-        <h2>I'm <span className="dangerous">Dangerous</span> with CSS.</h2>
       </div>
     </>
   );

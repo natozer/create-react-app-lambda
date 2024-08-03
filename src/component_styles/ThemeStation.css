@@ -1,44 +1,45 @@
 .ThemeStation {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    width: 200px;
-    height: 50px;
-    background-color: var(--main-black);
-    color: white; 
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: width 0.3s, height 0.3s;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    font-family: 'Space Mono';
-  }
-  
-  .ThemeStation.open {
-    width: 200px;
-    height: auto;
-    padding: 10px;
-  }
-  
-  .ThemeStation ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .ThemeStation li {
-    padding: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 200px;
+  height: 50px;
+  background-color: var(--main-black);
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: width 0.3s, height 0.3s;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-family: "Space Mono";
+}
 
-   
-  
-  .ThemeStationIcon {
-    font-size: 1rem;
-  }
-  
+.ThemeStation.open {
+  width: 200px;
+  height: auto;
+  padding: 10px;
+}
+
+.ThemeStation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ThemeStation li {
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: var(--main-gray);
+}
+
+.ThemeStation li.active {
+  color: white;
+}
+
+.ThemeStationIcon {
+  font-size: 1rem;
+}

@@ -20,21 +20,21 @@
   src: url("fonts/SpaceMono-Regular.ttf");
 }
 :root {
-  --millenial-gray: grey;
-  --pure-black: black;
   --burgundy: #1a0001 ;
   --icey-blue: #aef1f0;
-  --pink: #f18283;
-  --teal: #013636;
-  --white: white;
+  --white: #ffffff;
   --main-black: #141414;
-  --main-gray: #bac4b8;
+  --main-gray: #a9b0a6;
   --aqua: aqua;
   --purpleish-black: #1f001f;
-  --contrast-color: #e0b0ff; /* Light Lavender */
-  --tertiary-color: var(--white); /* New tertiary color */
+  --contrast-color: #e0b0ff; 
+
+
+  --tertiary-color: var(--white); 
   --primary-color: var(--white);
   --secondary-color: var(--main-black);
+
+  
 }
 
 

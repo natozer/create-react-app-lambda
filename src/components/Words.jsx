@@ -6,7 +6,7 @@ import "../component_styles/Words.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const Words = () => {
-  const words = ["Modern", "Bold", "Memorable", "Immersive"];
+  const words = ["Give", "Me", "A", "Job", "Please", "(づ ◕‿◕ )づ"];
   const wordsRef = useRef([]);
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const Words = () => {
     <>
       <div className="WordsTitleContainer">
         <span className="WordsTitle">
-          Here are some words for you    <svg
+          Let's cut to the chase   <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             width="30"

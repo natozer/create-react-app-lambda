@@ -12,7 +12,6 @@ import snowflake3 from "../assets/snowflake3.png";
 Full disclosure, I got the idea for the snowflake sprites from here:
 https://threejs.org/examples/#webgl_points_sprites
 
-
 */
 
 const SnowScene = () => {
@@ -28,7 +27,7 @@ const SnowScene = () => {
     animationType: "rotate",
   });
 
-  const themesAnimationSettings = {
+  const themesAnimationSettingsRef = useRef({
     Cyberpunk: {
       speed: 0.3,
       color: new THREE.Color(0.2, 0.7, 1),
@@ -47,7 +46,7 @@ const SnowScene = () => {
       size: 5,
       animationType: "bitter",
     },
-  };
+  });
 
   useEffect(() => {
     const camera = new THREE.PerspectiveCamera(
@@ -188,7 +187,7 @@ const SnowScene = () => {
       scene.background = new THREE.Color(secondaryColor);
 
       const { speed, color, size, animationType } =
-        themesAnimationSettings[theme.name];
+        themesAnimationSettingsRef.current[theme.name];
       animationSettingsRef.current = { speed, color, size, animationType };
     };
 

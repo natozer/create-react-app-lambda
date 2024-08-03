@@ -32,9 +32,9 @@
   color: var(--tertiary-color);
   text-shadow: 
     1px 1px 2px var(--primary-color),
-    2px 2px 4px var(--tertiary-color),
+    2px 2px 4px var(--primary-color),
     3px 3px 6px var(--primary-color),
-    4px 4px 8px var(--tertiary-color);
+    4px 4px 8px var(--primary-color);
   font-weight: lighter;
 }
 
@@ -46,7 +46,7 @@
 
 .scroll-down {
   position: absolute;
-  bottom: -1rem;
+  bottom: 1rem;
   text-align: center;
   font-size: 1rem;
   color: var(--main-gray);

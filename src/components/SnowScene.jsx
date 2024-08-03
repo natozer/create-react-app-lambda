@@ -2,16 +2,52 @@ import * as THREE from "three";
 import React, { useEffect, useRef } from "react";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
-import snowflake1 from '../assets/snowflake1.png';
-import snowflake2 from '../assets/snowflake2.png';
-import snowflake3 from '../assets/snowflake3.png';
-import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
+import snowflake1 from "../assets/snowflake1.png";
+import snowflake2 from "../assets/snowflake2.png";
+import snowflake3 from "../assets/snowflake3.png";
+
+/*
+
+Full disclosure, I got the idea for the snowflake sprites from here:
+https://threejs.org/examples/#webgl_points_sprites
+
+
+*/
 
 const SnowScene = () => {
   const sceneRef = useRef(null);
   const cameraRef = useRef(null);
   const rendererRef = useRef(null);
   const composerRef = useRef(null);
+
+  const animationSettingsRef = useRef({
+    speed: 0.5,
+    color: new THREE.Color(1, 1, 1),
+    size: 5,
+    animationType: "rotate",
+  });
+
+  const themesAnimationSettings = {
+    Cyberpunk: {
+      speed: 0.3,
+      color: new THREE.Color(0.2, 0.7, 1),
+      size: 6,
+      animationType: "cyberpunk",
+    },
+    "Miramichi Gothic": {
+      speed: 0.5,
+      color: new THREE.Color(0.5, 0.5, 0.5),
+      size: 4,
+      animationType: "gothic",
+    },
+    "Bitter about bitter": {
+      speed: 0.2,
+      color: new THREE.Color(0.8, 0.5, 0.2),
+      size: 5,
+      animationType: "bitter",
+    },
+  };
 
   useEffect(() => {
     const camera = new THREE.PerspectiveCamera(
@@ -46,7 +82,9 @@ const SnowScene = () => {
 
     const textureLoader = new THREE.TextureLoader();
     const snowflakeImages = [snowflake1, snowflake2, snowflake3];
-    const snowflakeTextures = snowflakeImages.map(image => textureLoader.load(image));
+    const snowflakeTextures = snowflakeImages.map((image) =>
+      textureLoader.load(image)
+    );
 
     const geometry = new THREE.BufferGeometry();
     const vertices = new Array(9000);
@@ -62,7 +100,10 @@ const SnowScene = () => {
       vertices[baseIndex + 2] = z;
     }
 
-    geometry.setAttribute("position", new THREE.Float32BufferAttribute(vertices, 3));
+    geometry.setAttribute(
+      "position",
+      new THREE.Float32BufferAttribute(vertices, 3)
+    );
 
     const sizes = [5, 4, 3];
     const colors = [
@@ -71,6 +112,7 @@ const SnowScene = () => {
       [0.9, 0.05, 0.5],
     ];
 
+    const particlesArray = [];
     snowflakeTextures.forEach((sprite, _index) => {
       sizes.forEach((size, index) => {
         const material = new THREE.PointsMaterial({
@@ -87,6 +129,7 @@ const SnowScene = () => {
         particles.rotation.y = Math.random() * 6;
         particles.rotation.z = Math.random() * 6;
         scene.add(particles);
+        particlesArray.push(particles);
       });
     });
 
@@ -102,9 +145,33 @@ const SnowScene = () => {
       requestAnimationFrame(animate);
       const time = Date.now() * 0.000015;
 
-      scene.children.forEach((object, i) => {
-        if (object instanceof THREE.Points) {
-          object.rotation.y = time * (i < 4 ? i + 1 : -(i + 1));
+      particlesArray.forEach((object, i) => {
+        const { speed, color, size, animationType } =
+          animationSettingsRef.current;
+        object.material.color = color;
+        object.material.size = size;
+
+        switch (animationType) {
+          case "cyberpunk":
+            object.rotation.y = time * speed * (i < 4 ? i + 1 : -(i + 1));
+            break;
+
+          case "gothic":
+            object.rotation.x += 0.002;
+            object.rotation.y += 0.002;
+            break;
+
+          case "bitter":
+            object.scale.setScalar(
+              Math.abs(Math.sin(time * speed * (i + 1))) + 0.5
+            );
+            object.rotation.x += 0.0005;
+            object.rotation.y += 0.0005;
+
+            break;
+          default:
+            object.rotation.y = time * speed * (i < 4 ? i + 1 : -(i + 1));
+            break;
         }
       });
 
@@ -113,19 +180,26 @@ const SnowScene = () => {
 
     animate();
 
-    const handleThemeChange = () => {
-      const secondaryColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-color');
+    const handleThemeChange = (event) => {
+      const theme = event.detail;
+      const secondaryColor = getComputedStyle(
+        document.documentElement
+      ).getPropertyValue("--secondary-color");
       scene.background = new THREE.Color(secondaryColor);
+
+      const { speed, color, size, animationType } =
+        themesAnimationSettings[theme.name];
+      animationSettingsRef.current = { speed, color, size, animationType };
     };
 
-    window.addEventListener('themeChange', handleThemeChange);
+    window.addEventListener("themeChange", handleThemeChange);
 
     return () => {
       document
         .getElementById("snow-scene-container")
         .removeChild(renderer.domElement);
       window.removeEventListener("resize", onWindowResize);
-      window.removeEventListener('themeChange', handleThemeChange);
+      window.removeEventListener("themeChange", handleThemeChange);
     };
   }, []);
 

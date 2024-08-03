@@ -15,7 +15,7 @@ const themes = [
     tertiary: "yellow",
   },
   {
-    name: "Bitter Bitterness",
+    name: "Bitter about bitter",
     primary: "#a0d2eb",
     secondary: "var(--purpleish-black)",
     tertiary: "#f8e58c",
@@ -31,7 +31,7 @@ const ThemeStation = () => {
     document.documentElement.style.setProperty("--secondary-color", theme.secondary);
     document.documentElement.style.setProperty("--tertiary-color", theme.tertiary);
 
-    const event = new CustomEvent("themeChange");
+    const event = new CustomEvent("themeChange", { detail: theme });
     window.dispatchEvent(event);
     setActiveTheme(theme.name);
   };

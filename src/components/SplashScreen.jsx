@@ -5,7 +5,6 @@ import { renderTextWithSpan } from "../utils";
 function SplashScreen({ onEnterSite, buttonVisible, splashScreenRef }) {
   return (
     <div className="splash-screen" ref={splashScreenRef}>
-      <div className="splash-overlay" />
       <div className="splash-header">
         {renderTextWithSpan("NATHANIEL TOZER 2025", "vertical-stack")}
       </div>

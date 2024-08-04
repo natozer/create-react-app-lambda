@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
   color: var(--primary-color);
-  font-family: 'Neue Montreal Bold'; 
   position: relative;
   text-align: center;
   text-transform: uppercase;
@@ -13,40 +12,44 @@
 }
 
 @keyframes blurAnimation {
-  0% { filter: blur(5px); }
-  100% { filter: blur(0px); }
+  0% {
+    filter: blur(5px);
+  }
+  100% {
+    filter: blur(0px);
+  }
 }
 
 .Hero h2 {
-  letter-spacing: 12px;
+  letter-spacing: 2px;
   font-size: 1rem;
   margin: 0;
 }
 
 .Hero h1 {
   letter-spacing: 5px;
-  font-size: 7rem;
-  font-family: 'Road Rage';  
-  margin: 0;
-  transform: rotate(-10deg); 
+  font-family: "Road Rage";
+  transform: rotate(-10deg);
   color: var(--tertiary-color);
-  text-shadow: 
-    1px 1px 2px var(--primary-color),
-    2px 2px 4px var(--primary-color),
-    3px 3px 6px var(--primary-color),
+  text-shadow: 1px 1px 2px var(--primary-color),
+    2px 2px 4px var(--primary-color), 3px 3px 6px var(--primary-color),
     4px 4px 8px var(--primary-color);
   font-weight: lighter;
 }
 
-
 @keyframes flash {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 .scroll-down {
-  position: absolute;
-  top: 1rem;
+  position: relative;
+  bottom: -1rem;
   text-align: center;
   font-size: 1rem;
   color: var(--main-gray);
@@ -61,17 +64,17 @@
     word-spacing: 0.1rem;
     padding: 0.3rem;
     margin: 2rem 4rem;
-    letter-spacing: 2px;
   }
 
   .Hero h2 {
-    font-size: 0.5rem;
+    font-size: 0.4rem;
+    letter-spacing: 5px;
   }
 
   .Hero h1 {
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     letter-spacing: 2px;
-    transform: rotate(-10deg); 
+    transform: rotate(-10deg);
   }
 
   .scroll-down {
@@ -95,7 +98,7 @@
 
   .Hero h1 {
     font-size: 3rem;
-    transform: rotate(-10deg); 
+    transform: rotate(-10deg);
   }
 
   .scroll-down {
@@ -113,17 +116,17 @@
   }
 
   .Hero h2 {
-    letter-spacing: 12px; 
+    letter-spacing: 12px;
     font-size: 0.8rem;
   }
 
   .Hero h1 {
     font-size: 3rem;
-    transform: rotate(-10deg); 
+    transform: rotate(-10deg);
   }
 
   .scroll-down {
-    font-size: 1rem; 
+    font-size: 1rem;
   }
 }
 
@@ -137,16 +140,16 @@
   }
 
   .Hero h2 {
-    letter-spacing: 12px; 
+    letter-spacing: 12px;
     font-size: 1.5rem;
   }
 
   .Hero h1 {
-    font-size: 4rem; 
-    transform: rotate(-10deg); 
+    font-size: 4rem;
+    transform: rotate(-10deg);
   }
 
   .scroll-down {
-    font-size: 1rem; 
+    font-size: 1.2rem;
   }
 }

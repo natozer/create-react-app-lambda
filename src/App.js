@@ -6,10 +6,10 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
 import SplashScreen from './components/SplashScreen';
-import backgroundMusic from './assets/gaia.mp3';
+import backgroundMusic from './assets/music.mp3';
 import AboutMe from './components/AboutMe';
 import Experience from './components/Experience';
-import Credits from './components/Credits'; 
+import Credits from './components/Credits';
 import ThemeStation from './components/ThemeStation';
 import Words from './components/Words';
 
@@ -59,14 +59,13 @@ function App() {
         <>
           <Header isPlaying={isPlaying} toggleMusic={toggleMusic} />
           <div className='wrapper'>
-           <AboutMe />
-          <Experience />
-          <Words/>
-          <Footer />
-          <Credits /> 
-  
+            <AboutMe />
+            <Experience />
+            <Words />
+            <Footer />
+            <Credits />
           </div>
-          <ThemeStation/>
+          <ThemeStation />
         </>
       )}
     </div>

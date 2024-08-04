@@ -15,7 +15,7 @@ const Experience = () => {
         start: "top 88%",
         end: "bottom top",
         toggleActions: "play none none reverse",
-      }
+      },
     });
 
     tl.fromTo(
@@ -26,29 +26,24 @@ const Experience = () => {
         y: 0,
         stagger: 0.05,
         ease: "expo.out",
-        duration: 1
+        duration: 1,
       }
     );
   }, []);
 
   return (
     <>
-      <div className="ExperienceTitleContainer">
-        <span className="ExperienceTitle">
-          MY SKILLSET
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="30"
-            height="30"
-          >
-            <path
-              fill="var(--primary-color)"
-              d="M12 15l-8-8h16l-8 8z"
-            />
-          </svg>
-        </span>
-      </div>
+      <span className="ExperienceTitle">
+        MY SKILLSET
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="30"
+          height="30"
+        >
+          <path fill="var(--primary-color)" d="M12 15l-8-8h16l-8 8z" />
+        </svg>
+      </span>
       <div className="experience-section" ref={experienceRef}>
         <div className="card-container">
           <div className="card">ANGULAR</div>
@@ -66,7 +61,7 @@ const Experience = () => {
           <div className="card">NODE.JS</div>
           <div className="card">REACT</div>
           <div className="card">TYPESCRIPT</div>
-        </div>      
+        </div>
       </div>
     </>
   );

@@ -59,7 +59,7 @@ const ThemeStation = () => {
           ))}
         </ul>
       ) : (
-        <div className="ThemeStationIcon">Theme Theatre ☰</div>
+        <div className="ThemeStationIcon">Theme Playground ☰</div>
       )}
     </div>
   );

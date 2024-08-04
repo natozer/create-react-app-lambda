@@ -13,12 +13,11 @@
   src: url("fonts/Road_Rage.otf") format("opentype");
 }
 
-
-
 @font-face {
   font-family: "Space Mono";
   src: url("fonts/SpaceMono-Regular.ttf");
 }
+
 :root {
 
   
@@ -73,12 +72,12 @@ body {
   cursor: pointer;
   z-index: 1000;
   color: var(--primary-color);
-  font-family: "Neue Montreal Bold";
+  font-family: "Space Mono";
   font-size: 0.7rem;
 }
 
 .credits-container {
-  font-family: "Neue Montreal Bold";
+  font-family: "Space Mono";
   position: fixed;
   bottom: 0;
   left: 0;

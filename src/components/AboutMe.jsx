@@ -38,7 +38,6 @@ const AboutMe = () => {
 
   return (
     <>
-      <div className="AboutMeTitleContainer">
         <span className="AboutMeTitle">
           WHO I AM
           <svg
@@ -53,7 +52,6 @@ const AboutMe = () => {
             />
           </svg>
         </span>
-      </div>
       <div ref={aboutMeRef} className="AboutMe">
         <h1 ref={headerRef}>
           I'm a web developer from Miramichi, Canada.

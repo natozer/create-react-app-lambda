@@ -19,8 +19,6 @@
 }
 
 :root {
-
-  
   --burgundy: #1a0001;
   --icey-blue: #aef1f0;
   --main-black: #141414;
@@ -33,10 +31,7 @@
   --tertiary-color: var(--aqua);
   --primary-color: var(--icey-blue);
   --secondary-color: var(--burgundy);
-
-  
 }
-
 
 html,
 body {
@@ -97,29 +92,5 @@ body {
 }
 
 .wrapper {
-  margin: 2rem 4rem;
-}
-
-@media (max-width: 444px) {
-  .wrapper {
-    margin: 1rem 2rem;
-  }
-}
-
-@media (max-width: 790px) {
-  .wrapper {
-    margin: 2rem 4rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .wrapper {
-    margin: 3rem 6rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  .wrapper {
-    margin: 4rem 8rem;
-  }
+  margin: clamp(1.5rem, 3vw + 1.5rem, 5rem) clamp(3rem, 5vw + 3rem, 10rem);
 }

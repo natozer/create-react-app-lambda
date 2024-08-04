@@ -9,6 +9,9 @@
   text-transform: uppercase;
   margin: 2rem 4rem;
   animation: blurAnimation 4s forwards;
+  padding: clamp(1rem, 5vw, 12rem);
+  gap: clamp(0.5rem, 2vw, 2rem);
+  word-spacing: clamp(0.1rem, 0.5vw, 2.5rem);
 }
 
 @keyframes blurAnimation {
@@ -21,20 +24,22 @@
 }
 
 .Hero h2 {
-  letter-spacing: 2px;
-  font-size: 1rem;
+  letter-spacing: clamp(2px, 0.5vw, 12px);
+  font-size: clamp(0.5rem, 2vw, 1.8rem);
   margin: 0;
 }
 
 .Hero h1 {
-  letter-spacing: 5px;
+  letter-spacing: clamp(2px, 1vw, 5px);
   font-family: "Road Rage";
   transform: rotate(-10deg);
   color: var(--tertiary-color);
-  text-shadow: 1px 1px 2px var(--primary-color),
-    2px 2px 4px var(--primary-color), 3px 3px 6px var(--primary-color),
+  text-shadow: 1px 1px 2px var(--primary-color), 
+    2px 2px 4px var(--primary-color), 
+    3px 3px 6px var(--primary-color), 
     4px 4px 8px var(--primary-color);
   font-weight: lighter;
+  font-size: clamp(1rem, 5vw, 4.5rem);
 }
 
 @keyframes flash {
@@ -51,7 +56,7 @@
   position: relative;
   bottom: -1rem;
   text-align: center;
-  font-size: 1rem;
+  font-size: clamp(0.4rem, 1.5vw, 1.3rem);
   color: var(--main-gray);
   opacity: 0;
   letter-spacing: normal;
@@ -59,97 +64,16 @@
   animation: flash 2.5s infinite;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   .Hero {
-    word-spacing: 0.1rem;
-    padding: 0.3rem;
-    margin: 2rem 4rem;
-  }
-
-  .Hero h2 {
-    font-size: 0.4rem;
-    letter-spacing: 5px;
-  }
-
-  .Hero h1 {
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    transform: rotate(-10deg);
-  }
-
-  .scroll-down {
-    font-size: 0.6rem;
+    padding: 0.2rem;
+    margin: 1rem 2rem;
   }
 }
 
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 1601px) {
   .Hero {
-    padding: 2rem;
+    padding: 10rem;
     margin: 2rem 6rem;
-    font-size: 0.9rem;
-    gap: 0.8rem;
-    word-spacing: 1.5rem;
-  }
-
-  .Hero h2 {
-    letter-spacing: 10px;
-    font-size: 0.9rem;
-  }
-
-  .Hero h1 {
-    font-size: 3rem;
-    transform: rotate(-10deg);
-  }
-
-  .scroll-down {
-    font-size: 0.9rem;
-  }
-}
-
-@media (min-width: 1025px) {
-  .Hero {
-    padding: 8rem;
-    margin: 2rem 6rem;
-    font-size: 1rem;
-    gap: 1rem;
-    word-spacing: 2rem;
-  }
-
-  .Hero h2 {
-    letter-spacing: 12px;
-    font-size: 0.8rem;
-  }
-
-  .Hero h1 {
-    font-size: 3rem;
-    transform: rotate(-10deg);
-  }
-
-  .scroll-down {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  .Hero {
-    padding: 12rem;
-    margin: 2rem 6rem;
-    font-size: 1rem;
-    gap: 1rem;
-    word-spacing: 2rem;
-  }
-
-  .Hero h2 {
-    letter-spacing: 12px;
-    font-size: 1.5rem;
-  }
-
-  .Hero h1 {
-    font-size: 4rem;
-    transform: rotate(-10deg);
-  }
-
-  .scroll-down {
-    font-size: 1.2rem;
   }
 }

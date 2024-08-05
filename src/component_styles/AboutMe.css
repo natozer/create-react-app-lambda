@@ -5,42 +5,15 @@
   background-color: var(--primary-color);
   border-radius: 4px;
   visibility: hidden;
+  font-size: clamp(0.2rem, 1vw + 0.2rem, 2rem);
+  padding: clamp(1rem, 1.5vw + 0.5rem, 3rem);
+  margin-bottom: 1rem;
 }
 
 .AboutMeTitle {
   display: flex;
   align-items: center;
-  font-size: 1rem;
+  font-size: clamp(0.6rem, 1vw + 0.6rem, 1.5rem); 
   color: var(--primary-color);
-  background: none;
   margin-bottom: 1rem;
-  
-}
-
-.AboutMe h1 {
-  padding: 3rem 2rem;
-}
-
-@media (max-width: 444px) {
-  .AboutMe {
-    font-size: 0.4rem;
-  }
-}
-
-@media (max-width: 790px) {
-  .AboutMe {
-    font-size: 0.6rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .AboutMe {
-    font-size: 1.5rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  .AboutMe {
-    font-size: 2rem;
-  }
 }

@@ -4,7 +4,6 @@
   border-radius: 10px;
 }
 
-
 .card-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -14,12 +13,12 @@
 .card {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  padding: 20px;
+  padding: clamp(20px, 2vw + 10px, 40px);
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
   transition: background-color 0.3s, color 0.3s;
-  font-size: 1rem;
+  font-size: clamp(0.5rem, 1vw + 0.5rem, 2rem);
   border-radius: 4px;
 }
 
@@ -31,53 +30,23 @@
 .ExperienceTitle {
   display: flex;
   align-items: center;
-  font-size: 1rem;
+  font-size: clamp(0.6rem, 1vw + 0.6rem, 1.5rem); 
   color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
-@media (max-width: 444px) {
-  .experience-section h1 {
-    font-size: 1.2rem;
-  }
-
-  .card {
-    font-size: 0.5rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .card {
-    font-size: 1.5rem;
-  }
+.experience-section h1 {
+  font-size: clamp(1.2rem, 3vw + 1.2rem, 4.5rem);
 }
 
 @media (min-width: 1024px) {
   .card-container {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .experience-section h1 {
-    font-size: 3.5rem;
-  }
-
-  .card {
-    padding: 30px;
-    font-size: 1.5rem;
-  }
 }
 
 @media (min-width: 1444px) {
   .card-container {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .experience-section h1 {
-    font-size: 4.5rem;
-  }
-
-  .card {
-    padding: 40px;
-    font-size: 2rem;
   }
 }

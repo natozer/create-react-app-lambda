@@ -1,16 +1,13 @@
 .footer {
   margin-top: 4rem;
-  
 }
-
 
 .footer-title {
   display: flex;
   align-items: center;
-  font-size: 1rem;
+  font-size: clamp(0.6rem, 1vw + 0.6rem, 1.5rem); 
   color: var(--primary-color);
   margin-bottom: 1rem;
-
 }
 
 .footer-content {
@@ -22,7 +19,8 @@
   background-color: var(--primary-color);
   border-radius: 4px;
   width: 100%;
-  padding: 5rem 0;
+  padding: clamp(2rem, 5vw, 5rem) 0;
+  font-size: clamp(0.6rem, 1vw + 0.4rem, 1.5rem);
 }
 
 .footer a {
@@ -46,16 +44,4 @@
 
 .footer a:hover::after {
   width: 100%;
-}
-
-@media (max-width: 1024px) {
-  .footer-content {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer-content {
-    font-size: 0.6rem;
-  }
 }

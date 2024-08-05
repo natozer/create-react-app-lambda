@@ -5,45 +5,22 @@
   text-transform: uppercase;
   background-color: var(--primary-color);
   border-radius: 4px;
-  padding: 2rem;
+  padding: clamp(1rem, 2vw + 1rem, 4rem);
+  font-size: clamp(1rem, 2vw + 1rem, 6rem);
 }
 
 .WordsTitle {
   display: flex;
   align-items: center;
-  font-size: 1rem;
+  font-size: clamp(0.6rem, 1vw + 0.6rem, 1.5rem); 
   color: var(--primary-color);
   text-transform: uppercase;
   margin-bottom: 1rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .word {
-  margin: 20px 0;
+  margin: clamp(10px, 2vw + 10px, 20px) 0;
   color: rgba(0, 0, 0, 0.1);
   transition: color 0.1s ease;
-}
-
-@media (max-width: 444px) {
-  .words-container {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 790px) {
-  .words-container {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .words-container {
-    font-size: 3rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  .words-container {
-    font-size: 6rem;
-  }
 }

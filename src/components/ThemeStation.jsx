@@ -6,8 +6,8 @@ const themes = [
   {
     name: "default",
     primary: "var(--icey-blue)",
-    secondary: "var(--burgundy)",
-    tertiary: "var(--aqua)",
+    secondary: "var(--main-black)",
+    tertiary: "#4EE0F0",
   },
   {
     name: "Miramichi",
@@ -23,9 +23,9 @@ const themes = [
   },
   {
     name: "Dangerous",
-    primary: "var(--dangerous-red)",
+     primary: "var(--icey-blue)",
     secondary: "var(--main-black)",
-    tertiary: "var(--main-black)",
+    tertiary: "var(--light-yellow)",
   },
 ];
 

@@ -45,9 +45,9 @@ const SnowScene = () => {
       animationType: "Cyberpunk",
     },
     Dangerous: {
-      speed: 0.025,
+      speed: 0.01,
       color: new THREE.Color(0.435, 0.604, 0.906),
-      size: 5.5,
+      size: 5,
       animationType: "Dangerous",
     },
   });
@@ -64,7 +64,7 @@ const SnowScene = () => {
     cameraRef.current = camera;
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color("#1a0001");
+    scene.background = new THREE.Color("#141414");
     sceneRef.current = scene;
 
     const renderer = new THREE.WebGLRenderer();

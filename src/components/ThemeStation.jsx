@@ -24,7 +24,7 @@ const themes = [
   {
     name: "Dangerous",
      primary: "var(--icey-blue)",
-    secondary: "var(--main-black)",
+    secondary: "var(--burgundy)",
     tertiary: "var(--main-black)",
   },
 ];

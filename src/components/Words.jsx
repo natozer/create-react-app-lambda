@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../component_styles/Words.css";
+import { ReactComponent as DownIcon } from "../assets/down.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,17 +34,10 @@ const Words = () => {
 
   return (
     <>
-      <span className="WordsTitle">
-        Let's cut to the chase{" "}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width="30"
-          height="30"
-        >
-          <path fill="var(--primary-color)" d="M12 15l-8-8h16l-8 8z" />
-        </svg>
-      </span>
+      <div className="WordsTitle">
+        Let's cut to the chase
+        <DownIcon />
+      </div>
       <div className="words-container">
         {words.map((word, index) => (
           <h1

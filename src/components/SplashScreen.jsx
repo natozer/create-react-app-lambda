@@ -6,7 +6,7 @@ function SplashScreen({ onEnterSite, buttonVisible, splashScreenRef }) {
   return (
     <div className="splash-screen" ref={splashScreenRef}>
       <div className="splash-header">
-        {renderTextWithSpan("NATHANIEL TOZER 2025", "vertical-stack")}
+        {renderTextWithSpan("Nathaniel Tozer", "vertical-stack")}
       </div>
       {buttonVisible && <button onClick={onEnterSite}>Enter Site</button>}
     </div>

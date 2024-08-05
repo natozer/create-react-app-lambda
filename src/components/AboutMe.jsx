@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "../component_styles/AboutMe.css";
+import { ReactComponent as DownIcon } from "../assets/down.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,25 +39,15 @@ const AboutMe = () => {
 
   return (
     <>
-        <span className="AboutMeTitle">
-          WHO I AM
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="30"
-            height="30"
-          >
-            <path
-              fill="var(--primary-color)"
-              d="M12 15l-8-8h16l-8 8z"
-            />
-          </svg>
-        </span>
+      <div className="AboutMeTitle">
+        WHO I AM
+        <DownIcon />
+      </div>
       <div ref={aboutMeRef} className="AboutMe">
         <h1 ref={headerRef}>
-          I'm a web developer from Miramichi, Canada.
-          I bring a wide range of front and back end skills to the table, and a
-          relentless pursuit of perfection.
+          I'm a web developer from Miramichi, Canada. I bring a wide range of
+          front and back end skills to the table, and a relentless pursuit of
+          perfection.
         </h1>
       </div>
     </>

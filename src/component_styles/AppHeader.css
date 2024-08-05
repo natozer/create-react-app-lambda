@@ -18,6 +18,7 @@
 }
 
 .header-left {
+  text-transform: uppercase;
   align-self: flex-start;
   writing-mode: vertical-rl;
   user-select: none;

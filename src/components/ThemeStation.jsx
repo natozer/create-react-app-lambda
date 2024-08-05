@@ -4,25 +4,25 @@ import bassDrop from "../assets/bass_drop.mp3";
 
 const themes = [
   {
-    name: "default",
+    name: "Mako Reactor",
     primary: "var(--icey-blue)",
     secondary: "var(--main-black)",
     tertiary: "var(--aqua)",
   },
   {
-    name: "Miramichi",
+    name: "North Shore",
     primary: "var(--main-black)",
     secondary: "var(--main-gray)",
     tertiary: "var(--main-gray)",
   },
   {
-    name: "Cyberpunk",
+    name: "Dangerous Days",
     primary: "var(--another-blue)",
     secondary: "var(--purpleish-black)",
     tertiary: "var(--main-black)",
   },
   {
-    name: "Dangerous",
+    name: "Fimbulvinter",
      primary: "var(--icey-blue)",
     secondary: "var(--burgundy)",
     tertiary: "var(--main-black)",

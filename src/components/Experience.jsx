@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "../component_styles/Experience.css";
+import { ReactComponent as DownIcon } from "../assets/down.svg";
 
 const Experience = () => {
   const experienceRef = useRef(null);
@@ -33,17 +34,10 @@ const Experience = () => {
 
   return (
     <>
-      <span className="ExperienceTitle">
+      <div className="ExperienceTitle">
         MY SKILLSET
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width="30"
-          height="30"
-        >
-          <path fill="var(--primary-color)" d="M12 15l-8-8h16l-8 8z" />
-        </svg>
-      </span>
+       <DownIcon/>
+      </div>
       <div className="experience-section" ref={experienceRef}>
         <div className="card-container">
           <div className="card">ANGULAR</div>

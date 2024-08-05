@@ -26,25 +26,25 @@ const SnowScene = () => {
   });
 
   const themesAnimationSettingsRef = useRef({
-    default: {
+    'Mako Reactor': {
       speed: 0.3,
       color: new THREE.Color(0.2, 0.7, 1),
       size: 5,
       animationType: "default",
     },
-    Miramichi: {
+    'North Shore': {
       speed: 0.5,
       color: new THREE.Color(0.5, 0.5, 0.5),
       size: 4,
       animationType: "Miramichi",
     },
-    Cyberpunk: {
+    'Dangerous Days': {
       speed: 0.2,
       color: new THREE.Color(0.8, 0.5, 0.2),
       size: 5,
       animationType: "Cyberpunk",
     },
-    Dangerous: {
+     'Fimbulvinter': {
       speed: 0.01,
       color: new THREE.Color(0.435, 0.604, 0.906),
       size: 5,

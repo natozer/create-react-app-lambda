@@ -21,6 +21,12 @@ const themes = [
     secondary: "var(--purpleish-black)",
     tertiary: "var(--main-black)",
   },
+  {
+    name: "Dangerous",
+    primary: "var(--dangerous-red)",
+    secondary: "var(--main-black)",
+    tertiary: "var(--main-black)",
+  },
 ];
 
 const ThemeStation = () => {

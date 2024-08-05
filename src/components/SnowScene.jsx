@@ -26,23 +26,29 @@ const SnowScene = () => {
   });
 
   const themesAnimationSettingsRef = useRef({
-    "default": {
+    default: {
       speed: 0.3,
       color: new THREE.Color(0.2, 0.7, 1),
       size: 5,
       animationType: "default",
     },
-    "Miramichi": {
+    Miramichi: {
       speed: 0.5,
       color: new THREE.Color(0.5, 0.5, 0.5),
       size: 4,
       animationType: "Miramichi",
     },
-    "Cyberpunk": {
+    Cyberpunk: {
       speed: 0.2,
       color: new THREE.Color(0.8, 0.5, 0.2),
       size: 5,
       animationType: "Cyberpunk",
+    },
+    Dangerous: {
+      speed: 0.025,
+      color: new THREE.Color(0.435, 0.604, 0.906),
+      size: 5.5,
+      animationType: "Dangerous",
     },
   });
 
@@ -58,7 +64,7 @@ const SnowScene = () => {
     cameraRef.current = camera;
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color("#1a0001"); 
+    scene.background = new THREE.Color("#1a0001");
     sceneRef.current = scene;
 
     const renderer = new THREE.WebGLRenderer();
@@ -106,12 +112,12 @@ const SnowScene = () => {
     const particlesArray = [];
     snowflakeTextures.forEach((sprite) => {
       const material = new THREE.PointsMaterial({
-        size: animationSettingsRef.current.size, 
+        size: animationSettingsRef.current.size,
         map: sprite,
         blending: THREE.AdditiveBlending,
         depthTest: false,
         transparent: true,
-        color: animationSettingsRef.current.color, 
+        color: animationSettingsRef.current.color,
       });
 
       const particles = new THREE.Points(geometry, material);
@@ -141,7 +147,6 @@ const SnowScene = () => {
         object.material.size = size;
 
         switch (animationType) {
-          
           case "default":
             object.rotation.y = time * speed * (i < 4 ? i + 1 : -(i + 1));
             break;
@@ -154,6 +159,19 @@ const SnowScene = () => {
           case "Cyberpunk":
             object.rotation.x += 0.0005;
             object.rotation.y += 0.0005;
+            break;
+
+          case "Dangerous":
+            object.rotation.x += Math.sin(time * 0.001) * speed * (i + 1) * 0.2;
+            object.rotation.y += Math.cos(time * 0.001) * speed * (i + 1) * 0.2;
+            object.rotation.z += Math.sin(time * 0.0005) * speed * 0.1;
+
+            const scaleOscillation = Math.sin(time * 0.0005) * 0.02 + 0.98;
+            object.scale.set(
+              scaleOscillation,
+              scaleOscillation,
+              scaleOscillation
+            );
             break;
 
           default:

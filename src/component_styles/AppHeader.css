@@ -1,17 +1,14 @@
-.header-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  animation: blurAnimation 3s forwards;
-}
-
 @keyframes blurAnimation {
   0% { filter: blur(5px); }
   100% { filter: blur(0px); }
 }
 
 .App-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: blurAnimation 3s forwards;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;

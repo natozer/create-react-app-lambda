@@ -28,7 +28,6 @@ function Header({ isPlaying, toggleMusic }) {
   const headerRef = useRef(null);
 
   return (
-    <div className="header-container">
       <header className="App-header" ref={headerRef}>
         <div className="header-left">
           {renderTextWithSpan("NATHANIEL TOZER", "vertical-stack")}
@@ -41,7 +40,6 @@ function Header({ isPlaying, toggleMusic }) {
           </a>
         </div>
       </header>
-    </div>
   );
 }
 

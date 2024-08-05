@@ -20,7 +20,7 @@ const Experience = () => {
     });
 
     tl.fromTo(
-      experienceRef.current.querySelectorAll(".card"),
+      experienceRef.current.querySelectorAll("li"),
       { autoAlpha: 0, y: 30 },
       {
         autoAlpha: 1,
@@ -36,27 +36,25 @@ const Experience = () => {
     <>
       <div className="ExperienceTitle">
         MY SKILLSET
-       <DownIcon/>
+        <DownIcon />
       </div>
-      <div className="experience-section" ref={experienceRef}>
-        <div className="card-container">
-          <div className="card">ANGULAR</div>
-          <div className="card">ASP.NET</div>
-          <div className="card">C#</div>
-          <div className="card">CSS</div>
-          <div className="card">EXPRESS.JS</div>
-          <div className="card">GIT</div>
-          <div className="card">HTML</div>
-          <div className="card">JAVA</div>
-          <div className="card">JAVASCRIPT</div>
-          <div className="card">MONGO DB</div>
-          <div className="card">MSSQL</div>
-          <div className="card">MYSQL</div>
-          <div className="card">NODE.JS</div>
-          <div className="card">REACT</div>
-          <div className="card">TYPESCRIPT</div>
-        </div>
-      </div>
+      <ul className="experience-section" ref={experienceRef}>
+        <li>ANGULAR</li>
+        <li>ASP.NET</li>
+        <li>C#</li>
+        <li>CSS</li>
+        <li>EXPRESS.JS</li>
+        <li>GIT</li>
+        <li>HTML</li>
+        <li>JAVA</li>
+        <li>JAVASCRIPT</li>
+        <li>MONGO DB</li>
+        <li>MSSQL</li>
+        <li>MYSQL</li>
+        <li>NODE.JS</li>
+        <li>REACT</li>
+        <li>TYPESCRIPT</li>
+      </ul>
     </>
   );
 };

@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { renderTextWithSpan } from "../utils";
-
 import { ReactComponent as MuteIcon } from "../assets/mute.svg";
 import { ReactComponent as UnmuteIcon } from "../assets/unmute.svg";
 import { ReactComponent as EmailIcon } from "../assets/email.svg";

@@ -31,6 +31,7 @@
     4px 4px 8px var(--primary-color);
   font-weight: lighter;
   font-size: clamp(0.9rem, 4.5vw, 4.2rem);
+  filter: blur(0.4px);
 }
 
 @keyframes flash {

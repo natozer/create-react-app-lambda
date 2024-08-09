@@ -6,7 +6,6 @@
   color: var(--primary-color);
   position: relative;
   text-align: center;
-  text-transform: uppercase;
   margin: 2rem 4rem;
   animation: blurAnimation 4s forwards;
   padding: clamp(1rem, 5vw, 12rem);

@@ -135,4 +135,7 @@ button {
 
 .vertical-stack:hover {
   color: var(--secondary-color);
+  text-shadow: 
+    2px 2px 5px var(--primary-color), 
+    2px -2px 5px var(--tertiary-color);
 }

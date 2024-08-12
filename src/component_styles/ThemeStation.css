@@ -16,12 +16,18 @@
   text-transform: uppercase;
   font-family: "Space Mono";
   animation: blurAnimation 3s forwards;
+  z-index: 998;
+
+
 }
 
 
 .ThemeStation.open {
   width: 200px;
   height: auto;
+
+  z-index: 998;
+
   padding: 10px;
 }
 
@@ -42,5 +48,7 @@
 }
 
 .ThemeStationIcon {
+  
+ z-index: 998;
   font-size: 1rem;
 }

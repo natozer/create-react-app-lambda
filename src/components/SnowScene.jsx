@@ -10,6 +10,7 @@ import snowflake3 from "../assets/snowflake3.png";
 /*
 Full disclosure, I got the idea for the snowflake sprites from here:
 https://threejs.org/examples/#webgl_points_sprites
+Thank you Three JS people; and also Rene Descartes.
 */
 
 const SnowScene = () => {

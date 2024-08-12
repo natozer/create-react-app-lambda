@@ -52,7 +52,6 @@ function App() {
     <div className="App">
       <SnowScene />
       <Hero />
-
       {splashScreenVisible ? (
         <SplashScreen onEnterSite={handleEnterSite} buttonVisible={buttonVisible} splashScreenRef={splashScreenRef} />
       ) : (

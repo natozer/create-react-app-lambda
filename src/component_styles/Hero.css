@@ -12,26 +12,27 @@
   gap: clamp(0.5rem, 2vw, 2rem);
   word-spacing: clamp(0.5rem, 0.5vw, 2.5rem);
 }
-
 .Hero h2 {
   letter-spacing: clamp(2px, 0.5vw, 12px);
-  font-size: clamp(0.45rem, 1.8vw, 1.6rem);
+  font-size: clamp(0.35rem, 1.6vw, 1.4rem);
   margin: 0;
 }
+
 
 .Hero h1 {
   letter-spacing: clamp(2px, 1vw, 5px);
   font-family: "Road Rage";
   transform: rotate(-10deg);
-  color: var(--tertiary-color);
-  text-shadow: 1px 1px 2px var(--primary-color),
-    2px 2px 4px var(--primary-color),
-    3px 3px 6px var(--primary-color),
-    4px 4px 8px var(--primary-color);
-  font-weight: lighter;
+  color: var(--secondary-color);
+  text-shadow: 1px 1px 2px var(--another-blue),
+    2px 2px 4px var(--hero-shadow),
+    3px 3px 6px  var(--hero-shadow),
+    5px 5px 7px  var(--hero-shadow);
   font-size: clamp(0.9rem, 4.5vw, 4.2rem);
-  filter: blur(0.4px);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  font-weight: 300;
 }
+
 
 @keyframes flash {
   0%,
@@ -54,4 +55,6 @@
   word-spacing: normal;
   animation: blurAnimation 3s forwards;
   animation: flash 2.5s infinite;
+  text-transform: uppercase;
 }
+

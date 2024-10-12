@@ -4,40 +4,33 @@ import bassDrop from "../assets/bass_drop.mp3";
 
 const themes = [
   {
-    name: "Mako Reactor",
-    primary: "var(--icey-blue)",
-    secondary: "var(--main-black)",
-    tertiary: "var(--aqua)",
-  },
-  {
-    name: "North Shore",
+    name: "Miramichi Grey",
     primary: "var(--main-black)",
     secondary: "var(--main-gray)",
     tertiary: "var(--main-gray)",
+    heroshadow: "blue"
   },
   {
-    name: "Dangerous Days",
-    primary: "var(--another-blue)",
-    secondary: "var(--purpleish-black)",
-    tertiary: "var(--main-black)",
+    name: "Pretty Nice Day",
+    primary: "#ffcc00",
+    secondary: "#265b93",
+    tertiary: "var(--another-blue)",
+    heroshadow: "#ffcc00",
   },
-  {
-    name: "Fimbulvinter",
-    primary: "var(--icey-blue)",
-    secondary: "var(--burgundy)",
-    tertiary: "var(--main-black)",
-  },
+  
 ];
 
 const ThemeStation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeTheme, setActiveTheme] = useState(themes[0].name);
+  const [activeTheme, setActiveTheme] = useState(themes[1].name);
   const audioRef = useRef(new Audio(bassDrop));
 
   const handleThemeChange = (theme) => {
     document.documentElement.style.setProperty("--primary-color", theme.primary);
     document.documentElement.style.setProperty("--secondary-color", theme.secondary);
     document.documentElement.style.setProperty("--tertiary-color", theme.tertiary);
+    document.documentElement.style.setProperty("--hero-shadow", theme.heroshadow);
+
 
     const event = new CustomEvent("themeChange", { detail: theme });
     window.dispatchEvent(event);

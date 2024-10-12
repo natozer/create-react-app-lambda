@@ -17,13 +17,13 @@ const Words = () => {
         start: "top center",
         end: "bottom center",
         onEnter: () => {
-          gsap.to(word, { color: "var(--secondary-color)", opacity: 1 });
+          gsap.to(word, { color: "var(--primary-color)", opacity: 1 });
         },
         onLeave: () => {
           gsap.to(word, { color: "rgba(0, 0, 0, 0.1)" });
         },
         onEnterBack: () => {
-          gsap.to(word, { color: "var(--secondary-color)", opacity: 1 });
+          gsap.to(word, { color: "var(--primary-color)", opacity: 1 });
         },
         onLeaveBack: () => {
           gsap.to(word, { color: "rgba(0, 0, 0, 0.1)" });

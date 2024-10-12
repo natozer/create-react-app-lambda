@@ -20,34 +20,23 @@ const SnowScene = () => {
   const composerRef = useRef(null);
 
   const animationSettingsRef = useRef({
-    speed: 0.3,
-    color: new THREE.Color(0.2, 0.7, 1),
+    speed: 0.02,
+    color: new THREE.Color(0.2, 0.2, 1),
     size: 5,
-    animationType: "default",
+    animationType: "Dangerous",
   });
 
   const themesAnimationSettingsRef = useRef({
-    'Mako Reactor': {
-      speed: 0.3,
-      color: new THREE.Color(0.2, 0.7, 1),
-      size: 5,
-      animationType: "default",
-    },
-    'North Shore': {
-      speed: 0.5,
+ 
+    'Miramichi Grey': {
+      speed: 0.2,
       color: new THREE.Color(0.5, 0.5, 0.5),
-      size: 4,
+      size: 7,
       animationType: "Miramichi",
     },
-    'Dangerous Days': {
-      speed: 0.2,
-      color: new THREE.Color(0.8, 0.5, 0.2),
-      size: 5,
-      animationType: "Cyberpunk",
-    },
-     'Fimbulvinter': {
-      speed: 0.01,
-      color: new THREE.Color(0.435, 0.604, 0.906),
+     'Pretty Nice Day': {
+      speed: 0.02,
+      color: new THREE.Color(0.2, 0.2, 1),
       size: 5,
       animationType: "Dangerous",
     },
@@ -65,7 +54,7 @@ const SnowScene = () => {
     cameraRef.current = camera;
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color("#141414");
+    scene.background = new THREE.Color(0x265b93);
     sceneRef.current = scene;
 
     const renderer = new THREE.WebGLRenderer();
@@ -148,20 +137,10 @@ const SnowScene = () => {
         object.material.size = size;
 
         switch (animationType) {
-          case "default":
-            object.rotation.y = time * speed * (i < 4 ? i + 1 : -(i + 1));
-            break;
-
           case "Miramichi":
             object.rotation.x += 0.002;
             object.rotation.y += 0.002;
             break;
-
-          case "Cyberpunk":
-            object.rotation.x += 0.0005;
-            object.rotation.y += 0.0005;
-            break;
-
           case "Dangerous":
             object.rotation.x += Math.sin(time * 0.001) * speed * (i + 1) * 0.2;
             object.rotation.y += Math.cos(time * 0.001) * speed * (i + 1) * 0.2;

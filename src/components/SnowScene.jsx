@@ -20,7 +20,7 @@ const SnowScene = () => {
   const composerRef = useRef(null);
 
   const animationSettingsRef = useRef({
-    speed: 0.02,
+    speed: 0.01,
     color: new THREE.Color(0.2, 0.2, 1),
     size: 5,
     animationType: "Dangerous",
@@ -35,7 +35,7 @@ const SnowScene = () => {
       animationType: "Miramichi",
     },
      'Pretty Nice Day': {
-      speed: 0.02,
+      speed: 0.01,
       color: new THREE.Color(0.2, 0.2, 1),
       size: 5,
       animationType: "Dangerous",
@@ -81,9 +81,9 @@ const SnowScene = () => {
     );
 
     const geometry = new THREE.BufferGeometry();
-    const vertices = new Array(9000);
+    const vertices = new Array(6000);
 
-    for (let i = 0; i < 3000; i++) {
+    for (let i = 0; i < 2000; i++) {
       const baseIndex = i * 3;
       const x = Math.random() * 2000 - 1000;
       const y = Math.random() * 2000 - 1000;

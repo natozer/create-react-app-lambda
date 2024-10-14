@@ -27,7 +27,7 @@ const Hero = () => {
   return (
     <div ref={heroRef} className="Hero">
       <h2>FULL STACK</h2>
-      <h1>Nathaniel<br />Tozer</h1>
+      <h1> Nathaniel<br />Tozer</h1>
       <h2>WEB DEVELOPER</h2>
       <div ref={scrollIndicatorRef} className="scroll-down">
         Scroll Down

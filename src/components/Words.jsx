@@ -7,7 +7,7 @@ import { ReactComponent as DownIcon } from "../assets/down.svg";
 gsap.registerPlugin(ScrollTrigger);
 
 const Words = () => {
-  const words = ["Give", "Me", "A", "Job", "Please", "٩(◕‿◕)۶"];
+  const words = ["Hire", "Me", "Please", "٩(◕‿◕)۶"];
   const wordsRef = useRef([]);
 
   useEffect(() => {

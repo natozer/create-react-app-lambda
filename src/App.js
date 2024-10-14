@@ -64,7 +64,6 @@ function App() {
             <Footer />
             <Credits />
           </div>
-          <ThemeStation />
         </>
       )}
       

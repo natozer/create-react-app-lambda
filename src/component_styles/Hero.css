@@ -21,7 +21,7 @@
 
 .Hero h1 {
   letter-spacing: clamp(2px, 1vw, 5px);
-  font-family: "Road Rage";
+  font-family: "Indelible";
   transform: rotate(-10deg);
   color: var(--secondary-color);
   text-shadow: 1px 1px 2px var(--another-blue),
@@ -30,7 +30,7 @@
     5px 5px 7px  var(--hero-shadow);
   font-size: clamp(0.9rem, 4.5vw, 4.2rem);
   transition: color 0.3s ease, text-shadow 0.3s ease;
-  font-weight: 300;
+  font-weight: 900;
 }
 
 

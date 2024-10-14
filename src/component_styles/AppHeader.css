@@ -25,7 +25,11 @@
   font-size: 0.8rem;
   margin-top: 1rem;
   letter-spacing: 2px;
-  font-family: "Space Mono";
+  font-family: 'Road Rage';
+  color: var(--secondary-color);
+
+  text-shadow: 
+    2px 2px 5px var(--primary-color);
 }
 
 .header-right {
@@ -136,6 +140,6 @@ button {
 .vertical-stack:hover {
   color: var(--secondary-color);
   text-shadow: 
-    2px 2px 5px var(--primary-color), 
-    2px -2px 5px var(--tertiary-color);
+    2px 2px 5px var(--hero-shadow), 
+    2px -2px 5px var(--hero-shadow);
 }

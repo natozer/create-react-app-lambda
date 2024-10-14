@@ -1,20 +1,15 @@
 .ThemeStation {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  width: 200px;
-  height: 50px;
-  background-color: var(--main-black);
-  color: #ffffff;
+
+  color: var(--primary-color);
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   transition: width 0.3s, height 0.3s;
-  font-size: 0.8rem;
+  font-size: 2rem;
   text-transform: uppercase;
-  font-family: "Space Mono";
+  font-family: "Moria";
   animation: blurAnimation 3s forwards;
   z-index: 998;
 
@@ -22,33 +17,3 @@
 }
 
 
-.ThemeStation.open {
-  width: 200px;
-  height: auto;
-
-  z-index: 998;
-
-  padding: 10px;
-}
-
-.ThemeStation ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.ThemeStation li {
-  padding: 5px;
-  cursor: pointer;
-  color: var(--main-gray);
-}
-
-.ThemeStation li.active {
-  color: #fff;
-}
-
-.ThemeStationIcon {
-  
- z-index: 998;
-  font-size: 1rem;
-}

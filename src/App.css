@@ -18,6 +18,19 @@
   src: url("fonts/SpaceMono-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Moria";
+  src: url("fonts/Moria.ttf");
+}
+
+
+
+
+@font-face {
+  font-family: "Indelible";
+  src: url("fonts/Indelible.otf") format("opentype");
+}
+
 :root {
   --main-black: #141414;
   --main-gray: #6b7471;

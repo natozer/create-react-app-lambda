@@ -5,18 +5,18 @@ import bassDrop from "../assets/bass_drop.mp3";
 const themes = [
   {
     name: "Pretty Nice Day", 
-    primary: "#ffcc00",
-    secondary: "#265b93",
+    primary: "silver",
+    secondary: "#173d6b",
     tertiary: "var(--another-blue)",
-    heroshadow: "#ffcc00",
+    heroshadow: "gold",
   },
   {
     name: "Miramichi Grey", 
-    primary: "var(--main-black)",
-    secondary: "var(--main-gray)",
+    primary: "var(--main-gray)",
+    secondary: "var(--main-black)",
     tertiary: "var(--main-gray)",
-    heroshadow: "blue",
-  },
+    heroshadow: "gold",
+  }
 ];
 
 const ThemeStation = () => {

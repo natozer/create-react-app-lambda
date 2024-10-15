@@ -32,15 +32,14 @@
 }
 
 :root {
-  --main-black: #141414;
-  --main-gray: #6b7471;
+  --main-black: #2A1E2D;
+  --main-gray: silver;
   --another-blue: #a0d2eb;
   --tertiary-color: var(--main-black);
-  --primary-color: #ffcc00;
+  --primary-color: white;
   --secondary-color: #265b93;
-  --hero-shadow: #ffcc00;
+  --hero-shadow: gold;
 }
-
 
 html,
 body {

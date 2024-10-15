@@ -14,7 +14,7 @@
 }
 .Hero h2 {
   letter-spacing: clamp(2px, 0.5vw, 12px);
-  font-size: clamp(0.35rem, 1.6vw, 1.4rem);
+  font-size: clamp(0.35rem, 1.6vw, 1rem);
   margin: 0;
 }
 
@@ -24,10 +24,9 @@
   font-family: "Indelible";
   transform: rotate(-10deg);
   color: var(--secondary-color);
-  text-shadow: 1px 1px 2px var(--another-blue),
+  text-shadow: 1px 1px 2px var(--hero-shadow),
     2px 2px 4px var(--hero-shadow),
-    3px 3px 6px  var(--hero-shadow),
-    5px 5px 7px  var(--hero-shadow);
+    4px 4px 8px  var(--hero-shadow);
   font-size: clamp(0.9rem, 4.5vw, 4.2rem);
   transition: color 0.3s ease, text-shadow 0.3s ease;
   font-weight: 900;
@@ -48,8 +47,8 @@
   position: relative;
   bottom: -1rem;
   text-align: center;
-  font-size: clamp(0.35rem, 1.3vw, 1.2rem);
-  color: var(--main-gray);
+  font-size: clamp(0.35rem, 1.3vw, 1rem);
+  color: var(--primary-color);
   opacity: 0;
   letter-spacing: normal;
   word-spacing: normal;

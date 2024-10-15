@@ -20,7 +20,7 @@ const SnowScene = () => {
   const composerRef = useRef(null);
 
   const animationSettingsRef = useRef({
-    speed: 0.01,
+    speed: 0.002,
     color: new THREE.Color(0.2, 0.2, 1),
     size: 5,
     animationType: "Dangerous",
@@ -29,13 +29,13 @@ const SnowScene = () => {
   const themesAnimationSettingsRef = useRef({
  
     'Miramichi Grey': {
-      speed: 0.2,
-      color: new THREE.Color(0.5, 0.5, 0.5),
-      size: 7,
+      speed: 0.002,
+      color: new THREE.Color(0.2, 0.2, 1),
+      size: 5,
       animationType: "Miramichi",
     },
      'Pretty Nice Day': {
-      speed: 0.01,
+      speed: 0.002,
       color: new THREE.Color(0.2, 0.2, 1),
       size: 5,
       animationType: "Dangerous",
@@ -54,7 +54,7 @@ const SnowScene = () => {
     cameraRef.current = camera;
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x265b93);
+    scene.background = new THREE.Color(0x173d6b);
     sceneRef.current = scene;
 
     const renderer = new THREE.WebGLRenderer();
@@ -146,17 +146,9 @@ const SnowScene = () => {
             object.rotation.y += Math.cos(time * 0.001) * speed * (i + 1) * 0.2;
             object.rotation.z += Math.sin(time * 0.0005) * speed * 0.1;
 
-            const scaleOscillation = Math.sin(time * 0.0005) * 0.02 + 0.98;
-            object.scale.set(
-              scaleOscillation,
-              scaleOscillation,
-              scaleOscillation
-            );
+        
             break;
 
-          default:
-            object.rotation.y = time * speed * (i < 4 ? i + 1 : -(i + 1));
-            break;
         }
       });
 

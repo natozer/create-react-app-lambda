@@ -149,6 +149,11 @@ const SnowScene = () => {
         
             break;
 
+            default:
+            object.rotation.x += 0.002;
+            object.rotation.y += 0.002;
+            break;
+
         }
       });
 

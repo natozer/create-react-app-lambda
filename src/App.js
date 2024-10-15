@@ -10,7 +10,6 @@ import backgroundMusic from './assets/music.mp3';
 import AboutMe from './components/AboutMe';
 import Experience from './components/Experience';
 import Credits from './components/Credits';
-import ThemeStation from './components/ThemeStation';
 import Words from './components/Words';
 
 function App() {

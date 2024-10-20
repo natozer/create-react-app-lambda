@@ -12,10 +12,12 @@
   gap: clamp(0.5rem, 2vw, 2rem);
   word-spacing: clamp(0.5rem, 0.5vw, 2.5rem);
 }
+
+
 .Hero h2 {
   letter-spacing: clamp(2px, 0.5vw, 12px);
   font-size: clamp(0.35rem, 1.6vw, 1rem);
-  margin: 0;
+  margin: 0; 
 }
 
 
@@ -28,7 +30,6 @@
     2px 2px 4px var(--hero-shadow),
     4px 4px 8px  var(--hero-shadow);
   font-size: clamp(0.9rem, 4.5vw, 4.2rem);
-  transition: color 0.3s ease, text-shadow 0.3s ease;
   font-weight: 900;
 }
 

@@ -4,7 +4,6 @@ import { ReactComponent as MuteIcon } from "../assets/mute.svg";
 import { ReactComponent as UnmuteIcon } from "../assets/unmute.svg";
 import { ReactComponent as EmailIcon } from "../assets/email.svg";
 import "../component_styles/AppHeader.css";
-import ThemeStation from "./ThemeStation";
 
 function MusicVisualizer({ isPlaying }) {
   return (
@@ -30,7 +29,7 @@ function Header({ isPlaying, toggleMusic }) {
   return (
       <header className="App-header" ref={headerRef}>
         <div className="header-left">
-          {renderTextWithSpan("Nathaniel Tozer", "vertical-stack")}
+          {renderTextWithSpan("Nathaniel Tozer 2025 ✹ ", "vertical-stack")}
         </div>
         <div className="header-right">
           <MusicVisualizer isPlaying={isPlaying} />
@@ -38,7 +37,6 @@ function Header({ isPlaying, toggleMusic }) {
           <a href="mailto:natozer@gmail.com">
             <EmailIcon />
           </a>
-          <ThemeStation/>
         </div>
       </header>
   );

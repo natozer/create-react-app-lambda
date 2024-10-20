@@ -7,26 +7,42 @@ import { ReactComponent as DownIcon } from "../assets/down.svg";
 gsap.registerPlugin(ScrollTrigger);
 
 const Words = () => {
-  const words = ["Hire", "Me", "Please", "٩(◕‿◕)۶"];
-  const wordsRef = useRef([]);
+  const skills = [
+    "ANGULAR",
+    "ASP.NET",
+    "C#",
+    "CSS",
+    "EXPRESS.JS",
+    "GIT",
+    "HTML",
+    "JAVA",
+    "JAVASCRIPT",
+    "MONGO DB",
+    "MSSQL",
+    "MYSQL",
+    "NODE.JS",
+    "REACT",
+    "TYPESCRIPT",
+  ];
+  const skillsRef = useRef([]);
 
   useEffect(() => {
-    gsap.utils.toArray(wordsRef.current).forEach((word, _index) => {
+    gsap.utils.toArray(skillsRef.current).forEach((skill) => {
       ScrollTrigger.create({
-        trigger: word,
+        trigger: skill,
         start: "top center",
         end: "bottom center",
         onEnter: () => {
-          gsap.to(word, { color: "var(--primary-color)", opacity: 1 });
+          gsap.to(skill, { color: "var(--primary-color)", opacity: 1 });
         },
         onLeave: () => {
-          gsap.to(word, { color: "rgba(0, 0, 0, 0.1)" });
+          gsap.to(skill, { color: "rgba(0, 0, 0, 0.4)" });
         },
         onEnterBack: () => {
-          gsap.to(word, { color: "var(--primary-color)", opacity: 1 });
+          gsap.to(skill, { color: "var(--primary-color)", opacity: 1 });
         },
         onLeaveBack: () => {
-          gsap.to(word, { color: "rgba(0, 0, 0, 0.1)" });
+          gsap.to(skill, { color: "rgba(0, 0, 0, 0.4)" });
         },
       });
     });
@@ -35,17 +51,17 @@ const Words = () => {
   return (
     <>
       <div className="WordsTitle">
-        Let's cut to the chase
+        My Skillset
         <DownIcon />
       </div>
       <div className="words-container">
-        {words.map((word, index) => (
+        {skills.map((skill, index) => (
           <h1
             key={index}
-            ref={(el) => (wordsRef.current[index] = el)}
+            ref={(el) => (skillsRef.current[index] = el)}
             className="word"
           >
-            {word}
+            {skill}
           </h1>
         ))}
       </div>

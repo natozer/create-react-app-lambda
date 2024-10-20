@@ -9,22 +9,14 @@
 }
 
 @font-face {
-  font-family: "Road Rage";
-  src: url("fonts/Road_Rage.otf") format("opentype");
-}
-
-@font-face {
   font-family: "Space Mono";
   src: url("fonts/SpaceMono-Regular.ttf");
 }
 
 @font-face {
-  font-family: "Moria";
-  src: url("fonts/Moria.ttf");
+  font-family: "Migra";
+  src: url("fonts/PPMigra-Extrabold.otf");
 }
-
-
-
 
 @font-face {
   font-family: "Indelible";
@@ -32,13 +24,9 @@
 }
 
 :root {
-  --main-black: #2A1E2D;
-  --main-gray: silver;
-  --another-blue: #a0d2eb;
-  --tertiary-color: var(--main-black);
-  --primary-color: white;
-  --secondary-color: #265b93;
-  --hero-shadow: gold;
+  --primary-color: #FFFFFF;
+  --secondary-color:  #2A1E2D;
+  --hero-shadow: rgb(245, 238, 230);
 }
 
 html,
@@ -51,9 +39,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 
-  
 }
-
 
 ::-webkit-scrollbar {
   width: 0px;

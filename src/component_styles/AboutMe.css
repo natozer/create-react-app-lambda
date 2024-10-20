@@ -1,8 +1,7 @@
 .AboutMe {
   text-align: left;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   text-transform: uppercase;
-  background-color: var(--primary-color);
   border-radius: 4px;
   visibility: hidden;
   font-size: clamp(0.2rem, 1vw + 0.2rem, 2rem);
